@@ -1,4 +1,5 @@
 import React from 'react';
+import './BeeFacts.css';
 
 const beeFactsQuestion = () => {
   return (
