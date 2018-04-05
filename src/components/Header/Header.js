@@ -1,4 +1,5 @@
 import React from 'react';
+import './Header.css'
 
 const ageRanges = [
   '13-19', '20-39', '40-59', '60-79', '79+'
@@ -11,7 +12,7 @@ const radioOptions = ageRangeArr => {
           <input type="radio" id={`age${range}`}
                  name={`age-${i}`} value={range} />
       </label>
-    )
+    );
   });
 };
 
