@@ -18,10 +18,14 @@ const radioOptions = ageRangeArr => {
 
 const Header = () => {
   return (
-    <div>
-      <h1>Bees and Our Food</h1>
-      <p>An interactive guide to how bees keep us well fed</p>
-      <form>
+    <div className="Header">
+      <div className="page-header-img">
+      </div>
+      <header className="page-header">
+        <h1>Bees and Our Food</h1>
+        <p>An interactive guide to how bees keep us well fed</p>
+      </header>
+      <form className="user-info-form">
         <label>First, let's get to know you</label>
         {radioOptions(ageRanges)}
         <button>Submit</button>
