@@ -3,7 +3,7 @@ exports.up = function(knex, Promise) {
     knex.schema.createTable('users', function(table) {
       table.increments('id').primary();
       table.string('location');
-      table.string('gender'); //????
+      table.string('occupation'); //????
       table.string('age');
 
       table.timestamps(true, true);
@@ -12,7 +12,7 @@ exports.up = function(knex, Promise) {
     knex.schema.createTable('bees', function(table) {
       table.increments('id').primary();
       table.string('question');
-      table.string('answer');
+      table.string('user_answer');
       table.integer('users_id').unsigned();
       table.foreign('users_id').references('users.id');
 
