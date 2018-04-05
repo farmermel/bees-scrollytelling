@@ -22,8 +22,8 @@ const dietArticle = () => {
 
 const economicQuestion = () => {
   <form>
-    <label htmlFor="diet">How much do bees contribute to the economy, anually?</label>
-    <input type="text" id="died" placeholder="Not sure on best avenue to provide answers to these questions"/>
+    <label htmlFor="economic">How much do bees contribute to the economy, anually?</label>
+    <input type="text" id="economic" placeholder="Not sure on best avenue to provide answers to these questions"/>
     <button type="submit">Guess</button>
   </form>
 }
@@ -32,7 +32,6 @@ const economicArticle = () => {
   return (
     <article>
       <h1>The honeybee services are valued to be just above $20 billion in the United States. World wide, that number rises to $217 billion. </h1>
-
     </article>
   )
 }
