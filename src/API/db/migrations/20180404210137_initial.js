@@ -3,7 +3,7 @@ exports.up = function(knex, Promise) {
     knex.schema.createTable('users', function(table) {
       table.increments('id').primary();
       table.string('location');
-      table.string('occupation'); //????
+      table.string('occupation');
       table.string('age');
 
       table.timestamps(true, true);

@@ -19,12 +19,13 @@
     "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "express": "npm run start --prefix ./src/api"
+    "express": "npm run start --prefix ./src/api",
+    "lint": "./node_modules/.bin/eslint ./src/*.js"
   },
   "devDependencies": {
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
-    "eslint": "^4.17.0",
-    "eslint-plugin-react": "^7.6.1"
+    "eslint": "^4.19.1",
+    "eslint-plugin-react": "^7.7.0"
   }
 }
