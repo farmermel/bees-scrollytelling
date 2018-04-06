@@ -24,8 +24,8 @@ class SwitchButton extends Component {
           <p>
             {
               this.state.checked 
-              ? "Stop answering questions"
-              : "Answer questions"
+              ? "Questions are on"
+              : "Questions are off"
             }
           </p>
         </label>
