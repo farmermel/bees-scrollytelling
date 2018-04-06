@@ -2,7 +2,8 @@
   min-height: 100vh;
   padding: 20px 0; }
 
-.Impact form {
-  margin: 10vh 0;
-  height: 80vh;
-  box-shadow: 0 0 20px #6d5a2f; }
+.fake-circle {
+  border-radius: 100%;
+  background-color: purple;
+  height: 200px;
+  width: 200px; }
