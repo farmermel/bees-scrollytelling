@@ -11,11 +11,12 @@ const concernArr = [
 
 //rename things to be more general
 const radioOptions = ageRangeArr => {
+  const name = ageRangeArr.length === 5 ? 'age' : 'concern';
   return ageRangeArr.map((range, i) => {
     return (
       <label htmlFor={`age${range}`}>{range}
           <input type="radio" id={`age${range}`}
-                 name={`age-${i}`} value={range} />
+                 name={name} value={range} />
       </label>
     );
   });
@@ -32,7 +33,7 @@ const Header = () => {
       </header>
       <form className="user-info-form">
         <h3>First, let's get to know you</h3>
-        {radioOptions(ageRanges)}
+          {radioOptions(ageRanges)}
         <label>How concerned are you about bees?
           {radioOptions(concernArr)}
         </label>
