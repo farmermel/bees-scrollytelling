@@ -33,10 +33,10 @@ const Header = () => {
       </header>
       <form className="user-info-form">
         <h3>First, let's get to know you</h3>
+        <h3 className="question-descr">Select your age</h3>
           {radioOptions(ageRanges)}
-        <label>How concerned are you about bees?
+        <h3 className="question-descr">How concerned are you about bees?</h3>
           {radioOptions(concernArr)}
-        </label>
         <button>Submit</button>
       </form>
     </div>
