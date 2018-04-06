@@ -22,6 +22,16 @@ const radioOptions = ageRangeArr => {
   });
 };
 
+//after submit/completion of the form we should have a 
+//down arrow pop up that lets user know they are now
+//free to keep scrolling. Maybe a lil up and down motion
+//on the arrow as well
+
+//also maybe more exposition between get to know you form
+//and content
+//like "Hey, nice to meet you! (or nice to Bee acquainted!) lol
+//Lets get down to business"
+
 const Header = () => {
   return (
     <div className="Header">
@@ -32,7 +42,7 @@ const Header = () => {
         <p>An interactive guide to how bees keep us well fed</p>
       </header>
       <form className="user-info-form">
-        <h3>First, let's get to know you</h3>
+        <h2>First, let's get to know you</h2>
         <h3 className="question-descr">Select your age</h3>
           {radioOptions(ageRanges)}
         <h3 className="question-descr">How concerned are you about bees?</h3>
