@@ -1,4 +1,5 @@
 import React from 'react';
+import './Impact.css';
 
 const dietQuestion = () => {
   return (
@@ -21,11 +22,13 @@ const dietArticle = () => {
 }
 
 const economicQuestion = () => {
-  <form>
-    <label htmlFor="economic">How much do bees contribute to the economy, anually?</label>
-    <input type="text" id="economic" placeholder="Not sure on best avenue to provide answers to these questions"/>
-    <button type="submit">Guess</button>
-  </form>
+  return (
+    <form>
+      <label htmlFor="economic">How much do bees contribute to the economy, anually?</label>
+      <input type="text" id="economic" placeholder="Not sure on best avenue to provide answers to these questions"/>
+      <button type="submit">Guess</button>
+    </form>
+  )
 }
 
 const economicArticle = () => {
