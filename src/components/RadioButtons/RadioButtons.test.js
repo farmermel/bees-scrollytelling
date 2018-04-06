@@ -1,10 +1,12 @@
+/* eslint-disable */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import RadioButtons from './RadioButtons';
+import { shallow } from 'enzyme';
 
-describe('APP', () => {
+describe('RADIOBUTTONS', () => {
   it.skip('should match the Snapshot', () => {
-    const wrapper = shallow(<App />);
+    const wrapper = shallow(<RadioButtons />);
     expect(wrapper).to.match.snapshot();
   });
 
@@ -12,3 +14,4 @@ describe('APP', () => {
   
   });
 });
+

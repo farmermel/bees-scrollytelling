@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import BeeFacts from './BeeFacts';
 
-describe('APP', () => {
+describe('BeeFacts', () => {
   it.skip('should match the Snapshot', () => {
-    const wrapper = shallow(<App />);
+    const wrapper = shallow(<BeeFacts />);
     expect(wrapper).to.match.snapshot();
   });
 
@@ -12,3 +12,4 @@ describe('APP', () => {
   
   });
 });
+

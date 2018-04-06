@@ -1,5 +1,5 @@
 import React from 'react';
-import './Header.css'
+import './Header.css';
 
 const ageRanges = [
   '13-19', '20-39', '40-59', '60-79', '79+'
@@ -14,7 +14,7 @@ const radioOptions = ageRangeArr => {
   const name = ageRangeArr.length === 5 ? 'age' : 'concern';
   return ageRangeArr.map((range, i) => {
     return (
-      <label htmlFor={`age${range}`}>{range}
+      <label htmlFor={`age${range}`} key={i}>{range}
           <input type="radio" id={`age${range}`}
                  name={name} value={range} />
       </label>
@@ -50,7 +50,7 @@ const Header = () => {
         <button>Submit</button>
       </form>
     </div>
-  )
-}
+  );
+};
 
 export default Header;

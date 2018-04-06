@@ -15,7 +15,7 @@ class SwitchButton extends Component {
 
   render() {
     return (
-      <div class="toggle">
+      <div className="toggle">
         <input checked={ this.state.checked } 
                onChange={this.handleChange}
                type="checkbox" 
