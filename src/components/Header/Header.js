@@ -5,6 +5,11 @@ const ageRanges = [
   '13-19', '20-39', '40-59', '60-79', '79+'
 ];
 
+const concernArr = [
+  'Not at all concerned', 'A little concerned', 'Very concerned', 'Haven\'t thought about it'
+];
+
+//rename things to be more general
 const radioOptions = ageRangeArr => {
   return ageRangeArr.map((range, i) => {
     return (
@@ -26,8 +31,11 @@ const Header = () => {
         <p>An interactive guide to how bees keep us well fed</p>
       </header>
       <form className="user-info-form">
-        <label>First, let's get to know you</label>
+        <h3>First, let's get to know you</h3>
         {radioOptions(ageRanges)}
+        <label>How concerned are you about bees?
+          {radioOptions(concernArr)}
+        </label>
         <button>Submit</button>
       </form>
     </div>
