@@ -1,5 +1,9 @@
+*, :after, :before {
+  box-sizing: border-box; }
+
 body {
   display: flex;
-  justify-content: center; 
-  font-family: 'Open Sans Condensed', sans-serif;
-}
+  justify-content: center;
+  margin: 0 10%;
+  align-items: center;
+  font-family: 'Open Sans Condensed', sans-serif; }
