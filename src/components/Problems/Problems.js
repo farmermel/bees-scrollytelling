@@ -1,4 +1,5 @@
 import React from 'react';
+import './Problems.css';
 
 const problemQuestion = () => {
   return (
@@ -9,8 +10,8 @@ const problemQuestion = () => {
       <div className='fake-circle'></div>
       <button type='submit'>Guess</button>
     </form>
-  )
-}
+  );
+};
 
 const pesticidesArticle = () => {
   return (
@@ -20,8 +21,8 @@ const pesticidesArticle = () => {
       <p>Bees will seek out plants that have been sprayed with neonicitinoides</p>
       <p>Meaning each time they visit sprayed plants, they have a greater chance of not finding home</p>
     </article>
-  )
-}
+  );
+};
 
 const monocultureArticle = () => {
   return (
@@ -32,8 +33,8 @@ const monocultureArticle = () => {
       <p>Also, fields of one plant often cause more problems with weeds and pests</p>
       <p>Enhancing the need for pesticides and harming the pollinating bees</p>
     </article>
-  )
-}
+  );
+};
 
 const climateChangeArticle = () => {
   return (
@@ -43,16 +44,16 @@ const climateChangeArticle = () => {
       <p>Making bees more suseptible to ------------------ colony collapse disorder, parasites?</p>
       <p>Also, climate change causes plants to flower earlier, disrupting the bee's natural schedule</p>
     </article>
-  )
-}
+  );
+};
 
 export const Problems = () => {
   return (
-    <div>
+    <div className='Problems'>
       { problemQuestion() }
       { pesticidesArticle() }
       { monocultureArticle() }
       { climateChangeArticle() }
     </div>
-  )
-}
+  );
+};
