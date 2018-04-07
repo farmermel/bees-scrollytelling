@@ -1,4 +1,5 @@
 import React from 'react';
+import './Help.css';
 
 export const Help = () => {
   return (
@@ -9,5 +10,5 @@ export const Help = () => {
       <h1>Make bee homes</h1>
       <h1>Support bee friendly organizations and legislation</h1>
     </div>
-  )
-}
+  );
+};

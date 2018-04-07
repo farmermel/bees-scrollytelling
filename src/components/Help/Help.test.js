@@ -1,4 +1,3 @@
-
 import Help from './Help';
 
 describe('HELP', () => {
