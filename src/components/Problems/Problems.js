@@ -4,9 +4,11 @@ import './Problems.css';
 const problemQuestion = () => {
   return (
     <form>
-      <label htmlFor="problem">What percent of bee colonies do beekeepers lose every year?</label>
-      <input type="text" id="problem" placeholder="Enter a number between 0 and 100"/>
-      <button type="submit">Guess</button>
+      <h2>Bees are in trouble</h2>
+      <label htmlFor='problem' className='question-descr'>What percent of bee colonies do beekeepers lose every year?</label>
+      <input type='text' id='problem' placeholder='Enter a number between 0 and 100' />
+      <div className='fake-circle'></div>
+      <button type='submit'>Guess</button>
     </form>
   );
 };
