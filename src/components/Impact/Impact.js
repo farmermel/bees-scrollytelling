@@ -44,7 +44,7 @@ const economicArticle = () => {
 
 export const Impact = () => {
   return (
-    <div className='Impact'>
+    <div className='Impact' >
       { dietQuestion() }
       { dietArticle() }
       { economicQuestion() }

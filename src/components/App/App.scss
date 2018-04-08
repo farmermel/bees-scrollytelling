@@ -14,7 +14,6 @@ form {
   // padding: 20px 50px;
   display: flex;
   flex-direction: column;
-  height: 100vh;
   width: 100%;
 }
 
@@ -47,4 +46,12 @@ button {
 
 .question-descr {
   font-size: 2em;
+}
+
+#displayAll {
+  display: block;
+}
+
+#displayNone {
+  display: none;
 }

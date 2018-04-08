@@ -31,7 +31,7 @@ const beeFactsArticle = () => {
 
 export const BeeFacts = () => {
   return (
-    <div>
+    <div >
       { beeFactsQuestion() }
       { beeFactsArticle() }
     </div>
