@@ -4,6 +4,8 @@ import './Help.css';
 export const Help = () => {
   return (
     <div>
+      {/* background effect */}
+      <div className='background'></div>
       <h1>Buy organic and local</h1>
       <h1>Grow pollinator gardens</h1>
       <p>Be sure to ask if the plants you buy were grown with neonicitinoides</p>
