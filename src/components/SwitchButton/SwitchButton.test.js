@@ -1,10 +1,12 @@
+/* eslint-disable */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import SwitchButton from './SwitchButton';
+import { shallow } from 'enzyme';
 
-describe('APP', () => {
+describe('SWITCHBUTTON', () => {
   it.skip('should match the Snapshot', () => {
-    const wrapper = shallow(<App />);
+    const wrapper = shallow(<SwitchButton />);
     expect(wrapper).to.match.snapshot();
   });
 
@@ -12,3 +14,4 @@ describe('APP', () => {
   
   });
 });
+

@@ -1,10 +1,12 @@
+/* eslint-disable */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import Statistics from './Statistics';
+import { shallow } from 'enzyme';
 
-describe('APP', () => {
+describe('Statistics', () => {
   it.skip('should match the Snapshot', () => {
-    const wrapper = shallow(<App />);
+    const wrapper = shallow(<Statistics />);
     expect(wrapper).to.match.snapshot();
   });
 
@@ -12,3 +14,4 @@ describe('APP', () => {
   
   });
 });
+
