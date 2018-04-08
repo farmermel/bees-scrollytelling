@@ -29,6 +29,10 @@ form h2 {
   margin: 20px 0;
 }
 
+input:focus {
+  outline: none;
+}
+
 input[type="text"] {
   margin: 10px 0 50px;
   font-size: 1.5em;

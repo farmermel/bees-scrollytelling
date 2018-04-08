@@ -2,8 +2,40 @@
   min-height: 100vh;
   padding: 20px 0; }
 
+.diet-form {
+  margin-bottom: 70px; }
+
 .fake-circle {
   border-radius: 100%;
   background-color: purple;
   height: 200px;
   width: 200px; }
+
+.question-cont {
+  position: relative; }
+
+.rotate {
+  position: absolute;
+  bottom: 38px;
+  right: 260px;
+  width: 70px; }
+
+/*
+.rotate {
+  width: 50px;
+    -webkit-animation: spin 3s infinite linear;
+    animation: spin 3s infinite linear;
+}
+@-webkit-keyframes spin {
+    100% { -webkit-transform: rotate(360deg); }
+}
+@-moz-keyframes spin {
+    100% { -moz-transform: rotate(360deg); }
+}
+@keyframes spin {
+    100% {
+        -moz-transform:rotate(360deg);
+        -o-transform:rotate(360deg);
+        transform:rotate(360deg);
+    }
+}*/

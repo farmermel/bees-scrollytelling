@@ -1,7 +1,8 @@
 .Header {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; }
+  justify-content: center;
+  margin-bottom: 50px; }
 
 .page-header-img {
   background-image: url("../../assets/bee5.png");

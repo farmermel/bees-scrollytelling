@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Header from '../Header/Header';
-import { Impact } from '../Impact/Impact';
+import Impact from '../Impact/Impact';
 import { Help } from '../Help/Help';
 import { BeeFacts } from '../BeeFacts/BeeFacts';
 import { Problems } from '../Problems/Problems';
@@ -37,7 +37,7 @@ class App extends Component {
       <div className="App" onScroll={() => console.log('hi')}>
         <SwitchButton />
         <Header startScroll={this.startScroll} />
-        <Impact />
+        <Impact startScroll={this.startScroll} />
         <BeeFacts />
         <Problems />
         <Help />
