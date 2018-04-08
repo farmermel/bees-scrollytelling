@@ -2,6 +2,7 @@
   "name": "bees-scrollytelling",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:3001",
   "dependencies": {
     "body-parser": "^1.18.2",
     "chai": "^4.1.2",
