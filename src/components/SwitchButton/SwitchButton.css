@@ -1,5 +1,5 @@
 .toggle {
-  margin-bottom: 10px;
+  margin: 10px 0;
   position: fixed;
   top: 15px;
   right: 15px; }
@@ -26,12 +26,20 @@
       box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
       transition: box-shadow 0.3s ease-in-out;
       animation: moveLeft 0.3s ease-in-out; }
-    .toggle label p {
-      position: absolute;
+    .toggle label div {
+      display: flex;
+      justify-content: space-around;
+      /*      position: absolute;
       top: -17px;
       right: 92px;
-      width: fit-content;
+      width: fit-content;*/
       text-align: right; }
+      .toggle label div p {
+        margin: 10px 0; }
+    .toggle label h4 {
+      position: absolute;
+      bottom: 19px;
+      left: 12px; }
   .toggle input {
     display: none; }
     .toggle input:checked + label {

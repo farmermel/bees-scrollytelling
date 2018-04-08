@@ -30,6 +30,7 @@ class PieChart extends Component {
   }
 
   render() {
+    //this is cool
     return (
       <div className='pie-chart-cont'>
         <div className={`progress-pie-chart ${this.state.class}`} data-percent={this.state.percent}>

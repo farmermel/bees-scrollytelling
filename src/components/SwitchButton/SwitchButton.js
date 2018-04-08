@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './SwitchButton.css';
 
+
+
 class SwitchButton extends Component {
   constructor() {
     super();
@@ -21,13 +23,11 @@ class SwitchButton extends Component {
                type="checkbox" 
                id="toggle" />
         <label htmlFor="toggle">
-          <p>
-            {
-              this.state.checked 
-              ? "Questions are on"
-              : "Questions are off"
-            }
-          </p>
+          <h4>Questions</h4>
+          <div>
+            <p>On</p>
+            <p>Off</p>
+          </div>
         </label>
       </div>
     )
@@ -35,3 +35,11 @@ class SwitchButton extends Component {
 }  
 
 export default SwitchButton; 
+
+          // <p>
+          //   {
+          //     this.state.checked 
+          //     ? "Questions are on"
+          //     : "Questions are off"
+          //   }
+          // </p>
