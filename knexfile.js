@@ -3,10 +3,10 @@ module.exports = {
     client: 'pg',
     connection: 'postgres://localhost/bees',
     migrations: {
-      directory: './src/api/db/migrations'
+      directory: './src/API/db/migrations'
     },
     seeds: {
-      directory: './src/api/db/seeds/development'
+      directory: './src/API/db/seeds/development'
     },
     useNullAsDefault: true
   },
@@ -14,10 +14,10 @@ module.exports = {
     client: 'pg',
     connection: 'postgres://localhost/bees_test',
     migrations: {
-      directory: './src/api/db/migrations'
+      directory: './src/API/db/migrations'
     },
     seeds: {
-      directory: './src/api/db/seeds/test'
+      directory: './src/API/db/seeds/test'
     },
     useNullAsDefault: true
   }
