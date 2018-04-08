@@ -11,7 +11,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      scrollPosition: 750
+      scrollPosition: 750,
+      questionsEnabled: true
     }
   }
 
@@ -20,7 +21,7 @@ class App extends Component {
   }
 
   stopScroll = () => {
-    if(window.scrollY > this.state.scrollPosition) {
+    if(this.state.questionsEnabled && window.scrollY > this.state.scrollPosition) {
       window.scrollTo(0, this.state.scrollPosition)
     }
   }
@@ -30,15 +31,31 @@ class App extends Component {
     this.setState({ scrollPosition })
   }
 
+  toggleQuestionsEnabled = () => {
+    this.setState({
+      questionsEnabled: !this.state.questionsEnabled
+    });
+    //on click 
+    //questionsEnabled = !this.state.qusEn
+    //pass this method as props to switch button
+    //pass questionsEnabled as prop
+    //to all components with questions
+    //eventually when clicked conditionally render questions
+    //for now just allow scroll without answering
+  }
+
   render() {
+    console.log(this.state.questionsEnabled)
     return (
       <div className="App" onScroll={() => console.log('hi')}>
-        <SwitchButton />
-        <Header startScroll={this.startScroll} />
-        <Impact startScroll={this.startScroll} />
-        <BeeFacts />
-        <Problems />
-        <Help />
+        <SwitchButton toggleQuestionsEnabled={ this.toggleQuestionsEnabled } />
+        <Header startScroll={this.startScroll}
+                questionsEnabled={this.state.questionsEnabled} />
+        <Impact startScroll={this.startScroll}
+                questionsEnabled={this.state.questionsEnabled} />
+        <BeeFacts questionsEnabled={this.state.questionsEnabled} />
+        <Problems questionsEnabled={this.state.questionsEnabled} />
+        <Help questionsEnabled={this.state.questionsEnabled} />
       </div>
     );
   }
