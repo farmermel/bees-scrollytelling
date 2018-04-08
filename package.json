@@ -24,7 +24,7 @@
     "build": "npm-run-all build-css build-js",
     "build-css": "node-sass-chokidar src/ -o src/",
     "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
-    "test": "react-scripts test --env=jsdom",
+    "test": "react-scripts test --env=jsdom ./src/components",
     "test-api": "NODE_ENV=test mocha --exit ./src/API/test/routes.spec.js",
     "eject": "react-scripts eject",
     "express": "PORT=3001 nodemon ./src/api/server.js",
