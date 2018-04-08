@@ -40,16 +40,16 @@ class Header extends Component {
   }
 
   postToDB = async () => {
-    const postBody = {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        concern: this.state.concern,
-        age: this.state.age
-      })
-    }
+    // const postBody = {
+    //   method: 'POST',
+    //   headers: {
+    //     'Content-Type': 'application/json'
+    //   },
+    //   body: JSON.stringify({
+    //     concern: this.state.concern,
+    //     age: this.state.age
+    //   })
+    // }
     // try{
     //   const id = await fetch('api/v1/users', postBody);
     //   const blah = await id.json();
