@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import './SwitchButton.css';
 
-
-
 class SwitchButton extends Component {
   constructor() {
     super();
@@ -13,6 +11,7 @@ class SwitchButton extends Component {
 
   handleChange = () => {
     this.setState({ checked: !this.state.checked })
+    this.props.toggleQuestionsEnabled();
   }
 
   render() {
