@@ -31,20 +31,34 @@ class Header extends Component {
     }
   }
 
-  handleSubmit = e => {
+  handleSubmit = async e => {
     e.preventDefault();
     if (this.state.concern && this.state.age) {
       this.props.startScroll(e, 1396);
-      this.saveToDB();
+      await this.postToDB();
     }
   }
 
-  saveToDB = () => {
-    
+  postToDB = async () => {
+    const postBody = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        concern: this.state.concern,
+        age: this.state.age
+      })
+    }
+    // try{
+    //   const id = await fetch('api/v1/users', postBody);
+    //   const blah = await id.json();
+    // } catch (error) {
+    //   console.log(error);
+    // }
   }
 
   handleChange = e => {
-    console.log(e.target.value)
     this.setState({
       [e.target.name]: e.target.value
     })

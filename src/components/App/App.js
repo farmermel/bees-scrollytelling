@@ -23,8 +23,6 @@ class App extends Component {
     if(window.scrollY > this.state.scrollPosition) {
       window.scrollTo(0, this.state.scrollPosition)
     }
-    console.log(window.scrollY)
-
   }
 
   startScroll = (e, scrollPosition) => {
