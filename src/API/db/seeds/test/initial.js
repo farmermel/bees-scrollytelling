@@ -5,9 +5,9 @@ exports.seed = function(knex, Promise) {
     .then(() => {
       return knex('users')
         .insert([
-          { location: 'Maryland', age: 10 },
-          { location: 'Colorado', age: 10 },
-          { location: 'Jersey', age: 10 }
+          { location: 'Maryland', age: 10, concern: 'Not very concerned' },
+          { location: 'Colorado', age: 10, concern: 'Not very concerned' },
+          { location: 'Jersey', age: 10, concern: 'Not very concerned' }
         ])
         .then(() => {
           return knex('bees').insert([
