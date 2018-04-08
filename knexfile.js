@@ -10,7 +10,6 @@ module.exports = {
     },
     useNullAsDefault: true
   },
-
   test: {
     client: 'pg',
     connection: 'postgres://localhost/bees_test',
