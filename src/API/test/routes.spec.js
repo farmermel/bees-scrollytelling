@@ -57,4 +57,37 @@ describe('API routes', () => {
       })
     })
   })
+
+  describe('POST /api/v1/answers', () => {
+    it('sends status 201 and id if post is successful', () => {
+      return chai.request(server)
+      .post('/api/v1/answers')
+      .send({
+        users_id: 1,
+        user_answer: '20',
+        question: 'impact diet'
+      })
+      .then(response => {
+        response.should.have.status(201);
+        response.body.should.have.property('id');
+        response.body.id.should.equal(3);
+      })
+      .catch(error => {
+        throw error;
+      })
+    })
+
+    it('sends status 422 if missing required parameter', () => {
+      return chai.request(server)
+      .post('/api/v1/answers')
+      .send({
+        users_id: 1
+      })
+      .then(response => {
+        response.should.have.status(422);
+        response.body.should.have.property('error');
+        response.body.error.should.equal('Expected request body to have format {users_id: <number>, user_answer: <string>, question: <string>}, missing user_answer')
+      })
+    })
+  })
 })
