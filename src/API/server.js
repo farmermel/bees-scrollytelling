@@ -15,13 +15,13 @@ app.get('/', (request, response) => {
 });
 
 app.post('/api/v1/users', async (request, response) => {
-  const requiredArr = ['concern', 'age'];
+  const requiredArr = ['concern', 'age', 'location'];
   for (let param of requiredArr) {
     if (!request.body[param]) {
       return response
       .status(422)
       .send({
-        error: `Expected request body to have format {concern: <string>, age: <string>}, missing ${param}`
+        error: `Expected request body to have format {concern: <string>, age: <string>, location: <object>}, missing ${param}`
       })
     }
   }

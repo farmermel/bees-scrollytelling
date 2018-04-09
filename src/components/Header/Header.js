@@ -27,9 +27,36 @@ class Header extends Component {
     super();
     this.state = {
       concern: '',
-      age: ''
+      age: '',
+      location: {}
     }
   }
+
+  componentDidMount = () => {
+    this.handleCurrentLocation()
+  }
+
+  shouldComponentUpdate(nextProps, nextState){
+    if(nextState.location !== this.state.location) {
+      return false;
+    }
+    return true;
+  }
+
+  handleCurrentLocation = async () => {
+    if ('geolocation' in navigator) {
+      console.log('geolocation')
+      try {
+        await navigator.geolocation.getCurrentPosition(response => {  
+          const { latitude, longitude } = response.coords;
+          console.log('Location Set')
+          this.setState({ location: {latitude: parseFloat(latitude), longitude: parseFloat(longitude)}})
+        });
+      } catch (error) {
+        console.log('handleCurrentLocation error', error)
+      }
+    }
+  };
 
   handleSubmit = async e => {
     e.preventDefault();
@@ -51,7 +78,8 @@ class Header extends Component {
     //   },
     //   body: JSON.stringify({
     //     concern: this.state.concern,
-    //     age: this.state.age
+    //     age: this.state.age,
+    //     location: this.state.location   
     //   })
     // }
     // try{
