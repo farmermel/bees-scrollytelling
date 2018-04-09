@@ -27,10 +27,10 @@ class PieChart extends Component {
   changePercent = async (e) => {
     await this.setState({ [e.target.name]: e.target.value })
     this.updateChart();
+    this.props.updateImpactPercent(this.state.percent);
   }
 
   render() {
-    //this is cool
     return (
       <div className='pie-chart-cont'>
         <div className={`progress-pie-chart ${this.state.class}`} data-percent={this.state.percent}>
