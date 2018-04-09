@@ -16,8 +16,8 @@ app.get('/', (request, response) => {
 
 app.post('/api/v1/users', async (request, response) => {
   const requiredArr = ['concern', 'age'];
-  for(let param of requiredArr) {
-    if(!request.body[param]) {
+  for (let param of requiredArr) {
+    if (!request.body[param]) {
       return response
       .status(422)
       .send({
@@ -30,7 +30,27 @@ app.post('/api/v1/users', async (request, response) => {
     const id = await database('users').insert({ concern, age }, 'id');
     return response.status(201).send({ id: id[0] });
   } catch (error) {
-    return response.status(500).error({ error: 'something went wrong!' })
+    return response.status(500).error({ error: 'something went wrong!' });
+  }
+})
+
+app.post('/api/v1/answers', async (request, response) => {
+  const requiredArr = ['users_id', 'user_answer', 'question'];
+  for (let param of requiredArr) {
+    if(!request.body[param]) {
+      return response
+      .status(422)
+      .send({
+        error: `Expected request body to have format {users_id: <number>, user_answer: <string>, question: <string>}, missing ${param}`
+      })
+    }
+  }
+  try {
+    const { users_id, user_answer, question } = request.body;
+    const id = await database('bees').insert({ users_id, user_answer, question }, 'id');
+    return response.status(201).send({ id: id[0] });
+  } catch (error) {
+    return response.status(500).send({ error: 'something went wrong! '});
   }
 })
 

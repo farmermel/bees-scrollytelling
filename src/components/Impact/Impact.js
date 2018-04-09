@@ -13,9 +13,25 @@ class Impact extends Component {
     }
   }
 
+  handleSubmit = async e => {
+    this.props.startScroll(e, 2500);
+    // const postBody = {
+    //   method: 'POST',
+    //   headers: {
+    //     'Content-type': 'application/json'
+    //   },
+    //   body: JSON.stringify({
+    //     users_id: this.props.currentUserId,
+    //     user_answer: this.state.percent,
+    //     question: 'impact diet'
+    //   })
+    // }
+    // await fetch('/api/v1/questions', postBody);
+  }
+
   displayDietQuestion = () => {
     return (
-      <form onSubmit={(e) => this.props.startScroll(e, 2500)} className="diet-form">
+      <form onSubmit={(e) => this.handleSubmit(e, 2500)} className="diet-form">
         <div className='question-cont'>
           <h2>Let's talk about food...</h2>
         </div>

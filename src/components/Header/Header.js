@@ -33,9 +33,13 @@ class Header extends Component {
 
   handleSubmit = async e => {
     e.preventDefault();
-    if (this.state.concern && this.state.age) {
-      this.props.startScroll(e, 1396);
-      await this.postToDB();
+    try {
+      if (this.state.concern && this.state.age) {
+        this.props.startScroll(e, 1396);
+        await this.postToDB();
+      }
+    } catch (error) {
+      console.log(error);
     }
   }
 
@@ -51,8 +55,10 @@ class Header extends Component {
     //   })
     // }
     // try{
-    //   const id = await fetch('api/v1/users', postBody);
-    //   const blah = await id.json();
+    //   const idResponse = await fetch('api/v1/users', postBody);
+    //   const id = await idResponse.json();
+    //   this.props.saveUser(id)
+    //   put user id into state on app for other question's answers
     // } catch (error) {
     //   console.log(error);
     // }
