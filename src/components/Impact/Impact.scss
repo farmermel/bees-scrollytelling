@@ -4,7 +4,8 @@
 }
 
 .diet-form {
-  margin-bottom: 70px;
+  margin: 50px 0;
+  height: 100vh;
 }
 
 .fake-circle {
@@ -25,6 +26,72 @@
   width: 70px;
 }
 
+.diet-article {
+  height: 100vh;
+
+  & h1 {
+    font-size: 3em;
+  }  
+
+  & p {
+    font-size: 1.6em;
+  }
+
+  & .foods-cont {
+    display: flex;
+    justify-content: center;
+  }
+
+  & .foods {
+    display: flex;
+    justify-content: space-evenly;
+    width: 200px;
+    height: 200px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  & #chocolate {
+    background-image: url('../../assets/chocolate.png');
+  }
+
+  & #avocado {
+    background-image: url('../../assets/avocado.png');
+  }
+
+  & #coffee {
+    background-image: url('../../assets/coffee-beans.png');
+  }
+}
+
+.economic-questions {
+  width: 100%;
+  height: 100vh;
+  margin: 50px 0;
+
+  & div {
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    margin: 50px auto;
+  }
+
+  & input {
+    width: 48%;
+    height: 50px;
+    border: 2px solid #e5e5e5;
+    padding-left: 20px;
+    box-sizing: border-box;
+    font-size: 1.3em;
+  }
+}
+
+.economic-article {
+  & h1 {
+    font-size: 3em;
+  }
+}
 /*
 .rotate {
   width: 50px;
