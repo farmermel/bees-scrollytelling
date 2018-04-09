@@ -12,7 +12,8 @@ class App extends Component {
     super();
     this.state = {
       scrollPosition: 750,
-      questionsEnabled: true
+      questionsEnabled: true,
+      currentUserId: null
     }
   }
 
@@ -31,6 +32,12 @@ class App extends Component {
     this.setState({ scrollPosition })
   }
 
+  saveUser = id => {
+    this.setState({
+      currentUserId: id
+    })
+  }
+
   toggleQuestionsEnabled = () => {
     this.setState({
       questionsEnabled: !this.state.questionsEnabled
@@ -45,17 +52,18 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.questionsEnabled)
     return (
       <div className="App" onScroll={() => console.log('hi')}>
         <SwitchButton toggleQuestionsEnabled={ this.toggleQuestionsEnabled } />
-        <Header startScroll={this.startScroll}
-                questionsEnabled={this.state.questionsEnabled} />
-        <Impact startScroll={this.startScroll}
-                questionsEnabled={this.state.questionsEnabled} />
-        <BeeFacts questionsEnabled={this.state.questionsEnabled} />
-        <Problems questionsEnabled={this.state.questionsEnabled} />
-        <Help questionsEnabled={this.state.questionsEnabled} />
+        <Header startScroll={ this.startScroll }
+                questionsEnabled={ this.state.questionsEnabled }
+                saveUser={ this.saveUser } />
+        <Impact startScroll={ this.startScroll }
+                questionsEnabled={ this.state.questionsEnabled }
+                currentUserId={ this.state.currentUserId } />
+        <BeeFacts questionsEnabled={ this.state.questionsEnabled } />
+        <Problems questionsEnabled={ this.state.questionsEnabled } />
+        <Help questionsEnabled={ this.state.questionsEnabled } />
       </div>
     );
   }
