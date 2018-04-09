@@ -22,7 +22,6 @@ class App extends Component {
   }
 
   stopScroll = () => {
-    console.log(window.scrollY)
     if(this.state.questionsEnabled && window.scrollY > this.state.scrollPosition) {
       window.scrollTo(0, this.state.scrollPosition)
     }
