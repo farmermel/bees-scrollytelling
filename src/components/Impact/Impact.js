@@ -9,34 +9,36 @@ class Impact extends Component {
   constructor(props) {
     super(props);
     this.state = { 
-      percent: 20
+      percent: 0,
+      economy: 0
     }
   }
 
-  handleSubmit = async e => {
-    this.props.startScroll(e, 2500);
-    // const postBody = {
-    //   method: 'POST',
-    //   headers: {
-    //     'Content-type': 'application/json'
-    //   },
-    //   body: JSON.stringify({
-    //     users_id: this.props.currentUserId,
-    //     user_answer: this.state.percent,
-    //     question: 'impact diet'
-    //   })
-    // }
+  handleSubmit = async (e, scrollStop, answer, question) => {
+    this.props.startScroll(e, scrollStop);
+    const postBody = {
+      method: 'POST',
+      headers: {
+        'Content-type': 'application/json'
+      },
+      body: JSON.stringify({
+        users_id: this.props.currentUserId,
+        user_answer: this.state[answer],
+        question: question
+      })
+    }
+    console.log(postBody)
     // await fetch('/api/v1/questions', postBody);
   }
 
   displayDietQuestion = () => {
     return (
-      <form onSubmit={(e) => this.handleSubmit(e, 2500)} className="diet-form">
+      <form onSubmit={(e) => this.handleSubmit(e, 2770, 'percent', 'impact diet')} className="diet-form">
         <div className='question-cont'>
           <h2>Let's talk about food...</h2>
         </div>
         <label htmlFor='diet' className='question-descr'>What percentage of your diet do you think is provided by bees?</label>
-        <PieChart />
+        <PieChart updateImpactPercent={ this.updateImpactPercent } />
         <button type='submit'>Guess</button>
       </form>
     );
@@ -55,11 +57,16 @@ class Impact extends Component {
         <a href='https://en.wikipedia.org/wiki/List_of_crop_plants_pollinated_by_bees' target='_blank'>Click to see all the other crops pollinated by food</a>
       </article>
     );
-  };
+  }
+
+  updateImpactPercent = percent => {
+    this.setState({ percent });
+  }
 
   displayEconomicQuestion = () => {
     return (
-      <form className="economic-questions">
+      <form onSubmit={(e) => this.handleSubmit(e, 4500, 'economy', 'impact economy')}
+            className='economic-questions'>
         <h2>What about the Economy?</h2>
         <label htmlFor='economic' className='question-descr'>How much do bees contribute to the economy, anually?</label>
         <div>
@@ -85,7 +92,7 @@ class Impact extends Component {
         <button type='submit'>Guess</button>
       </form>
     );
-  };
+  }
 
   displayEconomicArticle = () => {
     return (
@@ -93,7 +100,7 @@ class Impact extends Component {
         <h1>The honeybee services are valued to be just above $20 billion in the United States. World wide, that number rises to $217 billion. </h1>
       </article>
     );
-  };
+  }
 
   render() {
     return (
@@ -108,75 +115,3 @@ class Impact extends Component {
 }
 
 export default Impact;
-
-// const dietQuestion = (startScroll) => {
-//   return (
-//     <form onSubmit={(e) => startScroll(e, 2500)} className="diet-form">
-//       <div className='question-cont'>
-//         <h2>Let's talk about food...</h2>
-//       </div>
-//       <label htmlFor='diet' className='question-descr'>What percentage of your diet do you think is provided by bees?</label>
-//       <PieChart />
-//       <button type='submit'>Guess</button>
-//     </form>
-//   );
-// };
-
-// const dietArticle = () => {
-//   return (
-//     <article>
-//       <h1>60% diversity of food you eat, 30% by volume, are pollinated by bees</h1>
-//       <p>Most fruits and vegetables are animal pollinated, including chocolate, coffee, tea, and avocados</p>
-//       <a href='https://en.wikipedia.org/wiki/List_of_crop_plants_pollinated_by_bees' target='_blank'>Click to see all the other crops pollinated by food</a>
-//     </article>
-//   );
-// };
-
-// const economicQuestion = () => {
-//   return (
-//     <form>
-//       <h2>What about the Economy?</h2>
-//       <label htmlFor='economic' className='question-descr'>How much do bees contribute to the economy, anually?</label>
-//       <input type='text' id='economic' placeholder='Not sure on best avenue to provide answers to these questions' />
-//       <button type='submit'>Guess</button>
-//     </form>
-//   );
-// };
-
-// const economicArticle = () => {
-//   return (
-//     <article>
-//       <h1>The honeybee services are valued to be just above $20 billion in the United States. World wide, that number rises to $217 billion. </h1>
-//     </article>
-//   );
-// };
-
-// export const Impact = (props) => {
-//   return (
-//     <div className='Impact' >
-//       { dietQuestion(props.startScroll) }
-//       { dietArticle() }
-//       { economicQuestion() }
-//       { economicArticle() }
-//     </div>
-//   );
-// };
-
-        // <Parallax
-        //   offsetXMax={5}
-        // >
-        //   <img class='rotate' src={orange} />
-        // </Parallax>
-        // <Parallax
-        //   offsetXMax={25}
-        // >
-        //   <img class='rotate' src={apple} />
-        // </Parallax>
-        // <Parallax
-        //   offsetXMax={35}
-        // >
-        //   <img class='rotate' src={orange} />
-        // </Parallax>
-
-      //         <input type='text' id='diet' placeholder='Enter a number between 1 and 100' />
-      // <div className='fake-circle'></div>
