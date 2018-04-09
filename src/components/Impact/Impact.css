@@ -62,8 +62,10 @@
     box-sizing: border-box;
     font-size: 1.3em; }
 
-.economic-article h1 {
-  font-size: 3em; }
+.economic-article {
+  height: 100vh; }
+  .economic-article h1 {
+    font-size: 3em; }
 
 /*
 .rotate {
