@@ -26,13 +26,13 @@ app.post('/api/v1/users', async (request, response) => {
     }
   }
   try {
-    const { concern, age } = request.body;
-    const id = await database('users').insert({ concern, age }, 'id');
+    const { concern, age, location } = request.body;
+    const id = await database('users').insert({ concern, age, location }, 'id');
     return response.status(201).send({ id: id[0] });
   } catch (error) {
     return response.status(500).error({ error: 'something went wrong!' });
   }
-})
+});
 
 app.post('/api/v1/answers', async (request, response) => {
   const requiredArr = ['users_id', 'user_answer', 'question'];
