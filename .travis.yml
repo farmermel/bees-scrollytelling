@@ -6,7 +6,14 @@ services:
 before_script:
 - psql -c 'CREATE DATABASE bees_test;' -U postgres
 script:
-# - npm run test-api
+- npm run test-api
 # - npm run lint
 notifications:
 - email: false
+deploy:
+  provider: heroku
+  skip_cleanup: true
+  api_key:
+    secure: hxXWZJY7Na2bj01Sc08hIWow1CKY+37NMOUprQDlI1+I/7Oj53N+vzN0tOoLfy+SKA4HP/SVF1QmLgqjQnJKSAtA/MuXsf3ezLvY11c3SLA3vPL0E+JK10cUBtMG3OZX2XfPLYPR4rSP3D4ZA8t6gMlS/RbTKUpoNfAcDw6+Idqzz3RjGPqoEfcK7fCx7aFI0doZxMo7S5FpIru8cHFeCv2CjxrhqUDs+fQITL1N+NT0V0j/kgwekaL7xuyzctUnRlXL2ojibPvlLNXKiNmwsA2cslmDJ5kQDOR48i8h1Aio2tI1HcGdnEQ/4Q/rKLIXxj/rNhISvMcjsU2ut1fUhWcp8H1sdqJ5RG9LIkcbHcVdg75eHuAch4UTxqR5fgdLT0ZYn4rj+qdK/4YwCopBTuf25M/sGj7xOJyfc91/iPVFZdcvzEnOvKqMtOrs/JJxobWC7ha8C9Lt9wm91lAFWULT41XbfiYC9puvWOi9yUzMFEEBco7wHedpH9GO9/wn3u7Y7CcKZhb9vHEkLsZjoY6+0n172LSAGkN28yJHsEXiOBbBrrHAW9nBc7yqD6TuR8LtfS5MQD/WID9d9ewyhUCKgsgiMgZmYSURtxb17QSDP93JEblyLXA2Xfdz451aUXPAac0VBiEmu6mkykjHV+DfjmEuAmvg9vPKca3/dRY=
+
+
