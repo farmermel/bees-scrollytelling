@@ -23,6 +23,28 @@ describe('API routes', () => {
     });
   });
 
+  describe('GET /api/v1/answers', () => {
+    it('sends status 200 if get is successful', () => {
+      return chai.request(server)
+      .get('/api/v1/answers')
+      .then(response => {
+        response.should.have.status(200);
+        response.body.should.be.a('array');
+        response.body[0].should.have.property('id');
+        response.body[0].id.should.equal(1);
+        response.body[0].should.have.property('question');
+        response.body[0].question.should.equal('Do you LOVE bees');
+        response.body[0].should.have.property('user_answer');
+        response.body[0].user_answer.should.equal('YES');
+        response.body[0].should.have.property('users_id');
+        response.body[0].users_id.should.equal(1);
+      })
+      .catch(error => {
+        throw error;
+      })
+    })
+  })
+
   describe('POST /api/v1/users', () => {
     it('sends status 201 and id if post is successful', () => {
       return chai.request(server)
