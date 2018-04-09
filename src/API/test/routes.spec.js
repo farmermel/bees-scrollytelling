@@ -17,11 +17,11 @@ describe('API routes', () => {
         .then(() => {
           return database.seed.run()
           .then(() => {
-            done()
-        })
-      })
-    })
-  })
+            done();
+        });
+      });
+    });
+  });
 
   describe('POST /api/v1/users', () => {
     it('sends status 201 and id if post is successful', () => {
@@ -29,7 +29,8 @@ describe('API routes', () => {
       .post('/api/v1/users')
       .send({
         concern: 'A little concerned',
-        age: '13-19'
+        age: '13-19',
+        location: {latitude: 100, longitude: 100}
       })
       .then(response => {
         response.should.have.status(201);
@@ -38,25 +39,27 @@ describe('API routes', () => {
       })
       .catch(error => {
         throw error;
-      })
-    })
+      });
+    });
 
     it('sends status 422 if missing required parameter', () => {
       return chai.request(server)
       .post('/api/v1/users')
       .send({
-        age: '13-19'
+        // concern: 'A little concerned',
+        age: '13-19',
+        location: {latitude: 100, longitude: 100}
       })
       .then(response => {
         response.should.have.status(422);
         response.body.should.have.property('error');
-        response.body.error.should.equal('Expected request body to have format {concern: <string>, age: <string>}, missing concern')
+        response.body.error.should.equal('Expected request body to have format {concern: <string>, age: <string>, location: <object>}, missing concern');
       })
       .catch(error => {
         throw error;
-      })
-    })
-  })
+      });
+    });
+  });
 
   describe('POST /api/v1/answers', () => {
     it('sends status 201 and id if post is successful', () => {
@@ -74,8 +77,8 @@ describe('API routes', () => {
       })
       .catch(error => {
         throw error;
-      })
-    })
+      });
+    });
 
     it('sends status 422 if missing required parameter', () => {
       return chai.request(server)
@@ -86,8 +89,8 @@ describe('API routes', () => {
       .then(response => {
         response.should.have.status(422);
         response.body.should.have.property('error');
-        response.body.error.should.equal('Expected request body to have format {users_id: <number>, user_answer: <string>, question: <string>}, missing user_answer')
-      })
-    })
-  })
-})
+        response.body.error.should.equal('Expected request body to have format {users_id: <number>, user_answer: <string>, question: <string>}, missing user_answer');
+      });
+    });
+  });
+});
