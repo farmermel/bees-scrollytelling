@@ -14,6 +14,16 @@ app.get('/', (request, response) => {
   response.send('Oh hey bees-scrollytelling time');
 });
 
+app.get('/api/v1/answers', (request, response) => {
+  database('bees').select()
+  .then(answers => {
+    return response.status(200).send(answers);
+  })
+  .catch(error => {
+    return response.status(500).send({ error: 'something went wrong!' });
+  })
+})
+
 app.post('/api/v1/users', async (request, response) => {
   const requiredArr = ['concern', 'age', 'location'];
   for (let param of requiredArr) {
