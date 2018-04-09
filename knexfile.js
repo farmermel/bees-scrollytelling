@@ -20,5 +20,14 @@ module.exports = {
       directory: './src/API/db/seeds/test'
     },
     useNullAsDefault: true
+  },
+
+  production: {
+    client: 'pg',
+    connection: process.env.DATABASE_URL + `?ssl=true`,
+    migrations: {
+      directory: './src/API/db/migrations'
+    },
+    useNullAsDefault: true
   }
 };
