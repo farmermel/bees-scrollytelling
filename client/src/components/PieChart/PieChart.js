@@ -7,12 +7,12 @@ class PieChart extends Component {
     this.state = {
       class: '',
       degree: 0,
-      percent: 10,
+      percent: 10
     }
   }
 
   componentDidMount = () => {
-    this.updateChart()
+    this.updateChart();
   }
 
   updateChart = () => {
@@ -33,13 +33,15 @@ class PieChart extends Component {
   render() {
     return (
       <div className='pie-chart-cont'>
-        <div className={`progress-pie-chart ${this.state.class}`} data-percent={this.state.percent}>
-          <div className="ppc-progress">
-            <div className="ppc-progress-fill" style={{transform: `rotate(${this.state.degree}deg)`}}></div>
+        <div className={`progress-pie-chart ${ this.state.class }`} 
+             data-percent={ this.state.percent }>
+          <div className='ppc-progress'>
+            <div className='ppc-progress-fill' 
+                 style={{transform: `rotate(${this.state.degree}deg)`}}></div>
           </div>
-          <div className="ppc-percents">
-            <div className="pcc-percents-wrapper">
-              <span>{this.state.percent}%</span>
+          <div className='ppc-percents'>
+            <div className='pcc-percents-wrapper'>
+              <span>{ this.state.percent }%</span>
             </div>
           </div>
         </div>
@@ -47,14 +49,14 @@ class PieChart extends Component {
         <div>
           <label>Enter a Percentage</label>
           <input 
-            name="percent" 
-            type="number" 
-            placeholder="Percent" 
-            step="5" 
-            min="0" 
-            max="100"
-            value={this.state.percent}
-            onChange={this.changePercent}
+            name='percent' 
+            type='number' 
+            placeholder='Percent' 
+            step='5' 
+            min='0' 
+            max='100'
+            value={ this.state.percent }
+            onChange={ this.changePercent }
           />
         </div>
       </div>
