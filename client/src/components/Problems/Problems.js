@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PieChart from '../PieChart/PieChart';
+import PropTypes from 'prop-types';
 import './Problems.css';
 
 
@@ -87,6 +88,11 @@ export class Problems extends Component {
         { this.climateChangeArticle() }
       </div>
     );
-  }
-    
+  }   
 };
+
+Problems.propTypes = {
+  questionsEnabled: PropTypes.bool.isRequired,
+  startScroll: PropTypes.func.isRequired,
+  currentUserId: PropTypes.bool
+}
