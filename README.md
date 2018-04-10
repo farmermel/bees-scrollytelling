@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/farmermel/bees-scrollytelling.svg?branch=master)](https://travis-ci.org/farmermel/bees-scrollytelling)
+
 # Bees and Agriculture
 ### A scrollytelling application by Casey Dallavalle, Jeff Goodall, and Melena Suliteanu
 
