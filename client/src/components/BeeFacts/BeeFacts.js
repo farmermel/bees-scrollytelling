@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './BeeFacts.css';
+import truck from '../../assets/truck2.png';
 
 export class BeeFacts extends Component {
   constructor(props) {
@@ -66,7 +67,7 @@ export class BeeFacts extends Component {
         </div>
         <div id="last">
           <h2>Can be transported</h2>
-          <div className='bee-images transport'>
+          <div className='bee-images' id='transport'>
           </div>
         </div>
         <div>

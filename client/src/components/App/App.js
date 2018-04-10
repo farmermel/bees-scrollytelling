@@ -5,6 +5,7 @@ import { Help } from '../Help/Help';
 import { BeeFacts } from '../BeeFacts/BeeFacts';
 import { Problems } from '../Problems/Problems';
 import SwitchButton from '../SwitchButton/SwitchButton';
+import Statistics from '../Statistics/Statistics';
 import './App.css';
 
 class App extends Component {
@@ -61,6 +62,7 @@ class App extends Component {
                   startScroll={ this.startScroll }
                   currentUserId={ this.state.currentUserId } />
         <Help questionsEnabled={ this.state.questionsEnabled } />
+        <Statistics />
       </div>
     );
   }
