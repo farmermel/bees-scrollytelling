@@ -62,7 +62,7 @@ class App extends Component {
                   startScroll={ this.startScroll }
                   currentUserId={ this.state.currentUserId } />
         <Help questionsEnabled={ this.state.questionsEnabled } />
-        <Statistics />
+        <Statistics userId={ this.state.currentUserId } />
       </div>
     );
   }
