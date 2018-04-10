@@ -61,7 +61,8 @@ class App extends Component {
         <Impact startScroll={ this.startScroll }
                 questionsEnabled={ this.state.questionsEnabled }
                 currentUserId={ this.state.currentUserId } />
-        <BeeFacts questionsEnabled={ this.state.questionsEnabled } />
+        <BeeFacts questionsEnabled={ this.state.questionsEnabled }
+                  startScroll={ this.startScroll } />
         <Problems questionsEnabled={ this.state.questionsEnabled } />
         <Help questionsEnabled={ this.state.questionsEnabled } />
       </div>
