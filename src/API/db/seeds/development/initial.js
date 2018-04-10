@@ -8,11 +8,11 @@ exports.seed = function(knex, Promise) {
           { location: 'Maryland', age: 10, concern: 'Not very concerned' },
           { location: 'Colorado', age: 10, concern: 'Not very concerned' },
           { location: 'Jersey', age: 10, concern: 'Not very concerned' }
-        ])
-        .then(() => {
+        ], 'id')
+        .then(userId => {
           return knex('bees').insert([
-            { question: 'Do you LOVE bees', user_answer: 'YES', users_id: '1' },
-            { question: 'what about BEES do you love most', user_answer: 'Honey', users_id: '1' }
+            { question: 'Do you LOVE bees', user_answer: 'YES', users_id: userId[0] },
+            { question: 'what about BEES do you love most', user_answer: 'Honey', users_id: userId[0] }
           ]);
         })
         .then(() => console.log('Seeding complete!'))
