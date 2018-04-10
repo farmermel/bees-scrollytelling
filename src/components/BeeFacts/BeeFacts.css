@@ -11,7 +11,7 @@
 
 .bee-article {
   width: 100%;
-  height: 100vh; }
+  height: fit-content; }
   .bee-article h1 {
     font-size: 3em; }
   .bee-article h2 {
@@ -35,3 +35,9 @@
     height: 257px;
     width: 390px;
     background-image: url("../../assets/bee-box.png"); }
+  .bee-article .transport {
+    height: 257px;
+    width: 390px;
+    background-image: url("../../assets/truck.png"); }
+  .bee-article .transport > h3 {
+    margin-right: 20px; }

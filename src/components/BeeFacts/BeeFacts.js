@@ -19,13 +19,18 @@ const beeFactsArticle = () => {
       <h1>you probably know:</h1>
       <div>
         <h2>The Honey Bee</h2>
-        <div className="honey-bee bee-images">
+        <div className="bee-images honey-bee">
         </div>
       </div>
       <div>
-        <div className="bee-box bee-images">
+        <div className="bee-images bee-box">
         </div>
-        <h3>They're domesticated</h3>
+        <h2>They're domesticated</h2>
+      </div>
+      <div>
+        <h2>Can be transported</h2>
+        <div className="bee-images transport">
+        </div>
       </div>
     </article>
   )

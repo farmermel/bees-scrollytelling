@@ -13,7 +13,7 @@
 
 .bee-article {
   width: 100%;
-  height: 100vh;
+  height: fit-content;
 
   & h1 {
     font-size: 3em;
@@ -50,5 +50,15 @@
     height: 257px;
     width: 390px;
     background-image: url('../../assets/bee-box.png');
+  }
+
+  & .transport {
+    height: 257px;
+    width: 390px;
+    background-image: url('../../assets/truck.png');
+  }
+
+  & .transport < h3 {
+    margin-right: 20px;
   }
 }
