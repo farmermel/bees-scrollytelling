@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Parallax } from 'react-scroll-parallax';
+import PropTypes from 'prop-types';
 import './Header.css';
 
 
@@ -151,5 +152,11 @@ class Header extends Component {
     );
   }
 };
+
+Header.propTypes = {
+  startScroll: PropTypes.func.isRequired,
+  questionsEnabled: PropTypes.bool.isRequired,
+  saveUser: PropTypes.func.isRequired
+}
 
 export default Header;
