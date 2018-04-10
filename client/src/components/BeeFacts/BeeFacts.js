@@ -99,6 +99,6 @@ export class BeeFacts extends Component {
 
 BeeFacts.propTypes = {
   currentUserId: PropTypes.string,
-  startScroll: PropTypes.func,
-  questionsEnabled: PropTypes.bool
+  startScroll: PropTypes.func.isRequired,
+  questionsEnabled: PropTypes.bool.isRequired
 }
