@@ -14,22 +14,37 @@ const beeFactsQuestion = () => {
 
 const beeFactsArticle = () => {
   return (
-    <article className="bee-article">
+    <article className='bee-article'>
       <h1>There are more than 4000 types of wild bees,</h1>
       <h1>you probably know:</h1>
       <div>
         <h2>The Honey Bee</h2>
-        <div className="bee-images honey-bee">
+        <div className='bee-images honey-bee'>
         </div>
       </div>
       <div>
-        <div className="bee-images bee-box">
+        <div className='bee-images bee-box'>
         </div>
         <h2>They're domesticated</h2>
       </div>
-      <div>
+      <div id="last">
         <h2>Can be transported</h2>
-        <div className="bee-images transport">
+        <div className='bee-images transport'>
+        </div>
+      </div>
+      <div>
+        <h2>The Wild Bees</h2>
+        <div className='bee-images wild-bee'>
+        </div>
+      </div>
+      <div>
+        <div className='bee-images solitary'>
+        </div>
+        <h2>Mostly solitary but diverse</h2>
+      </div>
+      <div>
+        <h2>Local pollinators</h2>
+        <div className='bee-images flower'>
         </div>
       </div>
     </article>
@@ -44,14 +59,3 @@ export const BeeFacts = () => {
     </div>
   )
 }
-
-        // <ul>The Honey Bee
-        //   <li>lives in colonies</li>
-        //   <li>domesticated</li>
-        //   <li>can be transported via automobile</li>
-        // </ul>
-        // <ul>The Wild Bee
-        //   <li>solitary</li>
-        //   <li>diverse</li>
-        //   <li>local pollination</li>
-        // </ul>
