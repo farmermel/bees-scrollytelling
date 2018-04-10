@@ -35,30 +35,39 @@
   }
 
   & .bee-images {
+    height: 257px;
+    width: 390px;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
   }
 
   & .honey-bee {
-    height: 257px;
-    width: 390px;
     background-image: url('../../assets/bee2.png');
   }
 
-  & .bee-box {
-    height: 257px;
-    width: 390px;
+  & .bee-box { 
     background-image: url('../../assets/bee-box.png');
   }
 
   & .transport {
-    height: 257px;
-    width: 390px;
     background-image: url('../../assets/truck.png');
   }
 
-  & .transport < h3 {
-    margin-right: 20px;
+  & .wild-bee {
+    background-image: url('../../assets/wild-bee.png');
   }
+
+  & .solitary {
+    background-image: url('../../assets/bee-home.png');
+  }
+
+  & .flower {
+    background-image: url('../../assets/pink-flower.png');
+  }
+
+  & #last {
+    margin-bottom: 250px;
+  }
+
 }

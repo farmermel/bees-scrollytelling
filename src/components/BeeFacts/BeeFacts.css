@@ -24,20 +24,22 @@
     justify-content: center;
     align-items: center; }
   .bee-article .bee-images {
+    height: 257px;
+    width: 390px;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center; }
   .bee-article .honey-bee {
-    height: 257px;
-    width: 390px;
     background-image: url("../../assets/bee2.png"); }
   .bee-article .bee-box {
-    height: 257px;
-    width: 390px;
     background-image: url("../../assets/bee-box.png"); }
   .bee-article .transport {
-    height: 257px;
-    width: 390px;
     background-image: url("../../assets/truck.png"); }
-  .bee-article .transport > h3 {
-    margin-right: 20px; }
+  .bee-article .wild-bee {
+    background-image: url("../../assets/wild-bee.png"); }
+  .bee-article .solitary {
+    background-image: url("../../assets/bee-home.png"); }
+  .bee-article .flower {
+    background-image: url("../../assets/pink-flower.png"); }
+  .bee-article #last {
+    margin-bottom: 250px; }
