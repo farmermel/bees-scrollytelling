@@ -28,6 +28,9 @@ module.exports = {
     migrations: {
       directory: './API/db/migrations'
     },
+    seeds: {
+      directory: './API/db/seeds/test'
+    },
     useNullAsDefault: true
   }
 };
