@@ -1,2 +1,12 @@
 .Problems {
   color: inherit; }
+  .Problems form {
+    margin: 50px auto;
+    height: 100vh; }
+
+.problems-article {
+  height: 100vh; }
+  .problems-article h1 {
+    font-size: 3em; }
+  .problems-article p {
+    font-size: 2em; }
