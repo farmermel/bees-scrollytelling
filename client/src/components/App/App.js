@@ -64,7 +64,8 @@ class App extends Component {
         <BeeFacts questionsEnabled={ this.state.questionsEnabled }
                   startScroll={ this.startScroll } />
         <Problems questionsEnabled={ this.state.questionsEnabled }
-                  startScroll={ this.startScroll } />
+                  startScroll={ this.startScroll }
+                  currentUserId={ this.currentUserId } />
         <Help questionsEnabled={ this.state.questionsEnabled } />
       </div>
     );

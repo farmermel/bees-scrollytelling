@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './BeeFacts.css';
 
 export class BeeFacts extends Component {
@@ -94,4 +95,10 @@ export class BeeFacts extends Component {
       </div>
     )
   }
+}
+
+BeeFacts.propTypes = {
+  currentUserId: PropTypes.string,
+  startScroll: PropTypes.func.isRequired,
+  questionsEnabled: PropTypes.bool.isRequired
 }

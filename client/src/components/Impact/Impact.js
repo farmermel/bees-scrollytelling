@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { Parallax } from 'react-scroll-parallax';
 import PieChart from '../PieChart/PieChart';
-import './Impact.css';
 import orange from '../../assets/orange.png';
 import apple from '../../assets/apple.png';
+import PropTypes from 'prop-types';
+import './Impact.css';
 
 class Impact extends Component {
   constructor(props) {
@@ -121,6 +122,12 @@ class Impact extends Component {
       </div>
     );
   }
+}
+
+Impact.propTypes = {
+  startScroll: PropTypes.func.isRequired,
+  questionsEnabled: PropTypes.bool.isRequired,
+  currentUserId: PropTypes.string
 }
 
 export default Impact;
