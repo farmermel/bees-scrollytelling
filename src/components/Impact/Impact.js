@@ -67,7 +67,7 @@ class Impact extends Component {
 
   handleChangeEcon = e => {
     this.setState({
-      [e.target.list.id]: e.target.value,
+      [e.target.name]: e.target.value,
     })
   }
 
@@ -78,24 +78,22 @@ class Impact extends Component {
         <h2>What about the Economy?</h2>
         <label htmlFor='economic' className='question-descr'>How much do bees contribute to the economy, anually?</label>
         <div>
-          <input list='monetary' placeholder='0' onChange={ (e) => this.handleChangeEcon(e) } />
-          <datalist id='monetary'>
-            <option value='1' />
-            <option value='100' />
-            <option value='200' />
-            <option value='300' />
-            <option value='400' />
-            <option value='500' />
-            <option value='600' />
-            <option value='700' />
-            <option value='800' />
-            <option value='900' />
-          </datalist>
-          <input list='unit' placeholder='million' onChange={ (e) => this.handleChangeEcon(e) } />
-          <datalist id='unit'>
-            <option value='million'></option>
-            <option value='billion'></option>
-          </datalist>
+          <select name='monetary' onChange={ (e) => this.handleChangeEcon(e) }>
+            <option value='1' >1</option>
+            <option value='100'>100</option>
+            <option value='200'>200</option>
+            <option value='300'>300</option>
+            <option value='400'>400</option>
+            <option value='500'>500</option>
+            <option value='600'>600</option>
+            <option value='700'>700</option>
+            <option value='800'>800</option>
+            <option value='900'>900</option>
+          </select>
+          <select name='unit' onChange={ (e) => this.handleChangeEcon(e) }>
+            <option value='million'>million</option>
+            <option value='billion'>billion</option>
+          </select>
         </div>
         <button type='submit'>Guess</button>
       </form>
