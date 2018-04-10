@@ -6,7 +6,6 @@ services:
 before_script:
 - psql -c 'CREATE DATABASE bees_test;' -U postgres
 script:
-- npm run test-api
 # - npm run lint
 notifications:
 - email: false
