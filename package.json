@@ -14,7 +14,7 @@
   },
   "scripts": {
     "test-api": "NODE_ENV=test mocha --exit ./API/test/routes.spec.js",
-    "test-client": "cd client && npm run test",
+    "test-client": "cd client && npm install --only=dev && npm install && npm run test",
     "test": "concurrently --kill-others-on-fail \"npm run test-api\" \"npm run test-client\"",
     "lint": "./node_modules/.bin/eslint ./*.js",
     "client": "cd client && npm run start",
