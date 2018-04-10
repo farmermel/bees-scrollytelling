@@ -35,11 +35,13 @@ class Impact extends Component {
 
   displayDietQuestion = () => {
     return (
-      <form onSubmit={(e) => this.handleSubmit(e, 2770, 'percent', 'impact diet')} className="diet-form">
+      <form onSubmit={(e) => this.handleSubmit(e, 2770, 'percent', 'What percentage of your diet do you think is provided by bees?')} 
+            className="diet-form">
         <div className='question-cont'>
           <h2>Let's talk about food...</h2>
         </div>
-        <label htmlFor='diet' className='question-descr'>What percentage of your diet do you think is provided by bees?</label>
+        <label htmlFor='diet' 
+               className='question-descr'>What percentage of your diet do you think is provided by bees?</label>
         <PieChart updateImpactPercent={ this.updateImpactPercent } />
         <button type='submit'>Guess</button>
       </form>
@@ -73,10 +75,11 @@ class Impact extends Component {
 
   displayEconomicQuestion = () => {
     return (
-      <form onSubmit={(e) => this.handleSubmit(e, 4500, 'economy', 'impact economy')}
+      <form onSubmit={(e) => this.handleSubmit(e, 4500, 'economy', 'How much do bees contribute to the economy, anually?')}
             className='economic-questions'>
         <h2>What about the Economy?</h2>
-        <label htmlFor='economic' className='question-descr'>How much do bees contribute to the economy, anually?</label>
+        <label htmlFor='economic' 
+               className='question-descr'>How much do bees contribute to the economy, anually?</label>
         <div>
           <select name='monetary' onChange={ (e) => this.handleChangeEcon(e) }>
             <option value='1' >1</option>
@@ -109,7 +112,6 @@ class Impact extends Component {
   }
 
   render() {
-    console.log(this.state)
     return (
       <div className='Impact' >
         { this.displayDietQuestion() }
