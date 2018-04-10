@@ -38,6 +38,9 @@ button {
   color: #fff;
   font-size: 1.5em;
   margin: 30px 0 10px; }
+  button:hover {
+    cursor: pointer;
+    background-color: #236c33; }
 
 .question-descr {
   font-size: 2em; }
