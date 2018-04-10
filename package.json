@@ -20,7 +20,7 @@
     "client": "cd client && npm run start",
     "server": "PORT=3001 nodemon ./server.js",
     "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build && npm rebuild node-sass --force"
   },
   "devDependencies": {
     "eslint": "^4.19.1",
