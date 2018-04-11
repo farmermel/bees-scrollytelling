@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import './Problems.css';
 
 
-export class Problems extends Component {
+export default class Problems extends Component {
   constructor(props) {
     super(props);
     this.state = {

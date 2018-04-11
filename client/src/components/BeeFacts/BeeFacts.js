@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './BeeFacts.css';
 import truck from '../../assets/truck2.png';
 
-export class BeeFacts extends Component {
+export default class BeeFacts extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -28,7 +28,6 @@ export class BeeFacts extends Component {
         question: 'bee species'
       })
     }
-    console.log(this.props.currentUserId);
     await fetch('/api/v1/answers', postBody);
   }
 

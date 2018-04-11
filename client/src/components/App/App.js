@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import Header from '../Header/Header';
 import Impact from '../Impact/Impact';
-import { Help } from '../Help/Help';
-import { BeeFacts } from '../BeeFacts/BeeFacts';
-import { Problems } from '../Problems/Problems';
+import Help from '../Help/Help';
+import BeeFacts from '../BeeFacts/BeeFacts';
+import Problems from '../Problems/Problems';
 import SwitchButton from '../SwitchButton/SwitchButton';
 import Statistics from '../Statistics/Statistics';
 import './App.css';

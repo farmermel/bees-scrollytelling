@@ -34,11 +34,3 @@ class SwitchButton extends Component {
 }  
 
 export default SwitchButton; 
-
-          // <p>
-          //   {
-          //     this.state.checked 
-          //     ? "Questions are on"
-          //     : "Questions are off"
-          //   }
-          // </p>
