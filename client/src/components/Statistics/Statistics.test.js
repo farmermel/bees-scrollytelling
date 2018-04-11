@@ -1,6 +1,5 @@
 /* eslint-disable */
 import React from 'react';
-import ReactDOM from 'react-dom';
 import Statistics from './Statistics';
 import { shallow } from 'enzyme';
 

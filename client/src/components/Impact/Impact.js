@@ -127,7 +127,7 @@ class Impact extends Component {
 Impact.propTypes = {
   startScroll: PropTypes.func.isRequired,
   questionsEnabled: PropTypes.bool.isRequired,
-  currentUserId: PropTypes.string
+  currentUserId: PropTypes.number
 }
 
 export default Impact;

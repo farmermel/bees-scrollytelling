@@ -86,7 +86,7 @@ class Header extends Component {
     // try{
     //   const idResponse = await fetch('api/v1/users', postBody);
     //   const id = await idResponse.json();
-    //   this.props.saveUser(id)
+    //   this.props.saveUser(id.id)
     //   put user id into state on app for other question's answers
     // } catch (error) {
     //   console.log(error);

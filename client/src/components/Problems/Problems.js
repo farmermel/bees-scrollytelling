@@ -94,5 +94,5 @@ export class Problems extends Component {
 Problems.propTypes = {
   questionsEnabled: PropTypes.bool.isRequired,
   startScroll: PropTypes.func.isRequired,
-  currentUserId: PropTypes.bool
+  currentUserId: PropTypes.number
 }
