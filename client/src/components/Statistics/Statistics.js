@@ -36,6 +36,12 @@ class Statistics extends Component {
       //handle sum
       if (questionObj.user_answer.split('_').length === 1) {
         answers[questionObj.question].sum += parseInt(questionObj.user_answer);
+      } else {
+        const splitArray = questionObj.user_answer.split('_')
+        let number = parseInt(splitArray[0]);
+        splitArray[1] === 'million' ? number *= 1000000 : number *= 1000000000;
+        answers[questionObj.question].sum += number;
+        console.log(answers[questionObj.question].sum)
       }
 
       return answers
@@ -53,11 +59,17 @@ class Statistics extends Component {
 
   displayStatistics = () => {
     const response = this.state.response;
-    console.log(response)
     if (response) {
       return Object.keys(response).map( (key, index) => {
+        if (response[key].average) {
+          response[key].average % 1000000000
+          return (
+            <div>
+            </div>
+          )
+        }
       return (
-        <div>
+        <div key={index}>
           <h1>{key}</h1>
           <p>{response[key].average}</p>
         </div>
