@@ -8,7 +8,8 @@ describe('Impact', () => {
 
   beforeEach(() => {
     wrapper = shallow(<Impact startScroll={jest.fn()}
-                              questionsEnabled={true} />);
+                              questionsEnabled={true}
+                              currentUserId={2} />);
   })
 
   it.skip('matches the Snapshot', () => {
@@ -27,6 +28,13 @@ describe('Impact', () => {
   });
 
   describe('handleSubmit', () => {
+    global.window.fetch = jest.fn().mockImplementation( () => {
+      return Promise.resolve({
+        status: 200,
+        json: () => Promise.resolve({})
+      })
+    })
+
     it('calls startscroll with event and scrollstop passed in', () => {
       expect(wrapper.instance().props.startScroll).not.toHaveBeenCalled();
 
@@ -42,8 +50,14 @@ describe('Impact', () => {
       expect(wrapper.instance().state.economy).toEqual('70lbs');
     });
 
-    it.skip('calls fetch with correct url and postbody', () => {
+    it('calls fetch with correct url and postbody', async () => {
+      const expected = {"body": "{\"users_id\":2,\"question\":\"are plants great\"}", "headers": {"Content-type": "application/json"}, "method": "POST"};
+      window.fetch.mockClear();
+      expect(window.fetch).not.toHaveBeenCalled();
 
+      await wrapper.instance().handleSubmit({}, 800, 'yes', 'are plants great');
+
+      expect(window.fetch).toHaveBeenCalledWith("/api/v1/answers", expected);
     });
   });
 
