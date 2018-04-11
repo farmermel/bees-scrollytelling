@@ -47,7 +47,7 @@ describe('Impact', () => {
       await wrapper.instance().setState({unit: 'lbs', monetary: '70'})
       await wrapper.instance().handleSubmit({}, 800, 'yes', 'are plants great');
 
-      expect(wrapper.instance().state.economy).toEqual('70lbs');
+      expect(wrapper.instance().state.economy).toEqual('70_lbs');
     });
 
     it('calls fetch with correct url and postbody', async () => {
