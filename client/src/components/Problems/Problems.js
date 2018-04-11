@@ -5,8 +5,8 @@ import './Problems.css';
 
 
 export class Problems extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       percent: 0
     }
@@ -30,7 +30,7 @@ export class Problems extends Component {
         question: 'What percent of bee colonies do beekeepers lose every year?'
       })
     }
-    // await fetch('/api/v1/questions', postBody);
+    await fetch('/api/v1/answers', postBody);
   }
 
   problemQuestion = () => {

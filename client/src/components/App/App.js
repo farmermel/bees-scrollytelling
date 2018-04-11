@@ -56,10 +56,10 @@ class App extends Component {
                 currentUserId={ this.state.currentUserId } />
         <BeeFacts questionsEnabled={ this.state.questionsEnabled }
                   startScroll={ this.startScroll }
-                  currentUserId={ this.currentUserId } />
+                  currentUserId={ this.state.currentUserId } />
         <Problems questionsEnabled={ this.state.questionsEnabled }
                   startScroll={ this.startScroll }
-                  currentUserId={ this.currentUserId } />
+                  currentUserId={ this.state.currentUserId } />
         <Help questionsEnabled={ this.state.questionsEnabled } />
       </div>
     );

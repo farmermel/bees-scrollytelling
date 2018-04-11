@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import './BeeFacts.css';
 
 export class BeeFacts extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       beeSpecies: ''
     }
@@ -14,7 +14,7 @@ export class BeeFacts extends Component {
     this.setState({ [e.target.name]: e.target.value });
   }
 
-  handleSubmit = e => {
+  handleSubmit = async e => {
     this.props.startScroll(e, 6000);
     const postBody = {
       method: 'POST',
@@ -27,7 +27,8 @@ export class BeeFacts extends Component {
         question: 'bee species'
       })
     }
-    // await fetch('/api/v1/questions', postBody);
+    console.log(this.props.currentUserId);
+    await fetch('/api/v1/answers', postBody);
   }
 
   beeFactsQuestion = () => {
