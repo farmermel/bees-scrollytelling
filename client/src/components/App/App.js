@@ -42,13 +42,6 @@ class App extends Component {
     this.setState({
       questionsEnabled: !this.state.questionsEnabled
     });
-    //on click 
-    //questionsEnabled = !this.state.qusEn
-    //pass this method as props to switch button
-    //pass questionsEnabled as prop
-    //to all components with questions
-    //eventually when clicked conditionally render questions
-    //for now just allow scroll without answering
   }
 
   render() {
@@ -62,7 +55,8 @@ class App extends Component {
                 questionsEnabled={ this.state.questionsEnabled }
                 currentUserId={ this.state.currentUserId } />
         <BeeFacts questionsEnabled={ this.state.questionsEnabled }
-                  startScroll={ this.startScroll } />
+                  startScroll={ this.startScroll }
+                  currentUserId={ this.currentUserId } />
         <Problems questionsEnabled={ this.state.questionsEnabled }
                   startScroll={ this.startScroll }
                   currentUserId={ this.currentUserId } />
