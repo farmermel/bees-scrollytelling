@@ -19,7 +19,8 @@ class Impact extends Component {
 
   handleSubmit = async (e, scrollStop, answer, question) => {
     this.props.startScroll(e, scrollStop);
-    await this.setState({ economy: `${this.state.monetary}${this.state.unit}`});
+    await this.setState({ economy: `${this.state.monetary}_${this.state.unit}`});
+    console.log(this.state.economy)
     const postBody = {
       method: 'POST',
       headers: {
@@ -31,7 +32,7 @@ class Impact extends Component {
         question: question
       })
     }
-    console.log(this.props.currentUserId)
+    console.log(postBody)
     await fetch('/api/v1/answers', postBody);
   }
 
@@ -114,6 +115,7 @@ class Impact extends Component {
   }
 
   render() {
+    console.log(this.state.unit)
     return (
       <div className='Impact' >
         { this.displayDietQuestion() }
