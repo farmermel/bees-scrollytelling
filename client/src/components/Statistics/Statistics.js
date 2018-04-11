@@ -41,7 +41,6 @@ class Statistics extends Component {
         let number = parseInt(splitArray[0]);
         splitArray[1] === 'million' ? number *= 1000000 : number *= 1000000000;
         answers[questionObj.question].sum += number;
-        console.log(answers[questionObj.question].sum)
       }
 
       return answers
@@ -61,10 +60,13 @@ class Statistics extends Component {
     const response = this.state.response;
     if (response) {
       return Object.keys(response).map( (key, index) => {
-        if (response[key].average) {
-          response[key].average % 1000000000
+        if (response[key].average > 1000000) {
+          const monetary = (response[key].average / 1000000000) > 0 ? 'billion' : 'million'
+          const number = [...response[key].average.toString()];
+          const fullNumber = `${number[0]}${number[1]}${number[2]} ${monetary}`
           return (
             <div>
+              <p>{ fullNumber }</p>
             </div>
           )
         }
