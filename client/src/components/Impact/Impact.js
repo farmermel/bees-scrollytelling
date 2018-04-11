@@ -32,7 +32,6 @@ class Impact extends Component {
         question: question
       })
     }
-    console.log(postBody)
     await fetch('/api/v1/answers', postBody);
   }
 
