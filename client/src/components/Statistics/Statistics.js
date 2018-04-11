@@ -9,13 +9,14 @@ class Statistics extends Component {
 
   componentDidMount = async () => {
     await this.getStatistics();
-    // await this.getAverages();
   }
 
   getStatistics = async () => {
     const output = await fetch('/api/v1/answers');
     const rawResponse = await output.json();
+    console.log(rawResponse)
     const statsWithoutAverage = this.cleanStatistics(rawResponse);
+    console.log(statsWithoutAverage)
     const response = this.getAverages(statsWithoutAverage);
     await this.setState({ response })
   }
@@ -81,7 +82,6 @@ class Statistics extends Component {
   }
 
   render = () => {
-    console.log(this.state)
     return (
       <div className='Statistics'>
         <p>Statistics</p>
