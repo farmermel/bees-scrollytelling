@@ -4,13 +4,7 @@ import App from './App';
 
 describe('App', () => {
   let wrapper;
-
-  // let window = {
-  //   addEventListener: jest.fn(),
-  //   scrollTo: jest.fn()
-  // }
   global.window = window;
-
   window.addEventListener = jest.fn();
   window.scrollTo = jest.fn();
 
