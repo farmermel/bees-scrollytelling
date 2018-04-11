@@ -34,7 +34,7 @@ class Header extends Component {
   }
 
   componentDidMount = () => {
-    this.handleCurrentLocation()
+    this.handleCurrentLocation();
   }
 
   shouldComponentUpdate(nextProps, nextState){
@@ -46,7 +46,6 @@ class Header extends Component {
 
   handleCurrentLocation = async () => {
     if ('geolocation' in navigator) {
-      console.log('geolocation')
       try {
         await navigator.geolocation.getCurrentPosition(response => {  
           const { latitude, longitude } = response.coords;
