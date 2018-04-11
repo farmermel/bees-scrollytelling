@@ -31,7 +31,8 @@ class Impact extends Component {
         question: question
       })
     }
-    // await fetch('/api/v1/questions', postBody);
+    console.log(this.props.currentUserId)
+    await fetch('/api/v1/answers', postBody);
   }
 
   displayDietQuestion = () => {
