@@ -32,9 +32,19 @@ class Impact extends Component {
         question: question
       })
     }
-    console.log(postBody)
     await fetch('/api/v1/answers', postBody);
   }
+
+  updateImpactPercent = percent => {
+    this.setState({ percent });
+  }
+
+  handleChangeEcon = e => {
+    this.setState({
+      [e.target.name]: e.target.value,
+    })
+  }
+
 
   displayDietQuestion = () => {
     return (
@@ -64,16 +74,6 @@ class Impact extends Component {
         <a href='https://en.wikipedia.org/wiki/List_of_crop_plants_pollinated_by_bees' target='_blank'>Click to see all the other crops pollinated by food</a>
       </article>
     );
-  }
-
-  updateImpactPercent = percent => {
-    this.setState({ percent });
-  }
-
-  handleChangeEcon = e => {
-    this.setState({
-      [e.target.name]: e.target.value,
-    })
   }
 
   displayEconomicQuestion = () => {
