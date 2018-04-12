@@ -19,6 +19,10 @@ export default class Problems extends Component {
   handleSubmit = async e => {
     this.props.startScroll(e, 8000);
     await this.setState({ economy: `${this.state.monetary}${this.state.unit}`});
+    this.postData();
+  }
+
+  postData = async () => {
     const postBody = {
       method: 'POST',
       headers: {
