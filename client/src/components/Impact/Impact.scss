@@ -4,8 +4,22 @@
 }
 
 .diet-form {
+  position: relative;
   margin: 50px 0;
   height: 100vh;
+
+  & .fruit-arrangement {
+    top: -105px;
+    right: -50px;
+    position: absolute;
+    width: 400px;
+  }
+
+  & .raining-fruit {
+    // position: absolute;
+    // right: 50px;
+    width: 40px;
+  }
 }
 
 .fake-circle {
@@ -27,6 +41,7 @@
 }
 
 .diet-article {
+  position: relative;
   height: 100vh;
 
   & h1 {
@@ -43,25 +58,88 @@
   }
 
   & .foods {
+    position: absolute;
     display: flex;
     justify-content: space-evenly;
-    width: 200px;
-    height: 200px;
-    background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+    height: 200px;
+    width: 200px;
+  }
+
+  & .word-cloud {
+    width: 100%;
+  }
+
+  & .fruit-cloud {
+    display: flex;
+    overflow: hidden;
+    flex-wrap: wrap;
+    border-radius: 40%;
+    width: 880px;
+  }
+
+  & .fruit-cloud span {
+    margin: 1px;
+    height: fit-content;
+  }
+
+  & .fruit-cloud span:nth-of-type(3n+1) {
+    font-size: 2em;
+    margin: 3px;
+    opacity: 0.5;
+  }
+
+  & .fruit-cloud span:nth-of-type(4n+3) {
+    font-size: .5em;
+    opacity: 0.9;
+  }
+
+  & .fruit-cloud span:nth-of-type(7n-3) {
+    font-size: 3em;
+    margin: -9px 0;
+  }
+
+  & .fruit-cloud span:nth-of-type(47n-40),
+  & .fruit-cloud span:nth-of-type(40n) {
+    font-size: 5em;
+    margin: -25px 0;
   }
 
   & #chocolate {
+    bottom: 73px;
+    right: 257px;
     background-image: url('../../assets/chocolate.png');
+    z-index: 3;
   }
 
   & #avocado {
+    right: 247px;
+    top: 248px;
+    transform: rotate(345deg);
     background-image: url('../../assets/avocado.png');
+    height: 180px;
   }
 
   & #coffee {
+    bottom: 30px;
+    right: 390px;
+    z-index: 2;
     background-image: url('../../assets/coffee-beans.png');
+  }
+
+  & #apple {
+    top: 307px;
+    right: 370px;
+    z-index: 1;
+    background-image: url('../../assets/apple.png');
+  }
+
+  & #peach {
+    top: 331px;
+    right: 490px;
+    width: 160px;
+    background-image: url('../../assets/Peach.png');
   }
 }
 
