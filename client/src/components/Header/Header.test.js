@@ -10,7 +10,7 @@ describe('Header', () => {
   beforeEach(() => {
     wrapper = shallow(<Header startScroll={jest.fn()}
                               questionsEnabled={true}
-                              saveUser={jest.fn()} />, { disableLifeCycleMethods: true });
+                              saveUser={jest.fn()} />, { disableLifecycleMethods: true });
     global.window.fetch = jest.fn().mockImplementation(() => {
       return Promise.resolve({
         status: 200,

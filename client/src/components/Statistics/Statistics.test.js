@@ -22,9 +22,9 @@ describe('Statistics', () => {
     expect(wrapper).to.match.snapshot();
   });
 
-  it.skip('has a default state of an empty object', () => {
-    wrapper = shallow(<Statistics currentUserId={2} />, { disableLifeCycleMethods: true })
-    expect(wrapper.instance().state()).toEqual({});
+  it('has a default state of an empty object', () => {
+    wrapper = shallow(<Statistics currentUserId={2} />, { disableLifecycleMethods: true })
+    expect(wrapper.instance().state).toEqual({});
   });
 
   describe('getStatistics', () => {
@@ -49,8 +49,3 @@ describe('Statistics', () => {
       expect(wrapper.instance().getAverages(mockData.cleanedStatistics)).toEqual(mockData.cleanedAverageData);
     });
 });
-
-
-
-
-
