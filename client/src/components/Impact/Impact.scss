@@ -93,6 +93,26 @@
   & h1 {
     font-size: 3em;
   }
+  & .chart {
+    border: 2px solid grey;
+    display: flex;
+    height: 50%;
+    background-image: url("../../assets/background1.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  & .national {
+    background-color: magenta;
+    height: 100px;
+    width: 100px;
+  }
+  & .world {
+    background-color: blue;
+    height: 100px;
+    width: 100px;
+  }
 }
 /*
 .rotate {

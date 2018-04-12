@@ -12,6 +12,9 @@
     "mocha": "^5.0.5",
     "pg": "^7.4.1"
   },
+  "engines": {
+    "node": "8.6.0"
+  },
   "scripts": {
     "test-api": "NODE_ENV=test mocha --exit ./API/test/routes.spec.js",
     "test-client": "cd client && npm install --only=dev && npm install && npm run test",
@@ -20,7 +23,7 @@
     "client": "cd client && npm run start",
     "server": "PORT=3001 nodemon ./server.js",
     "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build && npm rebuild node-sass --force"
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
   },
   "devDependencies": {
     "eslint": "^4.19.1",
