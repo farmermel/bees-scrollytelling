@@ -3,8 +3,16 @@
   padding: 20px 0; }
 
 .diet-form {
+  position: relative;
   margin: 50px 0;
   height: 100vh; }
+  .diet-form .fruit-arrangement {
+    top: -105px;
+    right: -50px;
+    position: absolute;
+    width: 400px; }
+  .diet-form .raining-fruit {
+    width: 40px; }
 
 .fake-circle {
   border-radius: 100%;
@@ -22,6 +30,7 @@
   width: 70px; }
 
 .diet-article {
+  position: relative;
   height: 100vh; }
   .diet-article h1 {
     font-size: 3em; }
@@ -31,19 +40,64 @@
     display: flex;
     justify-content: center; }
   .diet-article .foods {
+    position: absolute;
     display: flex;
     justify-content: space-evenly;
-    width: 200px;
-    height: 200px;
-    background-position: center;
     background-size: contain;
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+    height: 200px;
+    width: 200px; }
+  .diet-article .word-cloud {
+    width: 100%; }
+  .diet-article .fruit-cloud {
+    display: flex;
+    overflow: hidden;
+    flex-wrap: wrap;
+    border-radius: 40%;
+    width: 880px; }
+  .diet-article .fruit-cloud span {
+    margin: 1px;
+    height: fit-content; }
+  .diet-article .fruit-cloud span:nth-of-type(3n+1) {
+    font-size: 2em;
+    margin: 3px;
+    opacity: 0.5; }
+  .diet-article .fruit-cloud span:nth-of-type(4n+3) {
+    font-size: .5em;
+    opacity: 0.9; }
+  .diet-article .fruit-cloud span:nth-of-type(7n-3) {
+    font-size: 3em;
+    margin: -9px 0; }
+  .diet-article .fruit-cloud span:nth-of-type(47n-40),
+  .diet-article .fruit-cloud span:nth-of-type(40n) {
+    font-size: 5em;
+    margin: -25px 0; }
   .diet-article #chocolate {
-    background-image: url("../../assets/chocolate.png"); }
+    bottom: 73px;
+    right: 257px;
+    background-image: url("../../assets/chocolate.png");
+    z-index: 3; }
   .diet-article #avocado {
-    background-image: url("../../assets/avocado.png"); }
+    right: 247px;
+    top: 248px;
+    transform: rotate(345deg);
+    background-image: url("../../assets/avocado.png");
+    height: 180px; }
   .diet-article #coffee {
+    bottom: 30px;
+    right: 390px;
+    z-index: 2;
     background-image: url("../../assets/coffee-beans.png"); }
+  .diet-article #apple {
+    top: 307px;
+    right: 370px;
+    z-index: 1;
+    background-image: url("../../assets/apple.png"); }
+  .diet-article #peach {
+    top: 331px;
+    right: 490px;
+    width: 160px;
+    background-image: url("../../assets/Peach.png"); }
 
 .economic-questions {
   width: 100%;
