@@ -2,6 +2,7 @@
 import React from 'react';
 import Impact from './Impact';
 import { shallow } from 'enzyme';
+import mockData from '../../__mocks__/mockData';
 
 describe('Impact', () => {
   let wrapper;
@@ -17,14 +18,7 @@ describe('Impact', () => {
   });
 
   it('has default state', () => {
-    const expected = { 
-      percent: 0,
-      unit: '',
-      monetary: '',
-      economy: ''
-    };
-
-    expect(wrapper.instance().state).toEqual(expected);
+    expect(wrapper.instance().state).toEqual(mockData.impactDefaultState);
   });
 
   describe('handleSubmit', () => {
@@ -51,13 +45,12 @@ describe('Impact', () => {
     });
 
     it('calls fetch with correct url and postbody', async () => {
-      const expected = {"body": "{\"users_id\":2,\"question\":\"are plants great\"}", "headers": {"Content-type": "application/json"}, "method": "POST"};
       window.fetch.mockClear();
       expect(window.fetch).not.toHaveBeenCalled();
 
       await wrapper.instance().handleSubmit({}, 800, 'yes', 'are plants great');
 
-      expect(window.fetch).toHaveBeenCalledWith("/api/v1/answers", expected);
+      expect(window.fetch).toHaveBeenCalledWith("/api/v1/answers", mockData.impactFactsPost);
     });
   });
 
@@ -70,17 +63,10 @@ describe('Impact', () => {
   });
 
   describe('handleChangeEcon', () => {
-    const e = {
-      target: {
-        name: 'Casey',
-        value: 'Awesome'
-      }
-    }
-
     it('sets state with name and value of event target passed in', () => {
-      wrapper.instance().handleChangeEcon(e);
+      wrapper.instance().handleChangeEcon(mockData.event);
 
-      expect(wrapper.instance().state.Casey).toEqual('Awesome');
+      expect(wrapper.instance().state.Jeff).toEqual('websocket');
     });
   });
 });

@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import App from './App';
+import mockData from '../../__mocks__/mockData';
 
 describe('App', () => {
   let wrapper;
@@ -19,11 +20,7 @@ describe('App', () => {
   });
 
   it('has default state', () => {
-    expect(wrapper.instance().state).toEqual({
-      scrollPosition: 750,
-      questionsEnabled: true,
-      currentUserId: null
-    });
+    expect(wrapper.instance().state).toEqual(mockData.appDefaultState);
   });
 
   describe('componentDidMount', () => {

@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import BeeFacts from './BeeFacts';
+import mockData from '../../__mocks__/mockData';
 
 describe('BeeFacts', () => {
   let wrapper;
@@ -20,11 +21,7 @@ describe('BeeFacts', () => {
   });
 
   describe('handleChange', () => {
-    const event = {
-      target: {
-        name: 'Jeff', value: 'websocket'
-      }
-    }
+    const event = mockData.event;
 
     it('sets state with name and value of event passed in', () => {
       wrapper.instance().handleChange(event);
@@ -41,21 +38,17 @@ describe('BeeFacts', () => {
       })
     })
 
-    const postBody = {"body": "{\"users_id\":2,\"user_answer\":\"\",\"question\":\"bee species\"}", "headers": {"Content-type": "application/json"}, "method": "POST"};
-
-    const event = {};
-
     it('calls startScroll with event passed in and 6000', () => {
-      wrapper.instance().handleSubmit(event);
+      wrapper.instance().handleSubmit(mockData.event);
 
-      expect(wrapper.instance().props.startScroll).toHaveBeenCalledWith(event, 6000);
+      expect(wrapper.instance().props.startScroll).toHaveBeenCalledWith(mockData.event, 6000);
     });
 
     it('calls fetch with /api/v1/answers and the post body', () => {
       wrapper.instance().setState({beeSpecies: 'rusty'})
-      wrapper.instance().handleSubmit(event);
+      wrapper.instance().handleSubmit(mockData.event);
 
-      expect(window.fetch).toHaveBeenCalledWith('/api/v1/answers', postBody);
+      expect(window.fetch).toHaveBeenCalledWith('/api/v1/answers', mockData.beeFactsPost);
     });
   });
 });
