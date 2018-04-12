@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './BeeFacts.css';
+import truck from '../../assets/truck2.png';
 
-export class BeeFacts extends Component {
-  constructor() {
-    super();
+export default class BeeFacts extends Component {
+  constructor(props) {
+    super(props);
     this.state = {
       beeSpecies: ''
     }
@@ -13,7 +15,7 @@ export class BeeFacts extends Component {
     this.setState({ [e.target.name]: e.target.value });
   }
 
-  handleSubmit = e => {
+  handleSubmit = async e => {
     this.props.startScroll(e, 6000);
     const postBody = {
       method: 'POST',
@@ -26,7 +28,7 @@ export class BeeFacts extends Component {
         question: 'bee species'
       })
     }
-    // await fetch('/api/v1/questions', postBody);
+    await fetch('/api/v1/answers', postBody);
   }
 
   beeFactsQuestion = () => {
@@ -64,7 +66,7 @@ export class BeeFacts extends Component {
         </div>
         <div id="last">
           <h2>Can be transported</h2>
-          <div className='bee-images transport'>
+          <div className='bee-images' id='transport'>
           </div>
         </div>
         <div>
@@ -94,4 +96,10 @@ export class BeeFacts extends Component {
       </div>
     )
   }
+}
+
+BeeFacts.propTypes = {
+  currentUserId: PropTypes.number,
+  startScroll: PropTypes.func.isRequired,
+  questionsEnabled: PropTypes.bool.isRequired
 }

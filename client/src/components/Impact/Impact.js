@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { Parallax } from 'react-scroll-parallax';
 import PieChart from '../PieChart/PieChart';
-import './Impact.css';
 import orange from '../../assets/orange.png';
 import apple from '../../assets/apple.png';
+import PropTypes from 'prop-types';
+import './Impact.css';
 
 class Impact extends Component {
   constructor(props) {
@@ -18,7 +19,7 @@ class Impact extends Component {
 
   handleSubmit = async (e, scrollStop, answer, question) => {
     this.props.startScroll(e, scrollStop);
-    await this.setState({ economy: `${this.state.monetary}${this.state.unit}`});
+    await this.setState({ economy: `${this.state.monetary}_${this.state.unit}`});
     const postBody = {
       method: 'POST',
       headers: {
@@ -30,8 +31,19 @@ class Impact extends Component {
         question: question
       })
     }
-    // await fetch('/api/v1/questions', postBody);
+    await fetch('/api/v1/answers', postBody);
   }
+
+  updateImpactPercent = percent => {
+    this.setState({ percent });
+  }
+
+  handleChangeEcon = e => {
+    this.setState({
+      [e.target.name]: e.target.value,
+    })
+  }
+
 
   displayDietQuestion = () => {
     return (
@@ -61,16 +73,6 @@ class Impact extends Component {
         <a href='https://en.wikipedia.org/wiki/List_of_crop_plants_pollinated_by_bees' target='_blank'>Click to see all the other crops pollinated by food</a>
       </article>
     );
-  }
-
-  updateImpactPercent = percent => {
-    this.setState({ percent });
-  }
-
-  handleChangeEcon = e => {
-    this.setState({
-      [e.target.name]: e.target.value,
-    })
   }
 
   displayEconomicQuestion = () => {
@@ -131,6 +133,12 @@ class Impact extends Component {
       </div>
     );
   }
+}
+
+Impact.propTypes = {
+  startScroll: PropTypes.func.isRequired,
+  questionsEnabled: PropTypes.bool.isRequired,
+  currentUserId: PropTypes.number
 }
 
 export default Impact;

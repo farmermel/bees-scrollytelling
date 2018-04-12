@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import Header from '../Header/Header';
 import Impact from '../Impact/Impact';
-import { Help } from '../Help/Help';
-import { BeeFacts } from '../BeeFacts/BeeFacts';
-import { Problems } from '../Problems/Problems';
+import Help from '../Help/Help';
+import BeeFacts from '../BeeFacts/BeeFacts';
+import Problems from '../Problems/Problems';
 import SwitchButton from '../SwitchButton/SwitchButton';
+import Statistics from '../Statistics/Statistics';
 import './App.css';
 
 class App extends Component {
@@ -44,13 +45,6 @@ class App extends Component {
     this.setState({
       questionsEnabled: !this.state.questionsEnabled
     });
-    //on click 
-    //questionsEnabled = !this.state.qusEn
-    //pass this method as props to switch button
-    //pass questionsEnabled as prop
-    //to all components with questions
-    //eventually when clicked conditionally render questions
-    //for now just allow scroll without answering
   }
 
   render() {
@@ -64,10 +58,13 @@ class App extends Component {
                 questionsEnabled={ this.state.questionsEnabled }
                 currentUserId={ this.state.currentUserId } />
         <BeeFacts questionsEnabled={ this.state.questionsEnabled }
-                  startScroll={ this.startScroll } />
+                  startScroll={ this.startScroll }
+                  currentUserId={ this.state.currentUserId } />
         <Problems questionsEnabled={ this.state.questionsEnabled }
-                  startScroll={ this.startScroll } />
+                  startScroll={ this.startScroll }
+                  currentUserId={ this.state.currentUserId } />
         <Help questionsEnabled={ this.state.questionsEnabled } />
+        <Statistics userId={ this.state.currentUserId } />
       </div>
     );
   }

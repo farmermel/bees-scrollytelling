@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import PieChart from '../PieChart/PieChart';
+import PropTypes from 'prop-types';
 import './Problems.css';
 
 
-export class Problems extends Component {
-  constructor() {
-    super();
+export default class Problems extends Component {
+  constructor(props) {
+    super(props);
     this.state = {
       percent: 0
     }
@@ -18,6 +19,10 @@ export class Problems extends Component {
   handleSubmit = async e => {
     this.props.startScroll(e, 8000);
     await this.setState({ economy: `${this.state.monetary}${this.state.unit}`});
+    this.postData();
+  }
+
+  postData = async () => {
     const postBody = {
       method: 'POST',
       headers: {
@@ -29,7 +34,7 @@ export class Problems extends Component {
         question: 'What percent of bee colonies do beekeepers lose every year?'
       })
     }
-    // await fetch('/api/v1/questions', postBody);
+    await fetch('/api/v1/answers', postBody);
   }
 
   problemQuestion = () => {
@@ -87,6 +92,11 @@ export class Problems extends Component {
         { this.climateChangeArticle() }
       </div>
     );
-  }
-    
+  }   
 };
+
+Problems.propTypes = {
+  questionsEnabled: PropTypes.bool.isRequired,
+  startScroll: PropTypes.func.isRequired,
+  currentUserId: PropTypes.number
+}

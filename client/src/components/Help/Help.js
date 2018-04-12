@@ -1,7 +1,7 @@
 import React from 'react';
 import './Help.css';
 
-export const Help = () => {
+const Help = () => {
   return (
     <div className="Help">
       <h1>Buy organic and local</h1>
@@ -14,3 +14,5 @@ export const Help = () => {
     </div>
   );
 };
+
+export default Help;

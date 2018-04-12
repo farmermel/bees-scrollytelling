@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Parallax } from 'react-scroll-parallax';
+import PropTypes from 'prop-types';
 import './Header.css';
 
 
@@ -33,7 +34,7 @@ class Header extends Component {
   }
 
   componentDidMount = () => {
-    this.handleCurrentLocation()
+    this.handleCurrentLocation();
   }
 
   shouldComponentUpdate(nextProps, nextState){
@@ -45,7 +46,6 @@ class Header extends Component {
 
   handleCurrentLocation = async () => {
     if ('geolocation' in navigator) {
-      console.log('geolocation')
       try {
         await navigator.geolocation.getCurrentPosition(response => {  
           const { latitude, longitude } = response.coords;
@@ -71,25 +71,24 @@ class Header extends Component {
   }
 
   postToDB = async () => {
-    // const postBody = {
-    //   method: 'POST',
-    //   headers: {
-    //     'Content-Type': 'application/json'
-    //   },
-    //   body: JSON.stringify({
-    //     concern: this.state.concern,
-    //     age: this.state.age,
-    //     location: this.state.location   
-    //   })
-    // }
-    // try{
-    //   const idResponse = await fetch('api/v1/users', postBody);
-    //   const id = await idResponse.json();
-    //   this.props.saveUser(id)
-    //   put user id into state on app for other question's answers
-    // } catch (error) {
-    //   console.log(error);
-    // }
+    const postBody = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        concern: this.state.concern,
+        age: this.state.age,
+        location: this.state.location   
+      })
+    }
+    try{
+      const idResponse = await fetch('api/v1/users', postBody);
+      const id = await idResponse.json();
+      this.props.saveUser(id.id)
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   handleChange = e => {
@@ -151,5 +150,11 @@ class Header extends Component {
     );
   }
 };
+
+Header.propTypes = {
+  startScroll: PropTypes.func.isRequired,
+  questionsEnabled: PropTypes.bool.isRequired,
+  saveUser: PropTypes.func.isRequired
+}
 
 export default Header;
