@@ -2,6 +2,7 @@
 import React from 'react';
 import Problems from './Problems';
 import { shallow } from 'enzyme';
+import mockData from '../../__mocks__/mockData';
 
 describe('Problems', () => {
   let wrapper;
@@ -59,18 +60,6 @@ describe('Problems', () => {
         json: () => Promise.resolve({})
       })
     })
-
-    const expectedPostBody = {
-      method: 'POST',
-      headers: {
-        'Content-type': 'application/json'
-      },
-      body: JSON.stringify({
-        users_id: 2,
-        user_answer: 30,
-        question: 'What percent of bee colonies do beekeepers lose every year?'
-      })
-    }
   
     it('calls fetch with correct url and post body', async() => {
       await wrapper.setState({ percent: 30 });
@@ -80,7 +69,7 @@ describe('Problems', () => {
 
       wrapper.instance().postData();
 
-      expect(window.fetch).toHaveBeenCalledWith('/api/v1/answers', expectedPostBody)
+      expect(window.fetch).toHaveBeenCalledWith('/api/v1/answers', mockData.problemsPostBody);
     })
   })
 });

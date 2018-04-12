@@ -2,6 +2,7 @@
 import React from 'react';
 import Header from './Header';
 import { shallow } from 'enzyme';
+import mockData from '../../__mocks__/mockData';
 
 describe('Header', () => {
   let wrapper;
@@ -23,13 +24,8 @@ describe('Header', () => {
   });
 
   it('has default state', () => {
-    const expected = {
-      concern: '',
-      age: '',
-      location: {}
-    };
 
-    expect(wrapper.instance().state).toEqual(expected);
+    expect(wrapper.instance().state).toEqual(mockData.headerDefaultState);
   });
 
   describe('componentDidMount', () => {
@@ -127,16 +123,11 @@ describe('Header', () => {
   });
 
   describe('handleChange', () => {
-    const event = {
-      target: {
-        name: 'Casey', value: 'good'
-      }
-    }
 
     it('sets state with name and value of target of event passed in', () => {
-      wrapper.instance().handleChange(event);
+      wrapper.instance().handleChange(mockData.event);
       
-      expect(wrapper.instance().state.Casey).toEqual('good');
+      expect(wrapper.instance().state.Jeff).toEqual('websocket');
     });
   });
 });
