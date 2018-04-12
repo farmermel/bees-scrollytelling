@@ -14,9 +14,7 @@ class Statistics extends Component {
   getStatistics = async () => {
     const output = await fetch('/api/v1/answers');
     const rawResponse = await output.json();
-    console.log(rawResponse)
     const statsWithoutAverage = this.cleanStatistics(rawResponse);
-    console.log(statsWithoutAverage)
     const response = this.getAverages(statsWithoutAverage);
     await this.setState({ response })
   }

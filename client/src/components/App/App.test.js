@@ -10,7 +10,7 @@ describe('App', () => {
   window.scrollTo = jest.fn();
 
   beforeEach(() => {
-    wrapper = shallow(<App />, { disableLifeCycleMethods: true });
+    wrapper = shallow(<App />, { disableLifecycleMethods: true });
     window.addEventListener.mockClear();
     window.scrollTo.mockClear();
   });

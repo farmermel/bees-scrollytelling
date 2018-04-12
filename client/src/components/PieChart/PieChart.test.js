@@ -15,9 +15,8 @@ describe("PieChart", () => {
     expect(wrapper).to.match.snapshot();
   });
 
-  //whhhyy is default life cycle methods not working?
-  it.skip('has default state', () => {
-    wrapper = shallow(<PieChart updateImpactPercent={updateImpactPercent} />, { disableLifeCycleMethods: true });
+  it('has default state', () => {
+    wrapper = shallow(<PieChart updateImpactPercent={updateImpactPercent} />, { disableLifecycleMethods: true });
 
     expect(wrapper.instance().state).toEqual(mockData.pieChartDefaultState);
   });
