@@ -2,9 +2,12 @@ import React, { Component } from 'react';
 import { Parallax } from 'react-scroll-parallax';
 import PieChart from '../PieChart/PieChart';
 import orange from '../../assets/orange.png';
-import apple from '../../assets/apple.png';
+// import apple from '../../assets/apple.png';
 import PropTypes from 'prop-types';
 import './Impact.css';
+// import fruitList from '../../data/fruitList';
+import fruitArrangement from '../../assets/raspberryStarfruit.png';
+import wordCloud from '../../assets/wordcloud.png';
 
 class Impact extends Component {
   constructor(props) {
@@ -16,6 +19,10 @@ class Impact extends Component {
       economy: ''
     }
   }
+
+  static contextTypes = {
+        parallaxController: PropTypes.object.isRequired,
+  };
 
   handleSubmit = async (e, scrollStop, answer, question) => {
     this.props.startScroll(e, scrollStop);
@@ -44,13 +51,24 @@ class Impact extends Component {
     })
   }
 
+  handleLoad = () => {
+    this.context.parallaxController.update();
+  };
+
 
   displayDietQuestion = () => {
     return (
       <form onSubmit={(e) => this.handleSubmit(e, 2770, 'percent', 'What percentage of your diet do you think is provided by bees?')} 
-            className="diet-form">
+            className='diet-form'>
         <div className='question-cont'>
           <h2>Let's talk about food...</h2>
+          <img src={ fruitArrangement } alt='fruit arrangement'
+               className='fruit-arrangement' />
+          <Parallax offsetYMin={1000}>
+            <img src={ orange } alt='orange' 
+                 onLoad={this.handleLoad}
+                 className='raining-fruit' />
+          </Parallax>
         </div>
         <label htmlFor='diet' 
                className='question-descr'>What percentage of your diet do you think is provided by bees?</label>
@@ -60,15 +78,25 @@ class Impact extends Component {
     );
   }
 
+  // makeWordCloud = () => {
+  //   return fruitList.map(fruit => {
+  //     return <span>{fruit}</span>
+  //   })
+  // }
+
   displayDietArticle = () => {
     return (
       <article className='diet-article'>
-        <h1>60% diversity of food you eat, 30% by volume, are pollinated by bees</h1>
+        <h1>60% diversity of food you eat</h1>
         <p>Most fruits and vegetables are animal pollinated, including chocolate, coffee, tea, and avocados</p>
+          <img src={wordCloud} alt='all the fruits' className='word-cloud' />
+        <h1>30% by volume, are pollinated by bees</h1>
         <div className='foods-cont'>
           <div className='foods' id='chocolate'></div>
           <div className='foods' id='avocado'></div>
           <div className='foods' id='coffee'></div>
+          <div className='foods' id='apple'></div>
+          <div className='foods' id='peach'></div>
         </div>
         <a href='https://en.wikipedia.org/wiki/List_of_crop_plants_pollinated_by_bees' target='_blank'>Click to see all the other crops pollinated by food</a>
       </article>
