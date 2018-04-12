@@ -113,12 +113,7 @@ class Impact extends Component {
           the United States. World wide, that number rises to $217 billion.{' '}
         </h1>
         <div className="chart">
-          <Parallax offsetYMax={400} offsetXMax={-100} offsetXMaxslowerScrollRate={false} disabled={window.scrollY<=4200?true:false}>
-            <div className="national" />
-          </Parallax>
-          <Parallax offsetYMax={85} slowerScrollRate={true} >
-            <div className="world" />
-          </Parallax>
+         
         </div>
       </article>;
   }
