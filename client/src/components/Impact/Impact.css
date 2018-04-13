@@ -37,8 +37,7 @@
   .diet-article p {
     font-size: 1.6em; }
   .diet-article .foods-cont {
-    display: flex;
-    justify-content: center; }
+    position: relative; }
   .diet-article .foods {
     position: absolute;
     display: flex;
@@ -73,8 +72,8 @@
     font-size: 5em;
     margin: -25px 0; }
   .diet-article #chocolate {
-    bottom: 73px;
-    right: 257px;
+    bottom: 62px;
+    right: 297px;
     background-image: url("../../assets/chocolate.png");
     z-index: 3; }
   .diet-article #avocado {
@@ -84,7 +83,7 @@
     background-image: url("../../assets/avocado.png");
     height: 180px; }
   .diet-article #coffee {
-    bottom: 30px;
+    bottom: 25px;
     right: 390px;
     z-index: 2;
     background-image: url("../../assets/coffee-beans.png"); }

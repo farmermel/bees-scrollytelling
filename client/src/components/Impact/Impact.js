@@ -89,15 +89,15 @@ class Impact extends Component {
       <article className='diet-article'>
         <h1>60% diversity of food you eat</h1>
         <p>Most fruits and vegetables are animal pollinated, including chocolate, coffee, tea, and avocados</p>
-          <img src={wordCloud} alt='all the fruits' className='word-cloud' />
+          <div className='foods-cont'>
+            <img src={wordCloud} alt='all the fruits' className='word-cloud' />
+            <div className='foods' id='chocolate'></div>
+            <div className='foods' id='avocado'></div>
+            <div className='foods' id='coffee'></div>
+            <div className='foods' id='apple'></div>
+            <div className='foods' id='peach'></div>
+          </div>
         <h1>30% by volume, are pollinated by bees</h1>
-        <div className='foods-cont'>
-          <div className='foods' id='chocolate'></div>
-          <div className='foods' id='avocado'></div>
-          <div className='foods' id='coffee'></div>
-          <div className='foods' id='apple'></div>
-          <div className='foods' id='peach'></div>
-        </div>
         <a href='https://en.wikipedia.org/wiki/List_of_crop_plants_pollinated_by_bees' target='_blank'>Click to see all the other crops pollinated by food</a>
       </article>
     );
