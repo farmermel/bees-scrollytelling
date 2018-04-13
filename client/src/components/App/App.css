@@ -1,3 +1,4 @@
+/*color variables*/
 *, :after, :before {
   box-sizing: border-box; }
 
@@ -32,15 +33,20 @@ input[type="text"] {
   height: 50px; }
 
 button {
-  height: 40px;
+  height: 62px;
   border: none;
-  background-color: #2d8440;
-  color: #fff;
+  background-color: #ffffff;
+  color: #60CA9B;
   font-size: 1.5em;
-  margin: 30px 0 10px; }
+  margin: 30px auto 10px;
+  width: 162px;
+  border: 3px solid #60CA9B;
+  border-radius: 51px;
+  transition: background-color 0.5s ease; }
   button:hover {
     cursor: pointer;
-    background-color: #236c33; }
+    background-color: #60CA9B;
+    color: white; }
 
 .question-descr {
   font-size: 2em; }

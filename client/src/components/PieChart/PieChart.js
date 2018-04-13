@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../../assets/variables.scss';
 import './PieChart.css';
 
 class PieChart extends Component {

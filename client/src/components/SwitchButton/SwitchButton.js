@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../../assets/variables.scss';
 import './SwitchButton.css';
 
 class SwitchButton extends Component {
