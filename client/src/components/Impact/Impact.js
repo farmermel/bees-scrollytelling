@@ -9,6 +9,8 @@ import './Impact.css';
 import fruitArrangement from '../../assets/raspberryStarfruit.png';
 import wordCloud from '../../assets/wordcloud.png';
 
+
+
 class Impact extends Component {
   constructor(props) {
     super(props);
@@ -91,11 +93,6 @@ class Impact extends Component {
         <p>Most fruits and vegetables are animal pollinated, including chocolate, coffee, tea, and avocados</p>
           <div className='foods-cont'>
             <img src={wordCloud} alt='all the fruits' className='word-cloud' />
-            <div className='foods' id='chocolate'></div>
-            <div className='foods' id='avocado'></div>
-            <div className='foods' id='coffee'></div>
-            <div className='foods' id='apple'></div>
-            <div className='foods' id='peach'></div>
           </div>
         <h1>30% by volume, are pollinated by bees</h1>
         <a href='https://en.wikipedia.org/wiki/List_of_crop_plants_pollinated_by_bees' target='_blank'>Click to see all the other crops pollinated by food</a>
@@ -160,3 +157,9 @@ Impact.propTypes = {
 }
 
 export default Impact;
+            // <div className='foods' id='chocolate'></div>
+
+            // <div className='foods' id='avocado'></div>
+            // <div className='foods' id='coffee'></div>
+            // <div className='foods' id='apple'></div>
+            // <div className='foods' id='peach'></div>
