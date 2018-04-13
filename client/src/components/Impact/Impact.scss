@@ -52,7 +52,7 @@
 
   & h1 {
     font-size: 3em;
-  }  
+  }
 
   & p {
     font-size: 1.6em;
@@ -176,6 +176,17 @@
 
   & h1 {
     font-size: 3em;
+  }
+
+  & .chart {
+    border: 2px solid grey;
+    display: flex;
+    height: 50%;
+    background-image: url('../../assets/chart.jpg'), url('../../assets/background1.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto, cover;
   }
 }
 

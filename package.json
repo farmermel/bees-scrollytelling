@@ -13,6 +13,9 @@
     "pg": "^7.4.1",
     "prop-types": "^15.6.1"
   },
+  "engines": {
+    "node": "8.6.0"
+  },
   "scripts": {
     "test-api": "NODE_ENV=test mocha --exit ./API/test/routes.spec.js",
     "test-client": "cd client && npm install --only=dev && npm install && npm run test",
