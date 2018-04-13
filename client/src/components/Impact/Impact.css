@@ -31,7 +31,11 @@
 
 .diet-article {
   position: relative;
-  height: 100vh; }
+  min-height: 100vh;
+  height: fit-content; }
+  .diet-article #diet-header {
+    font-size: 5em;
+    margin-bottom: 0; }
   .diet-article h1 {
     font-size: 3em; }
   .diet-article p {
@@ -120,22 +124,11 @@
   .economic-article h1 {
     font-size: 3em; }
 
-/*
-.rotate {
-  width: 50px;
-    -webkit-animation: spin 3s infinite linear;
-    animation: spin 3s infinite linear;
-}
-@-webkit-keyframes spin {
-    100% { -webkit-transform: rotate(360deg); }
-}
-@-moz-keyframes spin {
-    100% { -moz-transform: rotate(360deg); }
-}
-@keyframes spin {
-    100% {
-        -moz-transform:rotate(360deg);
-        -o-transform:rotate(360deg);
-        transform:rotate(360deg);
-    }
-}*/
+.wind-foods-cont {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center; }
+
+.wind-foods-cont img {
+  width: 135px; }
