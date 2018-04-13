@@ -138,7 +138,7 @@ class Impact extends Component {
           the United States. World wide, that number rises to $217 billion.{' '}
         </h1>
         <div className="chart">
-         
+          
         </div>
       </article>;
   }

@@ -123,11 +123,11 @@
     border: 2px solid grey;
     display: flex;
     height: 50%;
-    background-image: url("../../assets/meta-chart.svg");
+    background-image: url("../../assets/chart.jpg"), url("../../assets/background1.jpg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover; }
+    background-size: auto, cover; }
 
 /*
 .rotate {
