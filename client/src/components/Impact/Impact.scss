@@ -53,8 +53,8 @@
   }
 
   & .foods-cont {
-    display: flex;
-    justify-content: center;
+    position: relative;
+
   }
 
   & .foods {
@@ -107,8 +107,8 @@
   }
 
   & #chocolate {
-    bottom: 73px;
-    right: 257px;
+    bottom: 62px;
+    right: 297px;
     background-image: url('../../assets/chocolate.png');
     z-index: 3;
   }
@@ -122,7 +122,7 @@
   }
 
   & #coffee {
-    bottom: 30px;
+    bottom: 25px;
     right: 390px;
     z-index: 2;
     background-image: url('../../assets/coffee-beans.png');
