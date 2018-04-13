@@ -8,8 +8,9 @@ import './Impact.css';
 // import fruitList from '../../data/fruitList';
 import fruitArrangement from '../../assets/raspberryStarfruit.png';
 import wordCloud from '../../assets/wordcloud.png';
-
-
+import wheat from '../../assets/wheat.jpg';
+import riceball from '../../assets/riceball.png';
+import corn from '../../assets/corn.jpg';
 
 class Impact extends Component {
   constructor(props) {
@@ -89,13 +90,23 @@ class Impact extends Component {
   displayDietArticle = () => {
     return (
       <article className='diet-article'>
-        <h1>60% diversity of food you eat</h1>
+        <h1 id='diet-header'>In your daily diet,</h1>
+        <h1>30% by volume of food you eat</h1>
+        <p>The majority of our diet consists of wheat, rice and corn, all which are wind pollinated</p>
+        <div className='wind-foods-cont'>
+          <Parallax offsetXMax={100} offsetXMin={-50} slowerScrollRate={true}>
+            <img src={ wheat } />
+          </Parallax>
+          <img src={ riceball } />
+          <Parallax offsetXMax={-100} offsetXMin={50} slowerScrollRate={true}>
+            <img src={ corn } />
+          </Parallax>
+        </div>
+        <h1>and 60% diversity, are pollinated by bees</h1>
         <p>Most fruits and vegetables are animal pollinated, including chocolate, coffee, tea, and avocados</p>
           <div className='foods-cont'>
             <img src={wordCloud} alt='all the fruits' className='word-cloud' />
           </div>
-        <h1>30% by volume, are pollinated by bees</h1>
-        <a href='https://en.wikipedia.org/wiki/List_of_crop_plants_pollinated_by_bees' target='_blank'>Click to see all the other crops pollinated by food</a>
       </article>
     );
   }
@@ -157,9 +168,3 @@ Impact.propTypes = {
 }
 
 export default Impact;
-            // <div className='foods' id='chocolate'></div>
-
-            // <div className='foods' id='avocado'></div>
-            // <div className='foods' id='coffee'></div>
-            // <div className='foods' id='apple'></div>
-            // <div className='foods' id='peach'></div>
