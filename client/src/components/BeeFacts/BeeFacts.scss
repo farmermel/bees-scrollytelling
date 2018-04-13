@@ -16,6 +16,7 @@
   height: fit-content;
 
   & h1 {
+    margin: 0 200px 0 0;
     font-size: 3em;
   }
 
@@ -29,10 +30,16 @@
   }
 
   & div {
+    // margin: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
   }
+
+  // & .the-honeybee {
+  //   top: 80px;
+  //   margin: 0 0 100px 0;
+  // }
 
   & .bee-images {
     height: 257px;
@@ -43,6 +50,7 @@
   }
 
   & .honey-bee {
+    margin: 0 0 0 400px;
     background-image: url('../../assets/bee2.png');
   }
 

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { Parallax } from 'react-scroll-parallax';
 import './BeeFacts.css';
 import truck from '../../assets/truck2.png';
 
@@ -54,11 +55,16 @@ export default class BeeFacts extends Component {
       <article className='bee-article'>
         <h1>There are more than 4000 types of wild bees,</h1>
         <h1>you probably know:</h1>
-        <div>
-          <h2>The Honey Bee</h2>
+        <Parallax 
+                  offsetYMax={200}
+                  slowerScrollRate={true}
+                  className='the-honeybee'>
+          <h1>The Honey Bee</h1>
+        </Parallax>
+        <Parallax offsetYMax={50}>
           <div className='bee-images honey-bee'>
           </div>
-        </div>
+        </Parallax>
         <div>
           <div className='bee-images bee-box'>
           </div>

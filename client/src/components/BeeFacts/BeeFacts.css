@@ -13,6 +13,7 @@
   width: 100%;
   height: fit-content; }
   .bee-article h1 {
+    margin: 0 200px 0 0;
     font-size: 3em; }
   .bee-article h2 {
     margin-right: 80px;
@@ -30,6 +31,7 @@
     background-size: contain;
     background-position: center; }
   .bee-article .honey-bee {
+    margin: 0 0 0 400px;
     background-image: url("../../assets/bee2.png"); }
   .bee-article .bee-box {
     background-image: url("../../assets/bee-box.png"); }
