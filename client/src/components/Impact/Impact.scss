@@ -52,7 +52,7 @@
 
   & h1 {
     font-size: 3em;
-  }  
+  }
 
   & p {
     font-size: 1.6em;
@@ -60,7 +60,6 @@
 
   & .foods-cont {
     position: relative;
-
   }
 
   & .foods {
@@ -90,14 +89,14 @@
     height: fit-content;
   }
 
-  & .fruit-cloud span:nth-of-type(3n+1) {
+  & .fruit-cloud span:nth-of-type(3n + 1) {
     font-size: 2em;
     margin: 3px;
     opacity: 0.5;
   }
 
-  & .fruit-cloud span:nth-of-type(4n+3) {
-    font-size: .5em;
+  & .fruit-cloud span:nth-of-type(4n + 3) {
+    font-size: 0.5em;
     opacity: 0.9;
   }
 
@@ -176,6 +175,16 @@
 
   & h1 {
     font-size: 3em;
+  }
+  & .chart {
+    border: 2px solid grey;
+    display: flex;
+    height: 50%;
+    background-image: url('../../assets/chart.jpg'), url('../../assets/background1.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto, cover;
   }
 }
 
