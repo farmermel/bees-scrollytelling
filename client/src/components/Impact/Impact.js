@@ -145,6 +145,7 @@ class Impact extends Component {
     return (
       <article className='economic-article'>
         <h1>The honeybee services are valued to be just above $20 billion in the United States. World wide, that number rises to $217 billion. </h1>
+        <div className="chart"></div>
       </article>
     );
   }

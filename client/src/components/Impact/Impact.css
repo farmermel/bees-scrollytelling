@@ -61,12 +61,12 @@
   .diet-article .fruit-cloud span {
     margin: 1px;
     height: fit-content; }
-  .diet-article .fruit-cloud span:nth-of-type(3n+1) {
+  .diet-article .fruit-cloud span:nth-of-type(3n + 1) {
     font-size: 2em;
     margin: 3px;
     opacity: 0.5; }
-  .diet-article .fruit-cloud span:nth-of-type(4n+3) {
-    font-size: .5em;
+  .diet-article .fruit-cloud span:nth-of-type(4n + 3) {
+    font-size: 0.5em;
     opacity: 0.9; }
   .diet-article .fruit-cloud span:nth-of-type(7n-3) {
     font-size: 3em;
@@ -123,6 +123,14 @@
   height: 100vh; }
   .economic-article h1 {
     font-size: 3em; }
+  .economic-article .chart {
+    display: flex;
+    height: 50%;
+    background-image: url("../../assets/chart.jpg"), url("../../assets/background1.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto, cover; }
 
 .wind-foods-cont {
   display: flex;
