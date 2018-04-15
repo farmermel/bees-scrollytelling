@@ -23,6 +23,7 @@ class App extends Component {
   }
 
   stopScroll = () => {
+    this.myFunction()
     if(this.state.questionsEnabled && window.scrollY > this.state.scrollPosition) {
       window.scrollTo(0, this.state.scrollPosition)
     }
@@ -45,26 +46,31 @@ class App extends Component {
     });
   }
 
+  // window.onscroll = function() {myFunction()};
+
+myFunction = () => {
+  console.log('fired');
+  
+  const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrolled = (winScroll / height) * 100;
+  document.getElementById("bee-bar").style.width = scrolled + "%";
+}
+
   render() {
-    return (
-      <div className="App" onScroll={() => console.log('hi')}>
-        <SwitchButton toggleQuestionsEnabled={ this.toggleQuestionsEnabled } />
-        <Header startScroll={ this.startScroll }
-                questionsEnabled={ this.state.questionsEnabled }
-                saveUser={ this.saveUser } />
-        <Impact startScroll={ this.startScroll }
-                questionsEnabled={ this.state.questionsEnabled }
-                currentUserId={ this.state.currentUserId } />
-        <BeeFacts questionsEnabled={ this.state.questionsEnabled }
-                  startScroll={ this.startScroll }
-                  currentUserId={ this.state.currentUserId } />
-        <Problems questionsEnabled={ this.state.questionsEnabled }
-                  startScroll={ this.startScroll }
-                  currentUserId={ this.state.currentUserId } />
-        <Help questionsEnabled={ this.state.questionsEnabled } />
-        <Statistics userId={ this.state.currentUserId } />
-      </div>
-    );
+    return <div className="App">
+        <div className="progress-container" >
+          <div className="progress-bar" id="bee-bar" />
+        </div>
+
+        <SwitchButton toggleQuestionsEnabled={this.toggleQuestionsEnabled} />
+        <Header startScroll={this.startScroll} questionsEnabled={this.state.questionsEnabled} saveUser={this.saveUser} />
+        <Impact startScroll={this.startScroll} questionsEnabled={this.state.questionsEnabled} currentUserId={this.state.currentUserId} />
+        <BeeFacts questionsEnabled={this.state.questionsEnabled} startScroll={this.startScroll} currentUserId={this.state.currentUserId} />
+        <Problems questionsEnabled={this.state.questionsEnabled} startScroll={this.startScroll} currentUserId={this.state.currentUserId} />
+        <Help questionsEnabled={this.state.questionsEnabled} />
+        <Statistics userId={this.state.currentUserId} />
+      </div>;
   }
 }
 
