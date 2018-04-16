@@ -60,7 +60,7 @@ myFunction = () => {
   render() {
     return <div className="App">
         <div className="progress-container" >
-          <div className="progress-bar" id="bee-bar" />
+          <div className="progress-bar" id="bee-bar"/>
         </div>
 
         <SwitchButton toggleQuestionsEnabled={this.toggleQuestionsEnabled} />
