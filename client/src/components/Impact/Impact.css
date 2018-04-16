@@ -145,11 +145,17 @@
     display: inline-block;
     width: 150px;
     height: 100px; }
+    .economic-article .us-econ-growth p {
+      margin: -250px auto;
+      text-align: center; }
   .economic-article .world-econ-growth {
     background-color: yellow;
     display: inline-block;
     width: 150px;
     height: 300px; }
+    .economic-article .world-econ-growth p {
+      margin: -50px auto;
+      text-align: center; }
 
 .wind-foods-cont {
   display: flex;

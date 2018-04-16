@@ -155,8 +155,10 @@ class Impact extends Component {
       }
         <div className='econ-graph-wrap'>
           <div className='us-econ-growth'>
+          <p>US: 20 Billion</p>
           </div>
           <div className='world-econ-growth'>
+          <p>World: 217 Billion</p>
           </div>
         </div>
       </article>
