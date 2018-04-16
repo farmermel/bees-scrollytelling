@@ -2,7 +2,8 @@ module.exports = {
   appDefaultState: {
     scrollPosition: 750,
     questionsEnabled: true,
-    currentUserId: null
+    currentUserId: null,
+    displayGraphCover: true
   },
   event: {
     target: {
@@ -22,7 +23,7 @@ module.exports = {
   },
   impactDefaultState: {
     percent: 0,
-    unit: '',
+    unit: 'million',
     monetary: '',
     economy: ''
   },
