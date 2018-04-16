@@ -165,3 +165,31 @@
 
 .wind-foods-cont img {
   width: 135px; }
+
+.diet-article-volume {
+  height: 100vh; }
+  .diet-article-volume .wheat-cont {
+    position: relative;
+    width: 150%;
+    margin-left: -100px;
+    height: 500px;
+    overflow: hidden; }
+    .diet-article-volume .wheat-cont .wheat {
+      width: 100%; }
+
+#wheat1 {
+  position: absolute;
+  top: -36px;
+  width: 100%; }
+
+#wheat2 {
+  position: absolute;
+  top: 20px;
+  left: 50px;
+  z-index: 1; }
+
+#wheat3 {
+  position: absolute;
+  top: 50px;
+  left: -10px;
+  z-index: 2; }

@@ -2,15 +2,12 @@ import React, { Component } from 'react';
 import { Parallax } from 'react-scroll-parallax';
 import PieChart from '../PieChart/PieChart';
 import orange from '../../assets/orange.png';
-// import apple from '../../assets/apple.png';
 import PropTypes from 'prop-types';
 import './Impact.css';
 // import fruitList from '../../data/fruitList';
 import fruitArrangement from '../../assets/raspberryStarfruit.png';
 import wordCloud from '../../assets/wordcloud.png';
-import wheat from '../../assets/wheat.jpg';
-import riceball from '../../assets/riceball.png';
-import corn from '../../assets/corn.jpg';
+import wheat from '../../assets/wheat.png';
 
 class Impact extends Component {
   constructor(props) {
@@ -81,26 +78,23 @@ class Impact extends Component {
     );
   }
 
-  // makeWordCloud = () => {
-  //   return fruitList.map(fruit => {
-  //     return <span>{fruit}</span>
-  //   })
-  // }
-
   displayDietArticle = () => {
     return (
       <article className='diet-article'>
-        <h1 id='diet-header'>In your daily diet,</h1>
-        <h1>30% by volume of food you eat</h1>
-        <p>The majority of our diet consists of wheat, rice and corn, all which are wind pollinated</p>
-        <div className='wind-foods-cont'>
-          <Parallax offsetXMax={100} offsetXMin={-50} slowerScrollRate={true}>
-            <img src={ wheat } />
-          </Parallax>
-          <img src={ riceball } />
-          <Parallax offsetXMax={-100} offsetXMin={50} slowerScrollRate={true}>
-            <img src={ corn } />
-          </Parallax>
+        <div className='diet-article-volume'>
+          <h1 id='diet-header'>In your daily diet,</h1>
+          <h1>30% by volume of food you eat</h1>
+          <p>The majority of our diet consists of wheat, rice and corn, all which are wind pollinated</p>
+          <div className='wind-foods-cont'>
+            <Parallax offsetYMax={50} offsetYMin={-100} >
+              <div className='wheat-cont'>
+                <img src={ wheat } className='wheat' id='wheat1' />
+                <img src={ wheat } className='wheat' id='wheat2' />
+                <img src={ wheat } className='wheat' id='wheat3' />
+                <img src={ wheat } className='wheat' id='wheat4' />
+              </div>
+            </Parallax>
+          </div>
         </div>
         <h1>and 60% diversity, are pollinated by bees</h1>
         <p>Most fruits and vegetables are animal pollinated, including chocolate, coffee, tea, and avocados</p>
