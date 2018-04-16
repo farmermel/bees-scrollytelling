@@ -21,7 +21,7 @@ class Impact extends Component {
   }
 
   static contextTypes = {
-        parallaxController: PropTypes.object.isRequired,
+    parallaxController: PropTypes.object.isRequired,
   };
 
   handleSubmit = async (e, scrollStop, answer, question) => {
