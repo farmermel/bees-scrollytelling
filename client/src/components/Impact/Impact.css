@@ -61,12 +61,12 @@
   .diet-article .fruit-cloud span {
     margin: 1px;
     height: fit-content; }
-  .diet-article .fruit-cloud span:nth-of-type(3n+1) {
+  .diet-article .fruit-cloud span:nth-of-type(3n + 1) {
     font-size: 2em;
     margin: 3px;
     opacity: 0.5; }
-  .diet-article .fruit-cloud span:nth-of-type(4n+3) {
-    font-size: .5em;
+  .diet-article .fruit-cloud span:nth-of-type(4n + 3) {
+    font-size: 0.5em;
     opacity: 0.9; }
   .diet-article .fruit-cloud span:nth-of-type(7n-3) {
     font-size: 3em;
@@ -120,9 +120,42 @@
     font-size: 1.3em; }
 
 .economic-article {
-  height: 100vh; }
+  height: 100vh;
+  position: relative; }
   .economic-article h1 {
     font-size: 3em; }
+  .economic-article .graph-cover {
+    height: 470px;
+    width: 100%;
+    background-color: white;
+    border-top: 2px solid black;
+    z-index: 1; }
+  .economic-article .econ-graph-wrap {
+    position: absolute;
+    top: 260px;
+    width: 100%;
+    height: 300px;
+    justify-content: space-around;
+    display: flex;
+    align-items: flex-end;
+    border-bottom: 2px solid black;
+    z-index: -1; }
+  .economic-article .us-econ-growth {
+    background-color: magenta;
+    display: inline-block;
+    width: 150px;
+    height: 100px; }
+    .economic-article .us-econ-growth p {
+      margin: -250px auto;
+      text-align: center; }
+  .economic-article .world-econ-growth {
+    background-color: yellow;
+    display: inline-block;
+    width: 150px;
+    height: 300px; }
+    .economic-article .world-econ-growth p {
+      margin: -50px auto;
+      text-align: center; }
 
 .wind-foods-cont {
   display: flex;

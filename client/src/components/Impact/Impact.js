@@ -17,7 +17,7 @@ class Impact extends Component {
     super(props);
     this.state = { 
       percent: 0,
-      unit: '',
+      unit: 'million',
       monetary: '',
       economy: ''
     }
@@ -145,6 +145,22 @@ class Impact extends Component {
     return (
       <article className='economic-article'>
         <h1>The honeybee services are valued to be just above $20 billion in the United States. World wide, that number rises to $217 billion. </h1>
+        {
+          this.props.displayGraphCover &&
+          <Parallax offsetYMax={1200}
+                    slowerScrollRate={true}>
+          <div className='graph-cover'>
+          </div>
+        </Parallax>
+      }
+        <div className='econ-graph-wrap'>
+          <div className='us-econ-growth'>
+          <p>US: 20 Billion</p>
+          </div>
+          <div className='world-econ-growth'>
+          <p>World: 217 Billion</p>
+          </div>
+        </div>
       </article>
     );
   }
