@@ -25,17 +25,17 @@ class App extends Component {
 
   stopScroll = () => {
     this.manageGraphDisplay();
-    
+    console.log(window.scrollY)
     if (this.state.questionsEnabled && window.scrollY > this.state.scrollPosition) {
       window.scrollTo(0, this.state.scrollPosition)
     }
   }
 
   manageGraphDisplay = () => {
-    if (window.scrollY > 4174 && this.state.displayGraphCover) {
+    if (window.scrollY > 4400 && this.state.displayGraphCover) {
       console.log('changed')
       this.setState({ displayGraphCover: false })
-    } else if (!this.state.displayGraphCover && window.scrollY < 3767) {
+    } else if (!this.state.displayGraphCover && window.scrollY < 3992) {
       this.setState({ displayGraphCover: true })
     }
   }
