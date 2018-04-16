@@ -120,17 +120,36 @@
     font-size: 1.3em; }
 
 .economic-article {
-  height: 100vh; }
+  height: 100vh;
+  position: relative; }
   .economic-article h1 {
     font-size: 3em; }
-  .economic-article .chart {
+  .economic-article .graph-cover {
+    height: 470px;
+    width: 100%;
+    background-color: white;
+    border-top: 2px solid black;
+    z-index: 1; }
+  .economic-article .econ-graph-wrap {
+    position: absolute;
+    top: 260px;
+    width: 100%;
+    height: 300px;
+    justify-content: space-around;
     display: flex;
-    height: 50%;
-    background-image: url("../../assets/chart.jpg"), url("../../assets/background1.jpg");
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: auto, cover; }
+    align-items: flex-end;
+    border-bottom: 2px solid black;
+    z-index: -1; }
+  .economic-article .us-econ-growth {
+    background-color: magenta;
+    display: inline-block;
+    width: 150px;
+    height: 100px; }
+  .economic-article .world-econ-growth {
+    background-color: yellow;
+    display: inline-block;
+    width: 150px;
+    height: 300px; }
 
 .wind-foods-cont {
   display: flex;

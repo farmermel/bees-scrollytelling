@@ -14,7 +14,8 @@ class App extends Component {
     this.state = {
       scrollPosition: 750,
       questionsEnabled: true,
-      currentUserId: null
+      currentUserId: null,
+      displayGraphCover: true
     }
   }
 
@@ -23,8 +24,19 @@ class App extends Component {
   }
 
   stopScroll = () => {
-    if(this.state.questionsEnabled && window.scrollY > this.state.scrollPosition) {
+    this.manageGraphDisplay();
+    
+    if (this.state.questionsEnabled && window.scrollY > this.state.scrollPosition) {
       window.scrollTo(0, this.state.scrollPosition)
+    }
+  }
+
+  manageGraphDisplay = () => {
+    if (window.scrollY > 4174 && this.state.displayGraphCover) {
+      console.log('changed')
+      this.setState({ displayGraphCover: false })
+    } else if (!this.state.displayGraphCover && window.scrollY < 3767) {
+      this.setState({ displayGraphCover: true })
     }
   }
 
@@ -54,7 +66,8 @@ class App extends Component {
                 saveUser={ this.saveUser } />
         <Impact startScroll={ this.startScroll }
                 questionsEnabled={ this.state.questionsEnabled }
-                currentUserId={ this.state.currentUserId } />
+                currentUserId={ this.state.currentUserId }
+                displayGraphCover={ this.state.displayGraphCover } />
         <BeeFacts questionsEnabled={ this.state.questionsEnabled }
                   startScroll={ this.startScroll }
                   currentUserId={ this.state.currentUserId } />
