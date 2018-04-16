@@ -65,6 +65,10 @@ app.post('/api/v1/answers', async (request, response) => {
   }
 })
 
+app.use((request, response) => {
+  response.status(404).send("Sorry can't find that!")
+})
+
 app.listen(app.get('port'), () => {
   console.log(`${app.locals.title} is running on ${app.get('port')}.`);
 });
