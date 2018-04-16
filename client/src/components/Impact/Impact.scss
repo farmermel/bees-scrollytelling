@@ -16,9 +16,53 @@
   }
 
   & .raining-fruit {
-    // position: absolute;
-    // right: 50px;
-    width: 40px;
+    margin: -6px;
+    position: relative;
+    right: -72%;
+    width: 60px;
+
+    &.rain-1 {
+      top: -142px;
+    }
+
+    &.rain-2 {
+      width: 75px;
+      top: -33px;
+      margin: -18px;
+      right: -68%;
+    }
+
+    &.rain-3 {
+      top: 42px;
+    }
+
+    &.rain-4 {
+      width: 105px;
+      margin: -15px;
+      transform: rotate(-35deg);
+    }
+
+    &.rain-6 {
+      top: -78px;
+      right: -50%;
+    }
+
+    &.rain-7 {
+      right: -47%;
+      top: -122px;
+      transform: rotate(-60deg);
+      width: 115px;
+    }
+
+    &.rain-8 {
+      right: -49%;
+      top: -169px;
+    }
+
+    &.rain-9 {
+      right: -37%;
+      top: -50px;
+    }
   }
 }
 
@@ -182,7 +226,7 @@
     height: 470px;
     width: 100%;
     // position: absolute;
-    background-color: white;
+    background-color: green;
     border-top: 2px solid black;
     z-index: 1;
   }

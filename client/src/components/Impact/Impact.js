@@ -2,9 +2,16 @@ import React, { Component } from 'react';
 import { Parallax } from 'react-scroll-parallax';
 import PieChart from '../PieChart/PieChart';
 import orange from '../../assets/orange.png';
+import apple from '../../assets/apple.png';
+import acerola from '../../assets/acerola.png';
+import banana from '../../assets/banana.png';
+import blackberry from '../../assets/blackberry.png';
+import cherry from '../../assets/cherry.png';
+import cucumber from '../../assets/cucumber.png';
+import peach from '../../assets/Peach.png';
+import raspberry from '../../assets/raspberry.png';
 import PropTypes from 'prop-types';
 import './Impact.css';
-// import fruitList from '../../data/fruitList';
 import fruitArrangement from '../../assets/raspberryStarfruit.png';
 import wordCloud from '../../assets/wordcloud.png';
 import wheat from '../../assets/wheat.png';
@@ -64,10 +71,35 @@ class Impact extends Component {
           <h2>Let's talk about food...</h2>
           <img src={ fruitArrangement } alt='fruit arrangement'
                className='fruit-arrangement' />
-          <Parallax offsetYMin={1000}>
+          <Parallax offsetYMax={ 900 }
+                    slowerScrollRate={ true }>
             <img src={ orange } alt='orange' 
                  onLoad={this.handleLoad}
-                 className='raining-fruit' />
+                 className='raining-fruit rain-1' />
+            <img src={ apple } alt='apple' 
+                 onLoad={this.handleLoad}
+                 className='raining-fruit rain-2' />
+            <img src={ acerola } alt='acerola' 
+                 onLoad={this.handleLoad}
+                 className='raining-fruit rain-3' />
+            <img src={ banana } alt='banana' 
+                 onLoad={this.handleLoad}
+                 className='raining-fruit rain-4' />
+            <img src={ blackberry } alt='blackberry' 
+                 onLoad={this.handleLoad}
+                 className='raining-fruit rain-5' />
+            <img src={ cherry } alt='cherry' 
+                 onLoad={this.handleLoad}
+                 className='raining-fruit rain-6' />
+            <img src={ cucumber } alt='cucumber' 
+                 onLoad={this.handleLoad}
+                 className='raining-fruit rain-7' />
+            <img src={ peach } alt='peach' 
+                 onLoad={this.handleLoad}
+                 className='raining-fruit rain-8' />
+            <img src={ raspberry } alt='raspberry' 
+                 onLoad={this.handleLoad}
+                 className='raining-fruit rain-9' />
           </Parallax>
         </div>
         <label htmlFor='diet' 
@@ -141,7 +173,7 @@ class Impact extends Component {
         <h1>The honeybee services are valued to be just above $20 billion in the United States. World wide, that number rises to $217 billion. </h1>
         {
           this.props.displayGraphCover &&
-          <Parallax offsetYMax={1200}
+          <Parallax offsetYMax={1300}
                     slowerScrollRate={true}>
           <div className='graph-cover'>
           </div>
