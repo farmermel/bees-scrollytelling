@@ -23,6 +23,18 @@ describe('API routes', () => {
     });
   });
 
+  it('should return 404', () => {
+    return chai
+      .request(server)
+      .get('/sad')
+      .then(response => {
+        response.should.have.status(404);
+      })
+      .catch(error => {
+        throw error;
+      });
+  });
+
   describe('GET /api/v1/answers', () => {
     it('sends status 200 if get is successful', () => {
       return chai.request(server)
