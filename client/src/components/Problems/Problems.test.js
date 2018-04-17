@@ -14,13 +14,14 @@ describe('Problems', () => {
                                 currentUserId={2} />);
   });
 
-  it.skip('matches the Snapshot', () => {
-    expect(wrapper).to.match.snapshot();
+  it('matches the Snapshot', () => {
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('has default state', () => {
     const expected = {
-      percent: 0
+      percent: 0,
+      answered: false
     };
 
     expect(wrapper.instance().state).toEqual(expected);

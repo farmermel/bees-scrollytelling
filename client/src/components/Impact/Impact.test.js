@@ -13,8 +13,8 @@ describe('Impact', () => {
                               currentUserId={2} />);
   })
 
-  it.skip('matches the Snapshot', () => {
-    expect(wrapper).to.match.snapshot();
+  it('matches the Snapshot', () => {
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('has default state', () => {

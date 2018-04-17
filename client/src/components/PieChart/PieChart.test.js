@@ -11,8 +11,8 @@ describe("PieChart", () => {
     wrapper = shallow(<PieChart updateImpactPercent={updateImpactPercent} />);
   });
 
-  it.skip('matches the Snapshot', () => {
-    expect(wrapper).to.match.snapshot();
+  it('matches the Snapshot', () => {
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('has default state', () => {

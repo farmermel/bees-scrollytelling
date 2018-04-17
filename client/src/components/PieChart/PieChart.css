@@ -71,7 +71,8 @@
   height: 37px;
   padding-left: 5px;
   font-size: 1.3em;
-  text-align: center; }
+  text-align: center;
+  z-index: 3; }
 
 .progress-pie-chart {
   margin: 10px 0; }

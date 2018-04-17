@@ -12,12 +12,12 @@ describe('BeeFacts', () => {
                                 currentUserId={2} />)
   })
 
-  it.skip('matches the Snapshot', () => {
-    expect(wrapper).to.match.snapshot();
+  it('matches the Snapshot', () => {
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('has default state', () => {
-    expect(wrapper.instance().state).toEqual({beeSpecies: ''});
+    expect(wrapper.instance().state).toEqual({beeSpecies: '', answered: false});
   });
 
   describe('handleChange', () => {
