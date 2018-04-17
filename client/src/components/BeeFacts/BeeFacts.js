@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import { Parallax } from 'react-scroll-parallax';
-import './BeeFacts.css';
 import truck from '../../assets/truck2.png';
+import PropTypes from 'prop-types';
+import './BeeFacts.css';
 
 export default class BeeFacts extends Component {
   constructor(props) {

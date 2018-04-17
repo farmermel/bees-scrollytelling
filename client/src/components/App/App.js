@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
+import SwitchButton from '../SwitchButton/SwitchButton';
+import Statistics from '../Statistics/Statistics';
+import BeeFacts from '../BeeFacts/BeeFacts';
+import Problems from '../Problems/Problems';
 import Header from '../Header/Header';
 import Impact from '../Impact/Impact';
 import Help from '../Help/Help';
-import BeeFacts from '../BeeFacts/BeeFacts';
-import Problems from '../Problems/Problems';
-import SwitchButton from '../SwitchButton/SwitchButton';
-import Statistics from '../Statistics/Statistics';
 import './App.css';
 
 class App extends Component {
@@ -25,7 +25,6 @@ class App extends Component {
 
   stopScroll = () => {
     this.manageGraphDisplay();
-    console.log(window.scrollY)
     if (this.state.questionsEnabled && window.scrollY > this.state.scrollPosition) {
       window.scrollTo(0, this.state.scrollPosition)
     }

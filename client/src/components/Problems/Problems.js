@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
+import honeycomb1 from '../../assets/honeycomb1.png';
+import nicotine2 from '../../assets/nicotine2.png';
+import nicotine1 from '../../assets/nicotine1.png';
+import honeycomb from '../../assets/honeycomb.png';
 import { Parallax } from 'react-scroll-parallax';
+import bee from '../../assets/bee-problem.png';
+import flowers from '../../assets/flowers.png';
+import almond from '../../assets/almond.png';
 import PieChart from '../PieChart/PieChart';
 import PropTypes from 'prop-types';
 import './Problems.css';
-import honeycomb from '../../assets/honeycomb.png';
-import honeycomb1 from '../../assets/honeycomb1.png';
-import nicotine1 from '../../assets/nicotine1.png';
-import nicotine2 from '../../assets/nicotine2.png';
-import bee from '../../assets/bee-problem.png';
-import almond from '../../assets/almond.png';
-import flowers from '../../assets/flowers.png';
 
 export default class Problems extends Component {
   constructor(props) {
