@@ -21,11 +21,12 @@ class App extends Component {
 
   componentDidMount = () => {
     window.addEventListener('scroll', this.stopScroll);
+    document.querySelector('.progress-container').style.width =  document.documentElement.clientHeight-10 + 'px';
   };
 
   stopScroll = () => {
     this.manageGraphDisplay();
-    this.myFunction()
+    this.myFunction();
     if (
       this.state.questionsEnabled &&
       window.scrollY > this.state.scrollPosition
@@ -60,11 +61,9 @@ class App extends Component {
     });
   };
 
-  // window.onscroll = function() {myFunction()};
+  
 
   myFunction = () => {
-    console.log('fired');
-
     const winScroll =
       document.body.scrollTop || document.documentElement.scrollTop;
     const height =
