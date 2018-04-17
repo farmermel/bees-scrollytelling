@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
+import honeycomb1 from '../../assets/honeycomb1.png';
+import nicotine2 from '../../assets/nicotine2.png';
+import nicotine1 from '../../assets/nicotine1.png';
+import honeycomb from '../../assets/honeycomb.png';
 import { Parallax } from 'react-scroll-parallax';
+import bee from '../../assets/bee-problem.png';
+import flowers from '../../assets/flowers.png';
+import almond from '../../assets/almond.png';
 import PieChart from '../PieChart/PieChart';
 import PropTypes from 'prop-types';
 import './Problems.css';
-import honeycomb from '../../assets/honeycomb.png';
-import honeycomb1 from '../../assets/honeycomb1.png';
-import nicotine1 from '../../assets/nicotine1.png';
-import nicotine2 from '../../assets/nicotine2.png';
-import bee from '../../assets/bee-problem.png';
-import almond from '../../assets/almond.png';
-import flowers from '../../assets/flowers.png';
 
 export default class Problems extends Component {
   constructor(props) {
@@ -64,8 +64,8 @@ export default class Problems extends Component {
           <p>They are also very addictive (like nicotine)</p>
           <Parallax offsetYMax={50} offsetYMin={-100}>
             <div className='nicotine-cont'>
-              <img src={ nicotine1 } className='nicotine' id='nicotine1' />
-              <img src={ nicotine2 } className='nicotine' id='nicotine2' />
+              <img src={ nicotine1 } className='nicotine' id='nicotine1' alt='nicotine'/>
+              <img src={ nicotine2 } className='nicotine' id='nicotine2' alt='nicotine'/>
             </div>
           </Parallax>
         </div>
@@ -75,9 +75,9 @@ export default class Problems extends Component {
         </div>
         <Parallax offsetYMax={50} offsetYMin={-50}>
           <div className='honeycomb-cont'>
-            <img src={ honeycomb } id='honeycomb' />
-            <img src={ honeycomb1 } id='honeycomb1' />
-            <img src={ bee } id='bee' />
+            <img src={ honeycomb } id='honeycomb' alt='honeycomb'/>
+            <img src={ honeycomb1 } id='honeycomb1' alt='honeycomb'/>
+            <img src={ bee } id='bee' alt='bee'/>
            </div>
         </Parallax>
       </article>
@@ -94,7 +94,7 @@ export default class Problems extends Component {
         <p>Also, fields of one plant often cause more problems with weeds and pests,</p>
         <p>enhancing the need for pesticides and harming the pollinating bees</p>
         <Parallax offsetYMax={50} offsetYMin={-50} >
-          <img src={ almond } className='almond' />
+          <img src={ almond } className='almond' alt='almond'/>
         </Parallax>
       </article>
     );
@@ -110,7 +110,7 @@ export default class Problems extends Component {
         <p>Also, climate change causes plants to flower earlier, disrupting the bee's natural schedule</p>
         <div id='flowers-cont'>
         <Parallax offsetYMax={50} offsetYMin={-50} >
-          <img src={ flowers } className='flowers' />
+          <img src={ flowers } className='flowers' alt='flowers' />
         </Parallax>
         </div>
       </article>

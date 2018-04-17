@@ -1,21 +1,21 @@
 import React, { Component } from 'react';
-import { Parallax } from 'react-scroll-parallax';
-import PieChart from '../PieChart/PieChart';
-import orange from '../../assets/orange.png';
-import apple from '../../assets/apple.png';
-import acerola from '../../assets/acerola.png';
-import banana from '../../assets/banana.png';
+import fruitArrangement from '../../assets/raspberryStarfruit.png';
+import wheatCropped from '../../assets/wheat-cropped.png';
 import blackberry from '../../assets/blackberry.png';
-import cherry from '../../assets/cherry.png';
-import cucumber from '../../assets/cucumber.png';
-import peach from '../../assets/Peach.png';
+import wordCloud from '../../assets/wordcloud.png';
 import raspberry from '../../assets/raspberry.png';
+import { Parallax } from 'react-scroll-parallax';
+import cucumber from '../../assets/cucumber.png';
+import acerola from '../../assets/acerola.png';
+import orange from '../../assets/orange.png';
+import cherry from '../../assets/cherry.png';
+import banana from '../../assets/banana.png';
+import PieChart from '../PieChart/PieChart';
+import peach from '../../assets/Peach.png';
+import apple from '../../assets/apple.png';
+import wheat from '../../assets/wheat.png';
 import PropTypes from 'prop-types';
 import './Impact.css';
-import fruitArrangement from '../../assets/raspberryStarfruit.png';
-import wordCloud from '../../assets/wordcloud.png';
-import wheat from '../../assets/wheat.png';
-import wheatCropped from '../../assets/wheat-cropped.png';
 
 class Impact extends Component {
   constructor(props) {
@@ -29,7 +29,7 @@ class Impact extends Component {
   }
 
   static contextTypes = {
-    parallaxController: PropTypes.object.isRequired,
+    parallaxController: PropTypes.object
   };
 
   handleSubmit = async (e, scrollStop, answer, question) => {
@@ -121,10 +121,10 @@ class Impact extends Component {
           <div className='wind-foods-cont'>
             <Parallax offsetYMax={50} offsetYMin={-100} >
               <div className='wheat-cont'>
-                <img src={ wheat } className='wheat' id='wheat1' />
-                <img src={ wheat } className='wheat' id='wheat2' />
-                <img src={ wheatCropped } className='wheat' id='wheat3' />
-                <img src={ wheatCropped } className='wheat' id='wheat4' />
+                <img src={ wheat } className='wheat' id='wheat1' alt='wheat grass'/>
+                <img src={ wheat } className='wheat' id='wheat2' alt='wheat grass'/>
+                <img src={ wheatCropped } className='wheat' id='wheat3' alt='wheat grass'/>
+                <img src={ wheatCropped } className='wheat' id='wheat4' alt='wheat grass'/>
               </div>
             </Parallax>
           </div>
