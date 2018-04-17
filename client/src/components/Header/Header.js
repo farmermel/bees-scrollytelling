@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Parallax } from 'react-scroll-parallax';
 import PropTypes from 'prop-types';
+import downArrow from '../../assets/down-arrow.svg';
 import './Header.css';
 
 
@@ -12,16 +13,6 @@ const concernArr = [
   'Not at all concerned', 'A little concerned', 'Very concerned', 'Haven\'t thought about it'
 ];
 
-//after submit/completion of the form we should have a 
-//down arrow pop up that lets user know they are now
-//free to keep scrolling. Maybe a lil up and down motion
-//on the arrow as well
-
-//also maybe more exposition between get to know you form
-//and content
-//like "Hey, nice to meet you! (or nice to Bee acquainted!) lol
-//Lets get down to business"
-
 
 class Header extends Component {
   constructor() {
@@ -29,7 +20,8 @@ class Header extends Component {
     this.state = {
       concern: '',
       age: '',
-      location: {}
+      location: {},
+      answered: false
     }
   }
 
@@ -63,6 +55,7 @@ class Header extends Component {
     try {
       if (this.state.concern && this.state.age) {
         this.props.startScroll(e, 1396);
+        this.setState({ answered: true });
         await this.postToDB();
       }
     } catch (error) {
@@ -93,19 +86,18 @@ class Header extends Component {
 
   handleChange = e => {
     this.setState({
-      [e.target.name]: e.target.value
-    })
+      [e.target.name]: e.target.value,
+    });
   }
 
-  //rename things to be more general
   radioOptions = optionsArr => {
     const name = optionsArr.length === 5 ? 'age' : 'concern';
     return optionsArr.map((range, i) => {
       return (
         <label htmlFor={`${name}${range}`} key={i}>{range}
           <input type="radio" id={`${name}${range}`}
-                 name={name} value={range}
-                 onChange={this.handleChange} />
+                 name={ name } value={ range}
+                 onChange={ this.handleChange } />
         </label>
       );
     });
@@ -122,7 +114,7 @@ class Header extends Component {
         </header>
         <form 
           className='user-info-form'
-          onSubmit={this.handleSubmit}
+          onSubmit={ this.handleSubmit }
         >
           <h2>
             <Parallax 
@@ -137,14 +129,18 @@ class Header extends Component {
           <div className='questions-cont'>
             <div>
             <h3 className='question-descr'>Select your age</h3>
-              {this.radioOptions(ageRanges)}
+              { this.radioOptions(ageRanges) }
             </div>
             <div>
             <h3 className='question-descr'>How concerned are you about bees?</h3>
-              {this.radioOptions(concernArr)}
+              { this.radioOptions(concernArr) }
             </div>
           </div>
-          <button>Submit</button>
+          {
+            this.state.answered 
+            ? <div className='arrow-cont'><img src={ downArrow } alt='scroll' className='hover-arrow' /></div>
+            : <button type='submit'>Guess</button>
+          }
         </form>
       </div>
     );

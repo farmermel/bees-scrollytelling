@@ -13,7 +13,8 @@ import banana from '../../assets/banana.png';
 import PieChart from '../PieChart/PieChart';
 import peach from '../../assets/Peach.png';
 import apple from '../../assets/apple.png';
-import wheat from '../../assets/wheat.png';
+import coins from '../../assets/falling-coins.png';
+import downArrow from '../../assets/down-arrow.svg';
 import PropTypes from 'prop-types';
 import './Impact.css';
 
@@ -24,7 +25,9 @@ class Impact extends Component {
       percent: 0,
       unit: 'million',
       monetary: '',
-      economy: ''
+      economy: '',
+      answeredpercent: false,
+      answeredeconomy: false
     }
   }
 
@@ -34,7 +37,10 @@ class Impact extends Component {
 
   handleSubmit = async (e, scrollStop, answer, question) => {
     this.props.startScroll(e, scrollStop);
-    await this.setState({ economy: `${this.state.monetary}_${this.state.unit}`});
+    await this.setState({
+     economy: `${this.state.monetary}_${this.state.unit}`,
+     [`answered${answer}`]: true
+    });
     const postBody = {
       method: 'POST',
       headers: {
@@ -106,7 +112,11 @@ class Impact extends Component {
         <label htmlFor='diet' 
                className='question-descr'>What percentage of your diet do you think is provided by bees?</label>
         <PieChart updateImpactPercent={ this.updateImpactPercent } />
-        <button type='submit'>Guess</button>
+        {
+          this.state.answeredpercent 
+          ? <div className='arrow-cont'><img src={ downArrow } alt='scroll' className='hover-arrow' /></div>
+          : <button type='submit'>Guess</button>
+        }
       </form>
     );
   }
@@ -121,8 +131,8 @@ class Impact extends Component {
           <div className='wind-foods-cont'>
             <Parallax offsetYMax={50} offsetYMin={-100} >
               <div className='wheat-cont'>
-                <img src={ wheat } className='wheat' id='wheat1' alt='wheat grass'/>
-                <img src={ wheat } className='wheat' id='wheat2' alt='wheat grass'/>
+                <img src={ wheatCropped } className='wheat' id='wheat1' alt='wheat grass'/>
+                <img src={ wheatCropped } className='wheat' id='wheat2' alt='wheat grass'/>
                 <img src={ wheatCropped } className='wheat' id='wheat3' alt='wheat grass'/>
                 <img src={ wheatCropped } className='wheat' id='wheat4' alt='wheat grass'/>
               </div>
@@ -163,7 +173,18 @@ class Impact extends Component {
             <option value='billion'>billion</option>
           </select>
         </div>
+<<<<<<< HEAD
         <button type='submit'>Guess</button>
+        <Parallax offsetYMax={50} offsetYMin={-50} className='coins-parallax'>
+          <img src={ coins } alt='falling coins' id='coins' />
+        </Parallax>
+=======
+        {
+          this.state.answeredeconomy
+          ? <div className='arrow-cont'><img src={ downArrow } alt='scroll' className='hover-arrow' /></div>
+          : <button type='submit'>Guess</button>
+        }
+>>>>>>> Add downarrow image after submit is clicked
       </form>
     );
   }

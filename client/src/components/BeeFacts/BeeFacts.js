@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import { Parallax } from 'react-scroll-parallax';
 import PropTypes from 'prop-types';
+import downArrow from '../../assets/down-arrow.svg';
 import './BeeFacts.css';
 
 export default class BeeFacts extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      beeSpecies: ''
+      beeSpecies: '',
+      answered: false
     }
   }
 
@@ -28,7 +30,12 @@ export default class BeeFacts extends Component {
         question: 'bee species'
       })
     }
-    await fetch('/api/v1/answers', postBody);
+    try {
+      await fetch('/api/v1/answers', postBody);
+      this.setState({ answered: true });
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   beeFactsQuestion = () => {
@@ -44,7 +51,11 @@ export default class BeeFacts extends Component {
                name='beeSpecies'
                value={ this.state.beeSpecies }
                onChange={ (e) => this.handleChange(e) } />
-        <button type='submit'>Guess</button>
+        {
+          this.state.answered 
+          ? <div className='arrow-cont'><img src={ downArrow } alt='scroll' className='hover-arrow' /></div>
+          : <button type='submit'>Guess</button>
+        }
       </form>
     )
   }

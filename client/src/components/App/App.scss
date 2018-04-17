@@ -10,27 +10,32 @@ body {
   justify-content: center;
   margin: 0 10%;
   align-items: center;
+  font-weight: 300;
   font-family: 'Open Sans Condensed', sans-serif;
 }
 
 form {
-  // padding: 20px 50px;
+  position:relative;
+  align-items: center;
   display: flex;
   flex-direction: column;
   width: 100%;
+
+  & label {
+    align-self: left;
+    margin: 3px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+  
+  & h2 {
+    align-self: left;
+    font-size: 5em;
+    margin: 20px 0;
+  }
 }
 
-form label {
-  margin: 3px;
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: flex-end;
-}
-
-form h2 {
-  font-size: 5em;
-  margin: 20px 0;
-}
 
 input:focus {
   outline: none;
@@ -84,10 +89,28 @@ button {
 
 .progress-bar {
   height: 30px;
-  // width: 50px;
   background-image: url('../../assets/bee3.png');
   background-repeat: no-repeat;
   background-position: right top;
   background-size: 30px 30px;
 }
 
+.arrow-cont {
+  height: 150px;
+}
+
+.hover-arrow {
+  animation: MoveUpDown 2s linear infinite;
+  position: absolute;
+  bottom: 0;
+  width: 100px;
+}
+
+@keyframes MoveUpDown {
+  0%, 100% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 50px;
+  }
+}

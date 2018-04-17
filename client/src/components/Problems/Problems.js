@@ -4,6 +4,7 @@ import nicotine2 from '../../assets/nicotine2.png';
 import nicotine1 from '../../assets/nicotine1.png';
 import honeycomb from '../../assets/honeycomb.png';
 import { Parallax } from 'react-scroll-parallax';
+import downArrow from '../../assets/down-arrow.svg';
 import bee from '../../assets/bee-problem.png';
 import flowers from '../../assets/flowers.png';
 import almond from '../../assets/almond.png';
@@ -15,7 +16,8 @@ export default class Problems extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      percent: 0
+      percent: 0,
+      answered: false
     }
   }
 
@@ -25,7 +27,10 @@ export default class Problems extends Component {
 
   handleSubmit = async e => {
     this.props.startScroll(e, 8000);
-    await this.setState({ economy: `${this.state.monetary}${this.state.unit}`});
+    await this.setState({ 
+      economy: `${this.state.monetary}${this.state.unit}`,
+      answered: true
+    });
     this.postData();
   }
 
@@ -50,7 +55,11 @@ export default class Problems extends Component {
         <h2>Bees are in trouble</h2>
         <label htmlFor='problem' className='question-descr'>What percent of bee colonies do beekeepers lose every year?</label>
         <PieChart updateImpactPercent={ this.updateImpactPercent } />
-        <button type='submit'>Guess</button>
+          {
+            this.state.answered 
+            ? <div className='arrow-cont'><img src={ downArrow } alt='scroll' className='hover-arrow' /></div>
+            : <button type='submit'>Guess</button>
+          }
       </form>
     );
   };
@@ -73,11 +82,11 @@ export default class Problems extends Component {
           <p>Bees will seek out plants that have been sprayed with neonicotinoides</p>
           <p>Meaning each time they visit sprayed plants, they have a greater chance of not finding home</p>
         </div>
-        <Parallax offsetYMax={50} offsetYMin={-50}>
+        <Parallax offsetYMax={50} offsetYMin={-50} className='honeycomb-parallax'>
           <div className='honeycomb-cont'>
             <img src={ honeycomb } id='honeycomb' alt='honeycomb'/>
-            <img src={ honeycomb1 } id='honeycomb1' alt='honeycomb'/>
             <img src={ bee } id='bee' alt='bee'/>
+            <img src={ honeycomb } id='honeycomb1' alt='honeycomb'/>
            </div>
         </Parallax>
       </article>
@@ -106,7 +115,7 @@ export default class Problems extends Component {
         <h1>Climate change create warmer temperatures</h1>
         <p>Higher temperatures effect many aspects of the honey bee way</p>
         <p>A warmer climate promotes the growth of pests in bee hives</p>
-        <p>Making bees more suseptible to ------------------ colony collapse disorder, parasites?</p>
+        <p>Making bees more suseptible to colony collapse disorder and parasites</p>
         <p>Also, climate change causes plants to flower earlier, disrupting the bee's natural schedule</p>
         <div id='flowers-cont'>
         <Parallax offsetYMax={50} offsetYMin={-50} >

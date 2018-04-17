@@ -71,31 +71,38 @@
 
 .neonics-cont2 {
   height: 30vh;
-  & .honeycomb-cont {
+}
+
+.honeycomb-cont {
   position: relative;
-  height: 300px
-  }
+  height: 500px
+}
+
+.honeycomb-parallax {
+  z-index: -1;
 }
 
 #honeycomb {
   width: 685px;
   z-index: -1;
   position: relative;
-  top: -131px;
-  left: 570px;
+  top: -250px;
+  left: 650px;
+  transform: rotate(180deg);
 }
 
 #honeycomb1 {
-  width: 213px;
+  width: 685px;
   z-index: -1;
   position: relative;
-  top: -203px;
-  left: -214px;
+  top: -670px;
+  left: -409px;
 }
 
 #bee {
   position: relative;
   top: -450px;
+  left: -210px;
 }
 
 .monoculture {
