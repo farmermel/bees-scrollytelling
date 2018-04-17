@@ -9,6 +9,7 @@ import nicotine1 from '../../assets/nicotine1.png';
 import nicotine2 from '../../assets/nicotine2.png';
 import bee from '../../assets/bee-problem.png';
 import almond from '../../assets/almond.png';
+import flowers from '../../assets/flowers.png';
 
 export default class Problems extends Component {
   constructor(props) {
@@ -107,6 +108,11 @@ export default class Problems extends Component {
         <p>A warmer climate promotes the growth of pests in bee hives</p>
         <p>Making bees more suseptible to ------------------ colony collapse disorder, parasites?</p>
         <p>Also, climate change causes plants to flower earlier, disrupting the bee's natural schedule</p>
+        <div id='flowers-cont'>
+        <Parallax offsetYMax={50} offsetYMin={-50} >
+          <img src={ flowers } className='flowers' />
+        </Parallax>
+        </div>
       </article>
     );
   };
