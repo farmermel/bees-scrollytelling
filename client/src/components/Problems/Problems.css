@@ -49,15 +49,19 @@
 
 .neonics-cont2 {
   height: 30vh; }
-  .neonics-cont2 .honeycomb-cont {
-    position: relative;
-    height: 300px; }
+
+.honeycomb-cont {
+  position: relative;
+  height: 500px; }
+
+.honeycomb-parallax {
+  z-index: -1; }
 
 #honeycomb {
   width: 685px;
   z-index: -1;
   position: relative;
-  top: -330px;
+  top: -250px;
   left: 650px;
   transform: rotate(180deg); }
 
@@ -65,7 +69,7 @@
   width: 685px;
   z-index: -1;
   position: relative;
-  top: -740px;
+  top: -670px;
   left: -409px; }
 
 #bee {

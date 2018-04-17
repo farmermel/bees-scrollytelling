@@ -73,7 +73,7 @@ export default class Problems extends Component {
           <p>Bees will seek out plants that have been sprayed with neonicotinoides</p>
           <p>Meaning each time they visit sprayed plants, they have a greater chance of not finding home</p>
         </div>
-        <Parallax offsetYMax={50} offsetYMin={-50}>
+        <Parallax offsetYMax={50} offsetYMin={-50} className='honeycomb-parallax'>
           <div className='honeycomb-cont'>
             <img src={ honeycomb } id='honeycomb' alt='honeycomb'/>
             <img src={ bee } id='bee' alt='bee'/>
@@ -106,7 +106,7 @@ export default class Problems extends Component {
         <h1>Climate change create warmer temperatures</h1>
         <p>Higher temperatures effect many aspects of the honey bee way</p>
         <p>A warmer climate promotes the growth of pests in bee hives</p>
-        <p>Making bees more suseptible to ------------------ colony collapse disorder, parasites?</p>
+        <p>Making bees more suseptible to colony collapse disorder and parasites</p>
         <p>Also, climate change causes plants to flower earlier, disrupting the bee's natural schedule</p>
         <div id='flowers-cont'>
         <Parallax offsetYMax={50} offsetYMin={-50} >
