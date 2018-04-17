@@ -75,3 +75,13 @@
 #bee {
   position: relative;
   top: -450px; }
+
+.monoculture {
+  height: 100vh;
+  margin-bottom: 400px; }
+
+.almond {
+  position: relative;
+  top: -299px;
+  left: 470px;
+  z-index: -1; }
