@@ -29,13 +29,29 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 130px; }
+  .neonics-cont1 .nicotine-cont {
+    width: 300px;
+    position: relative; }
+  .neonics-cont1 .nicotine {
+    position: relative; }
+  .neonics-cont1 #nicotine1 {
+    width: 300px;
+    z-index: -1;
+    position: relative;
+    top: -40px;
+    left: 283px;
+    transform: rotate(80deg); }
+  .neonics-cont1 #nicotine2 {
+    width: 360px;
+    transform: rotate(300deg);
+    top: -290px;
+    left: 360px; }
 
 .neonics-cont2 {
   height: 30vh; }
-
-.honeycomb-cont {
-  position: relative;
-  height: 300px; }
+  .neonics-cont2 .honeycomb-cont {
+    position: relative;
+    height: 300px; }
 
 #honeycomb {
   width: 685px;
@@ -51,27 +67,6 @@
   top: -203px;
   left: -214px; }
 
-.nicotine-cont {
-  width: 300px;
-  position: relative; }
-
-#nicotine1 {
-  width: 300px;
-  z-index: -1;
-  position: relative;
-  top: -40px;
-  left: 283px;
-  transform: rotate(80deg); }
-
-#nicotine2 {
-  width: 360px;
-  transform: rotate(300deg);
-  top: -290px;
-  left: 360px; }
-
-.nicotine {
-  position: relative; }
-
 #bee {
   position: relative;
   top: -450px; }
@@ -79,12 +74,11 @@
 .monoculture {
   height: 100vh;
   margin-bottom: 400px; }
-
-.almond {
-  position: relative;
-  top: -299px;
-  left: 470px;
-  z-index: -1; }
+  .monoculture .almond {
+    position: relative;
+    top: -299px;
+    left: 470px;
+    z-index: -1; }
 
 #flowers-cont {
   width: 100%;
