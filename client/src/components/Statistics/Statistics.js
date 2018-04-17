@@ -64,15 +64,16 @@ class Statistics extends Component {
           const number = [...response[key].average.toString()];
           const fullNumber = `${number[0]}${number[1]}${number[2]} ${monetary}`
           return (
-            <div>
+            <div className='answer'>
               <p>{ fullNumber }</p>
             </div>
           )
         }
       return (
-        <div key={index}>
-          <h1>{key}</h1>
-          <p>{response[key].average}</p>
+        <div key={index} className='statistics-card'>
+          <h4>{key}</h4>
+            <hr/>
+          <h6>Average Answer: {response[key].average}</h6>
         </div>
       )
       })
@@ -82,7 +83,7 @@ class Statistics extends Component {
   render = () => {
     return (
       <div className='Statistics'>
-        <p>Statistics</p>
+        <h2>Whats the buzz on how people are answering?</h2>
         { this.displayStatistics() }
       </div>
     )
