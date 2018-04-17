@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Parallax } from 'react-scroll-parallax';
-import truck from '../../assets/truck2.png';
 import PropTypes from 'prop-types';
 import './BeeFacts.css';
 

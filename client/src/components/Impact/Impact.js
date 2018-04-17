@@ -121,10 +121,10 @@ class Impact extends Component {
           <div className='wind-foods-cont'>
             <Parallax offsetYMax={50} offsetYMin={-100} >
               <div className='wheat-cont'>
-                <img src={ wheat } className='wheat' id='wheat1' />
-                <img src={ wheat } className='wheat' id='wheat2' />
-                <img src={ wheatCropped } className='wheat' id='wheat3' />
-                <img src={ wheatCropped } className='wheat' id='wheat4' />
+                <img src={ wheat } className='wheat' id='wheat1' alt='wheat grass'/>
+                <img src={ wheat } className='wheat' id='wheat2' alt='wheat grass'/>
+                <img src={ wheatCropped } className='wheat' id='wheat3' alt='wheat grass'/>
+                <img src={ wheatCropped } className='wheat' id='wheat4' alt='wheat grass'/>
               </div>
             </Parallax>
           </div>

@@ -34,10 +34,10 @@ class Statistics extends Component {
 
       //handle sum
       if (questionObj.user_answer.split('_').length === 1) {
-        answers[questionObj.question].sum += parseInt(questionObj.user_answer);
+        answers[questionObj.question].sum += parseInt(questionObj.user_answer, 10);
       } else {
         const splitArray = questionObj.user_answer.split('_')
-        let number = parseInt(splitArray[0]);
+        let number = parseInt(splitArray[0], 10);
         splitArray[1] === 'million' ? number *= 1000000 : number *= 1000000000;
         answers[questionObj.question].sum += number;
       }
@@ -47,7 +47,7 @@ class Statistics extends Component {
   }
 
   getAverages = (response) => {
-    Object.keys(response).map(key => {
+    Object.keys(response).forEach(key => {
       const counts = Object.values(response[key].count);
       const totalCount = counts.reduce((totalCount, number) => {return totalCount += number}, 0);
       response[key].average = response[key].sum / totalCount
