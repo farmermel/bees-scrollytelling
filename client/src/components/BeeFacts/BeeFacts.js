@@ -53,7 +53,7 @@ export default class BeeFacts extends Component {
                onChange={ (e) => this.handleChange(e) } />
         {
           this.state.answered 
-          ? <img src={ downArrow } alt='down arrow' className='hover-arrow' />
+          ? <div className='arrow-cont'><img src={ downArrow } alt='scroll' className='hover-arrow' /></div>
           : <button type='submit'>Guess</button>
         }
       </form>
