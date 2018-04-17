@@ -13,6 +13,7 @@ import banana from '../../assets/banana.png';
 import PieChart from '../PieChart/PieChart';
 import peach from '../../assets/Peach.png';
 import apple from '../../assets/apple.png';
+import coins from '../../assets/falling-coins.png';
 import PropTypes from 'prop-types';
 import './Impact.css';
 
@@ -163,6 +164,9 @@ class Impact extends Component {
           </select>
         </div>
         <button type='submit'>Guess</button>
+        <Parallax offsetYMax={50} offsetYMin={-50} className='coins-parallax'>
+          <img src={ coins } alt='falling coins' id='coins' />
+        </Parallax>
       </form>
     );
   }
