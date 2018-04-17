@@ -13,7 +13,6 @@ import banana from '../../assets/banana.png';
 import PieChart from '../PieChart/PieChart';
 import peach from '../../assets/Peach.png';
 import apple from '../../assets/apple.png';
-import wheat from '../../assets/wheat.png';
 import PropTypes from 'prop-types';
 import './Impact.css';
 
@@ -121,8 +120,8 @@ class Impact extends Component {
           <div className='wind-foods-cont'>
             <Parallax offsetYMax={50} offsetYMin={-100} >
               <div className='wheat-cont'>
-                <img src={ wheat } className='wheat' id='wheat1' alt='wheat grass'/>
-                <img src={ wheat } className='wheat' id='wheat2' alt='wheat grass'/>
+                <img src={ wheatCropped } className='wheat' id='wheat1' alt='wheat grass'/>
+                <img src={ wheatCropped } className='wheat' id='wheat2' alt='wheat grass'/>
                 <img src={ wheatCropped } className='wheat' id='wheat3' alt='wheat grass'/>
                 <img src={ wheatCropped } className='wheat' id='wheat4' alt='wheat grass'/>
               </div>
