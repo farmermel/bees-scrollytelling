@@ -5,7 +5,7 @@
     height: 100vh; }
 
 .problems-article {
-  height: 100vh; }
+  min-height: 100vh; }
   .problems-article h1 {
     font-size: 3em; }
   .problems-article p {
@@ -23,7 +23,8 @@
   position: relative; }
 
 .honeycomb-cont {
-  position: relative; }
+  position: relative;
+  height: 300px; }
 
 #honeycomb {
   width: 685px;

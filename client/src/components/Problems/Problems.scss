@@ -8,7 +8,7 @@
 }
 
 .problems-article {
-  height: 100vh;
+  min-height: 100vh;
 
   & h1 {
     font-size: 3em;
@@ -35,6 +35,7 @@
 
 .honeycomb-cont {
   position: relative;
+  height: 300px
 }
 
 #honeycomb {
