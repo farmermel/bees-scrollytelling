@@ -9,6 +9,7 @@
 
 .problems-article {
   min-height: 100vh;
+  margin-bottom: 200px;
 
   & h1 {
     font-size: 3em;
@@ -31,6 +32,19 @@
 .neonics-cont1 {
   height: 100vh;
   position: relative;
+
+  & .fixed-pesticides {
+    background-image: url("../../assets/pesticides.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 130px;
+  }
+}
+
+.neonics-cont2 {
+  height: 30vh;
 }
 
 .honeycomb-cont {
@@ -54,10 +68,33 @@
   left: -214px;
 }
 
-#nicotine {
-  width: 550px;
+.nicotine-cont {
+  width: 300px;
+  position: relative;
+}
+
+#nicotine1 {
+  width: 300px;
   z-index: -1;
-  transform: rotate(-20deg);
-  margin-left: -230px;
-  margin-bottom: 230px;
+  position: relative;
+  top: -40px;
+  left: 283px;
+  transform: rotate(80deg);
+
+}
+
+#nicotine2 {
+  width: 360px;
+  transform: rotate(300deg);
+  top: -290px;
+  left: 360px;
+}
+
+.nicotine {
+  position: relative;
+}
+
+#bee {
+  position: relative;
+  top: -450px;
 }

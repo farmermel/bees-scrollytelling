@@ -5,8 +5,9 @@ import PropTypes from 'prop-types';
 import './Problems.css';
 import honeycomb from '../../assets/honeycomb.png';
 import honeycomb1 from '../../assets/honeycomb1.png';
+import nicotine1 from '../../assets/nicotine1.png';
 import nicotine2 from '../../assets/nicotine2.png';
-
+import bee from '../../assets/bee-problem.png';
 
 export default class Problems extends Component {
   constructor(props) {
@@ -57,21 +58,26 @@ export default class Problems extends Component {
       <article className='problems-article'>
         <div className='neonics-cont1'> 
           <h1>Neonicotinoides confuse bees and make it difficult for bees to find their way back to their hive</h1>
-          <Parallax offsetYMax={50} offsetYMin={-100}>
-            <div className='honeycomb-cont'>
-              <img src={ honeycomb } id='honeycomb' />
-              <img src={ honeycomb1 } id='honeycomb1' />
-            </div>
-          </Parallax>
+          <div className='fixed-pesticides'></div>
           <p>They are also very addictive (like nicotine)</p>
-          <Parallax offsetYMax={0} offsetYMin={-100}>
-            <img src={ nicotine2 } id='nicotine' />
+          <Parallax offsetYMax={50} offsetYMin={-100}>
+            <div className='nicotine-cont'>
+              <img src={ nicotine1 } className='nicotine' id='nicotine1' />
+              <img src={ nicotine2 } className='nicotine' id='nicotine2' />
+            </div>
           </Parallax>
         </div>
         <div className='neonics-cont2'>
           <p>Bees will seek out plants that have been sprayed with neonicotinoides</p>
           <p>Meaning each time they visit sprayed plants, they have a greater chance of not finding home</p>
         </div>
+        <Parallax offsetYMax={50} offsetYMin={-50}>
+          <div className='honeycomb-cont'>
+            <img src={ honeycomb } id='honeycomb' />
+            <img src={ honeycomb1 } id='honeycomb1' />
+            <img src={ bee } id='bee' />
+           </div>
+        </Parallax>
       </article>
     );
   };
