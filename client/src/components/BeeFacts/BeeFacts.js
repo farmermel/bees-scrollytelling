@@ -53,7 +53,8 @@ export default class BeeFacts extends Component {
   beeFactsArticle = () => {
     return (
       <article className='bee-article'>
-        <h1>There are more than 4000 types of wild bees,</h1>
+        <h1>There are more than 4000 types of bees,</h1>
+        <div className='wild-bees-img'></div>
         <h1>you probably know:</h1>
         <Parallax 
                   offsetYMax={200}

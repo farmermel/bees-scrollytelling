@@ -171,7 +171,7 @@
     border-bottom: 2px solid black;
     z-index: -1; }
   .economic-article .us-econ-growth {
-    background-color: magenta;
+    background-color: #CCCF85;
     display: inline-block;
     width: 150px;
     height: 100px; }
@@ -179,7 +179,7 @@
       margin: -250px auto;
       text-align: center; }
   .economic-article .world-econ-growth {
-    background-color: yellow;
+    background-color: #B2BD72;
     display: inline-block;
     width: 150px;
     height: 300px; }

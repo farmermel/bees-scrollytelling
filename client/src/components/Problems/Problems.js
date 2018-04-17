@@ -63,6 +63,7 @@ export default class Problems extends Component {
     return (
       <article className='problems-article'>
         <h1>Large fields of one plant, like you see in today's agriculture, can cause harm to bee colonies</h1>
+        <div className='fixed-monocropping'></div>
         <p>Bees become stressed out feeding on the same plant because they do not receive a nutrient-rich diet</p>
         <p>In fact, nearly 20 percent of the beekeepers who pollinated almonds lost 50 percent or more of their colonies</p>
         <p>Also, fields of one plant often cause more problems with weeds and pests</p>
