@@ -15,8 +15,8 @@ describe('App', () => {
     window.scrollTo.mockClear();
   });
 
-  it.skip('should match the Snapshot', () => {
-    expect(wrapper).to.match.snapshot();
+  it('should match the Snapshot', () => {
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('has default state', () => {

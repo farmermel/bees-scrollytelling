@@ -19,13 +19,16 @@ module.exports = {
   headerDefaultState: {
     concern: '',
     age: '',
-    location: {}
+    location: {},
+    answered: false
   },
   impactDefaultState: {
     percent: 0,
     unit: 'million',
     monetary: '',
-    economy: ''
+    economy: '',
+    answeredeconomy: false,
+    answeredpercent: false
   },
   impactFactsPost: {
     body: '{"users_id":2,"question":"are plants great"}',

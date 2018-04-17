@@ -1,0 +1,221 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Help matches the Snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Help />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h1>
+          Buy organic and local
+</h1>,
+        <h1>
+          Grow pollinator gardens
+</h1>,
+        <p>
+          Be sure to ask if the plants you buy were grown with neonicitinoides
+</p>,
+        <h1>
+          Make bee homes
+</h1>,
+        <div
+          className="bee-images bee-home"
+/>,
+        <h1>
+          Support bee friendly organizations and legislation
+</h1>,
+      ],
+      "className": "Help",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Buy organic and local",
+        },
+        "ref": null,
+        "rendered": "Buy organic and local",
+        "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Grow pollinator gardens",
+        },
+        "ref": null,
+        "rendered": "Grow pollinator gardens",
+        "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Be sure to ask if the plants you buy were grown with neonicitinoides",
+        },
+        "ref": null,
+        "rendered": "Be sure to ask if the plants you buy were grown with neonicitinoides",
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Make bee homes",
+        },
+        "ref": null,
+        "rendered": "Make bee homes",
+        "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "className": "bee-images bee-home",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Support bee friendly organizations and legislation",
+        },
+        "ref": null,
+        "rendered": "Support bee friendly organizations and legislation",
+        "type": "h1",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h1>
+            Buy organic and local
+</h1>,
+          <h1>
+            Grow pollinator gardens
+</h1>,
+          <p>
+            Be sure to ask if the plants you buy were grown with neonicitinoides
+</p>,
+          <h1>
+            Make bee homes
+</h1>,
+          <div
+            className="bee-images bee-home"
+/>,
+          <h1>
+            Support bee friendly organizations and legislation
+</h1>,
+        ],
+        "className": "Help",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Buy organic and local",
+          },
+          "ref": null,
+          "rendered": "Buy organic and local",
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Grow pollinator gardens",
+          },
+          "ref": null,
+          "rendered": "Grow pollinator gardens",
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Be sure to ask if the plants you buy were grown with neonicitinoides",
+          },
+          "ref": null,
+          "rendered": "Be sure to ask if the plants you buy were grown with neonicitinoides",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Make bee homes",
+          },
+          "ref": null,
+          "rendered": "Make bee homes",
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "bee-images bee-home",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Support bee friendly organizations and legislation",
+          },
+          "ref": null,
+          "rendered": "Support bee friendly organizations and legislation",
+          "type": "h1",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
