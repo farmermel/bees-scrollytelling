@@ -75,7 +75,7 @@ class Impact extends Component {
       <form onSubmit={(e) => this.handleSubmit(e, 2770, 'percent', 'What percentage of your diet do you think is provided by bees?')} 
             className='diet-form'>
         <div className='question-cont'>
-          <h2>Let's talk about food...</h2>
+          <h2 id='food-h2'>Let's talk about food...</h2>
           <img src={ fruitArrangement } alt='fruit arrangement'
                className='fruit-arrangement' />
           <Parallax offsetYMax={ 900 }
@@ -173,18 +173,14 @@ class Impact extends Component {
             <option value='billion'>billion</option>
           </select>
         </div>
-<<<<<<< HEAD
-        <button type='submit'>Guess</button>
         <Parallax offsetYMax={50} offsetYMin={-50} className='coins-parallax'>
           <img src={ coins } alt='falling coins' id='coins' />
         </Parallax>
-=======
         {
           this.state.answeredeconomy
           ? <div className='arrow-cont'><img src={ downArrow } alt='scroll' className='hover-arrow' /></div>
           : <button type='submit'>Guess</button>
         }
->>>>>>> Add downarrow image after submit is clicked
       </form>
     );
   }

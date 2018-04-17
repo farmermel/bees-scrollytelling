@@ -131,7 +131,7 @@ class Header extends Component {
             <h3 className='question-descr'>Select your age</h3>
               { this.radioOptions(ageRanges) }
             </div>
-            <div>
+            <div id='concern'>
             <h3 className='question-descr'>How concerned are you about bees?</h3>
               { this.radioOptions(concernArr) }
             </div>
