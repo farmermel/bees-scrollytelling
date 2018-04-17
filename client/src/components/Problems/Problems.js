@@ -76,8 +76,8 @@ export default class Problems extends Component {
         <Parallax offsetYMax={50} offsetYMin={-50}>
           <div className='honeycomb-cont'>
             <img src={ honeycomb } id='honeycomb' alt='honeycomb'/>
-            <img src={ honeycomb1 } id='honeycomb1' alt='honeycomb'/>
             <img src={ bee } id='bee' alt='bee'/>
+            <img src={ honeycomb } id='honeycomb1' alt='honeycomb'/>
            </div>
         </Parallax>
       </article>
