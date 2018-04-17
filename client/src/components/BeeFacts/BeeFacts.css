@@ -24,6 +24,13 @@
     display: flex;
     justify-content: center;
     align-items: center; }
+  .bee-article .wild-bees-img {
+    background-image: url("../../assets/wildbees.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 110px; }
   .bee-article .bee-images {
     height: 257px;
     width: 390px;
