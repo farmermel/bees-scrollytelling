@@ -62,34 +62,45 @@ export default class BeeFacts extends Component {
                   className='the-honeybee'>
           <h1>The Honey Bee</h1>
         </Parallax>
-        <Parallax offsetYMax={50}>
+        <Parallax offsetYMax={80}>
           <div className='bee-images honey-bee'>
           </div>
         </Parallax>
         <div>
-          <div className='bee-images bee-box'>
-          </div>
+          <Parallax offsetYMax={80}>
+            <div className='bee-images bee-box'>
+            </div>
+          </Parallax>
           <h2>They're domesticated</h2>
         </div>
         <div id="last">
           <h2>Can be transported</h2>
-          <div className='bee-images' id='transport'>
-          </div>
+          <Parallax offsetYMax={80}>
+            <div className='bee-images' id='transport'>
+            </div>
+          </Parallax>
+        </div>
+        <h1>Less commonly known...</h1>
+        <div>
+          <h1>The Wild Bees</h1>
+          <Parallax offsetYMax={80}>
+            <div className='bee-images wild-bee'>
+            </div>
+          </Parallax>
         </div>
         <div>
-          <h2>The Wild Bees</h2>
-          <div className='bee-images wild-bee'>
-          </div>
-        </div>
-        <div>
-          <div className='bee-images solitary'>
-          </div>
+          <Parallax offsetYMax={80}>
+            <div className='bee-images solitary'>
+            </div>
+          </Parallax>
           <h2>Mostly solitary but diverse</h2>
         </div>
         <div>
           <h2>Local pollinators</h2>
-          <div className='bee-images flower'>
-          </div>
+          <Parallax offsetYMax={80}>
+            <div className='bee-images flower'>
+            </div>
+          </Parallax>
         </div>
       </article>
     )
