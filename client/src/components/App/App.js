@@ -32,7 +32,7 @@ class App extends Component {
   }
 
   manageGraphDisplay = () => {
-    if (window.scrollY > 4400 && this.state.displayGraphCover) {
+    if (window.scrollY > 4450 && this.state.displayGraphCover) {
       console.log('changed')
       this.setState({ displayGraphCover: false })
     } else if (!this.state.displayGraphCover && window.scrollY < 3992) {

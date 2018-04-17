@@ -16,12 +16,13 @@
   height: fit-content;
 
   & h1 {
-    margin: 0 200px 0 0;
+    margin: 50px 200px 0px 0;
     font-size: 3em;
   }
 
   & h2 {
-    margin-right: 80px;
+    margin: 50px 200px 0px 0;
+    // margin-right: 80px;
     font-size: 2em;
   }
 
@@ -64,22 +65,27 @@
   }
 
   & .bee-box { 
+    margin: 190px 0;
     background-image: url('../../assets/bee-box.png');
   }
 
   & #transport {
+    margin: 190px 0;
     background-image: url('../../assets/truck2.png');
   }
 
   & .wild-bee {
+    margin: 190px 0;
     background-image: url('../../assets/wild-bee.png');
   }
 
   & .solitary {
+    margin: 190px 0;
     background-image: url('../../assets/bee-home.png');
   }
 
   & .flower {
+    margin: 190px 0;
     background-image: url('../../assets/pink-flower.png');
   }
 
