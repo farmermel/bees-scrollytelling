@@ -66,13 +66,6 @@
   }
 }
 
-.fake-circle {
-  border-radius: 100%;
-  background-color: purple;
-  height: 200px;
-  width: 200px;
-}
-
 .question-cont {
   position: relative;
 }
@@ -225,8 +218,7 @@
   & .graph-cover {
     height: 470px;
     width: 100%;
-    // position: absolute;
-    background-color: green;
+    background-color: #fff;
     border-top: 2px solid black;
     z-index: 1;
   }
