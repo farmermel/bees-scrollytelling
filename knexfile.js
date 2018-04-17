@@ -24,6 +24,7 @@ module.exports = {
 
   production: {
     client: 'pg',
+    /* eslint-disable-next-line */
     connection: process.env.DATABASE_URL + `?ssl=true`,
     migrations: {
       directory: './API/db/migrations'

@@ -1,30 +1,35 @@
 import React, { Component } from 'react';
+import fruitArrangement from '../../assets/raspberryStarfruit.png';
+import wheatCropped from '../../assets/wheat-cropped.png';
+import blackberry from '../../assets/blackberry.png';
+import wordCloud from '../../assets/wordcloud.png';
+import raspberry from '../../assets/raspberry.png';
 import { Parallax } from 'react-scroll-parallax';
-import PieChart from '../PieChart/PieChart';
+import cucumber from '../../assets/cucumber.png';
+import acerola from '../../assets/acerola.png';
 import orange from '../../assets/orange.png';
-// import apple from '../../assets/apple.png';
+import cherry from '../../assets/cherry.png';
+import banana from '../../assets/banana.png';
+import PieChart from '../PieChart/PieChart';
+import peach from '../../assets/Peach.png';
+import apple from '../../assets/apple.png';
+import wheat from '../../assets/wheat.png';
 import PropTypes from 'prop-types';
 import './Impact.css';
-// import fruitList from '../../data/fruitList';
-import fruitArrangement from '../../assets/raspberryStarfruit.png';
-import wordCloud from '../../assets/wordcloud.png';
-import wheat from '../../assets/wheat.jpg';
-import riceball from '../../assets/riceball.png';
-import corn from '../../assets/corn.jpg';
 
 class Impact extends Component {
   constructor(props) {
     super(props);
     this.state = { 
       percent: 0,
-      unit: '',
+      unit: 'million',
       monetary: '',
       economy: ''
     }
   }
 
   static contextTypes = {
-        parallaxController: PropTypes.object.isRequired,
+    parallaxController: PropTypes.object
   };
 
   handleSubmit = async (e, scrollStop, answer, question) => {
@@ -67,10 +72,35 @@ class Impact extends Component {
           <h2>Let's talk about food...</h2>
           <img src={ fruitArrangement } alt='fruit arrangement'
                className='fruit-arrangement' />
-          <Parallax offsetYMin={1000}>
+          <Parallax offsetYMax={ 900 }
+                    slowerScrollRate={ true }>
             <img src={ orange } alt='orange' 
                  onLoad={this.handleLoad}
-                 className='raining-fruit' />
+                 className='raining-fruit rain-1' />
+            <img src={ apple } alt='apple' 
+                 onLoad={this.handleLoad}
+                 className='raining-fruit rain-2' />
+            <img src={ acerola } alt='acerola' 
+                 onLoad={this.handleLoad}
+                 className='raining-fruit rain-3' />
+            <img src={ banana } alt='banana' 
+                 onLoad={this.handleLoad}
+                 className='raining-fruit rain-4' />
+            <img src={ blackberry } alt='blackberry' 
+                 onLoad={this.handleLoad}
+                 className='raining-fruit rain-5' />
+            <img src={ cherry } alt='cherry' 
+                 onLoad={this.handleLoad}
+                 className='raining-fruit rain-6' />
+            <img src={ cucumber } alt='cucumber' 
+                 onLoad={this.handleLoad}
+                 className='raining-fruit rain-7' />
+            <img src={ peach } alt='peach' 
+                 onLoad={this.handleLoad}
+                 className='raining-fruit rain-8' />
+            <img src={ raspberry } alt='raspberry' 
+                 onLoad={this.handleLoad}
+                 className='raining-fruit rain-9' />
           </Parallax>
         </div>
         <label htmlFor='diet' 
@@ -81,29 +111,26 @@ class Impact extends Component {
     );
   }
 
-  // makeWordCloud = () => {
-  //   return fruitList.map(fruit => {
-  //     return <span>{fruit}</span>
-  //   })
-  // }
-
   displayDietArticle = () => {
     return (
       <article className='diet-article'>
-        <h1 id='diet-header'>In your daily diet,</h1>
-        <h1>30% by volume of food you eat</h1>
-        <p>The majority of our diet consists of wheat, rice and corn, all which are wind pollinated</p>
-        <div className='wind-foods-cont'>
-          <Parallax offsetXMax={100} offsetXMin={-50} slowerScrollRate={true}>
-            <img src={ wheat } />
-          </Parallax>
-          <img src={ riceball } />
-          <Parallax offsetXMax={-100} offsetXMin={50} slowerScrollRate={true}>
-            <img src={ corn } />
-          </Parallax>
+        <div className='diet-article-volume'>
+          <h1 id='diet-header'>In your daily diet,</h1>
+          <h1>30% of food you eat is pollinated by bees</h1>
+          <p>The other 70% consists of wheat, rice and corn, all which are wind pollinated</p>
+          <div className='wind-foods-cont'>
+            <Parallax offsetYMax={50} offsetYMin={-100} >
+              <div className='wheat-cont'>
+                <img src={ wheat } className='wheat' id='wheat1' alt='wheat grass'/>
+                <img src={ wheat } className='wheat' id='wheat2' alt='wheat grass'/>
+                <img src={ wheatCropped } className='wheat' id='wheat3' alt='wheat grass'/>
+                <img src={ wheatCropped } className='wheat' id='wheat4' alt='wheat grass'/>
+              </div>
+            </Parallax>
+          </div>
         </div>
-        <h1>and 60% diversity, are pollinated by bees</h1>
-        <p>Most fruits and vegetables are animal pollinated, including chocolate, coffee, tea, and avocados</p>
+        <h1>60% of the diversity of food you eat is pollinated by bees</h1>
+        <p>This is because most fruits and vegetables are animal pollinated, including chocolate, coffee, tea, and avocados</p>
           <div className='foods-cont'>
             <img src={wordCloud} alt='all the fruits' className='word-cloud' />
           </div>
@@ -117,7 +144,7 @@ class Impact extends Component {
             className='economic-questions'>
         <h2>What about the Economy?</h2>
         <label htmlFor='economic' 
-               className='question-descr'>How much do bees contribute to the economy, anually?</label>
+               className='question-descr'>How much does bee pollination contribute to the economy, anually?</label>
         <div>
           <select name='monetary' onChange={ (e) => this.handleChangeEcon(e) }>
             <option value='1' >1</option>
@@ -144,7 +171,23 @@ class Impact extends Component {
   displayEconomicArticle = () => {
     return (
       <article className='economic-article'>
-        <h1>The honeybee services are valued to be just above $20 billion in the United States. World wide, that number rises to $217 billion. </h1>
+        <h1>The honeybee pollination services are valued to be just above $20 billion in the United States. World wide, that number rises to $217 billion. </h1>
+        {
+          this.props.displayGraphCover &&
+          <Parallax offsetYMax={1300}
+                    slowerScrollRate={true}>
+          <div className='graph-cover'>
+          </div>
+        </Parallax>
+      }
+        <div className='econ-graph-wrap'>
+          <div className='us-econ-growth'>
+          <p>US: 20 Billion</p>
+          </div>
+          <div className='world-econ-growth'>
+          <p>World: 217 Billion</p>
+          </div>
+        </div>
       </article>
     );
   }

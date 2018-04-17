@@ -13,10 +13,10 @@
   width: 100%;
   height: fit-content; }
   .bee-article h1 {
-    margin: 0 200px 0 0;
+    margin: 50px 200px 0px 0;
     font-size: 3em; }
   .bee-article h2 {
-    margin-right: 80px;
+    margin: 50px 200px 0px 0;
     font-size: 2em; }
   .bee-article h3 {
     margin-left: 50px; }
@@ -24,6 +24,13 @@
     display: flex;
     justify-content: center;
     align-items: center; }
+  .bee-article .wild-bees-img {
+    background-image: url("../../assets/wildbees.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 110px; }
   .bee-article .bee-images {
     height: 257px;
     width: 390px;
@@ -34,14 +41,19 @@
     margin: 0 0 0 400px;
     background-image: url("../../assets/bee2.png"); }
   .bee-article .bee-box {
+    margin: 190px 0;
     background-image: url("../../assets/bee-box.png"); }
   .bee-article #transport {
+    margin: 190px 0;
     background-image: url("../../assets/truck2.png"); }
   .bee-article .wild-bee {
+    margin: 190px 0;
     background-image: url("../../assets/wild-bee.png"); }
   .bee-article .solitary {
+    margin: 190px 0;
     background-image: url("../../assets/bee-home.png"); }
   .bee-article .flower {
+    margin: 190px 0;
     background-image: url("../../assets/pink-flower.png"); }
   .bee-article #last {
     margin-bottom: 250px; }

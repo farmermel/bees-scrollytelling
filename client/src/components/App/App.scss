@@ -53,6 +53,7 @@ button {
   border: 3px solid $seafoam;
   border-radius: 51px;
   transition: background-color 0.5s ease;
+  outline: none;
 
   &:hover {
     cursor: pointer;

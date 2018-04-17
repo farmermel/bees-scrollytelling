@@ -16,9 +16,53 @@
   }
 
   & .raining-fruit {
-    // position: absolute;
-    // right: 50px;
-    width: 40px;
+    margin: -6px;
+    position: relative;
+    right: -72%;
+    width: 60px;
+
+    &.rain-1 {
+      top: -142px;
+    }
+
+    &.rain-2 {
+      width: 75px;
+      top: -33px;
+      margin: -18px;
+      right: -68%;
+    }
+
+    &.rain-3 {
+      top: 42px;
+    }
+
+    &.rain-4 {
+      width: 105px;
+      margin: -15px;
+      transform: rotate(-35deg);
+    }
+
+    &.rain-6 {
+      top: -78px;
+      right: -50%;
+    }
+
+    &.rain-7 {
+      right: -47%;
+      top: -122px;
+      transform: rotate(-60deg);
+      width: 115px;
+    }
+
+    &.rain-8 {
+      right: -49%;
+      top: -169px;
+    }
+
+    &.rain-9 {
+      right: -37%;
+      top: -50px;
+    }
   }
 }
 
@@ -52,7 +96,7 @@
 
   & h1 {
     font-size: 3em;
-  }  
+  }
 
   & p {
     font-size: 1.6em;
@@ -60,7 +104,6 @@
 
   & .foods-cont {
     position: relative;
-
   }
 
   & .foods {
@@ -90,14 +133,14 @@
     height: fit-content;
   }
 
-  & .fruit-cloud span:nth-of-type(3n+1) {
+  & .fruit-cloud span:nth-of-type(3n + 1) {
     font-size: 2em;
     margin: 3px;
     opacity: 0.5;
   }
 
-  & .fruit-cloud span:nth-of-type(4n+3) {
-    font-size: .5em;
+  & .fruit-cloud span:nth-of-type(4n + 3) {
+    font-size: 0.5em;
     opacity: 0.9;
   }
 
@@ -173,9 +216,55 @@
 
 .economic-article {
   height: 100vh;
+  position: relative;
 
   & h1 {
     font-size: 3em;
+  }
+
+  & .graph-cover {
+    height: 470px;
+    width: 100%;
+    // position: absolute;
+    background-color: green;
+    border-top: 2px solid black;
+    z-index: 1;
+  }
+
+  & .econ-graph-wrap {
+    position: absolute;
+    top: 260px;
+    width: 100%;
+    height: 300px;
+    justify-content: space-around;
+    display: flex;
+    align-items: flex-end;
+    border-bottom: 2px solid black;
+    z-index: -1;
+  }
+
+  & .us-econ-growth {
+    background-color: #CCCF85;
+    display: inline-block;
+    width: 150px;
+    height: 100px;
+
+    & p {
+      margin: -250px auto;
+      text-align: center;
+    }
+  }
+
+  & .world-econ-growth {
+    background-color: #B2BD72;
+    display: inline-block;
+    width: 150px;
+    height: 300px;
+
+    & p {
+      margin: -50px auto;
+      text-align: center;
+    }
   }
 }
 
@@ -188,4 +277,42 @@
 
 .wind-foods-cont img {
   width: 135px;
+}
+
+.diet-article-volume {
+  height: 100vh;
+
+  & .wheat-cont {
+      position: relative;
+      width: 150%;
+      margin-left: -300px;
+      height: 500px;
+      overflow: hidden;
+
+    & .wheat {
+      width: 100%;
+    } 
+  }
+}
+
+
+
+#wheat1 {
+  position: absolute;
+  top: -36px;
+  width: 100%;
+}
+
+#wheat2 {
+  position: absolute;
+  top: 20px;
+  left: 50px;
+  z-index: 1;
+}
+
+#wheat3 {
+  position: absolute;
+  top: 50px;
+  left: -10px;
+  z-index: 2;
 }

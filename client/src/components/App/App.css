@@ -42,7 +42,8 @@ button {
   width: 162px;
   border: 3px solid #60CA9B;
   border-radius: 51px;
-  transition: background-color 0.5s ease; }
+  transition: background-color 0.5s ease;
+  outline: none; }
   button:hover {
     cursor: pointer;
     background-color: #60CA9B;
