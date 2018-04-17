@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
+import { Parallax } from 'react-scroll-parallax';
 import PieChart from '../PieChart/PieChart';
 import PropTypes from 'prop-types';
 import './Problems.css';
+import honeycomb from '../../assets/honeycomb.png';
+import honeycomb1 from '../../assets/honeycomb1.png';
+import nicotine2 from '../../assets/nicotine2.png';
 
 
 export default class Problems extends Component {
@@ -51,10 +55,23 @@ export default class Problems extends Component {
   pesticidesArticle = () => {
     return (
       <article className='problems-article'>
-        <h1>Neonicitinoides confuse bees and make it difficult for bees to find their way back to their hive</h1>
-        <p>They are also very addictive (like nicotine)</p>
-        <p>Bees will seek out plants that have been sprayed with neonicitinoides</p>
-        <p>Meaning each time they visit sprayed plants, they have a greater chance of not finding home</p>
+        <div className='neonics-cont1'> 
+          <h1>Neonicotinoides confuse bees and make it difficult for bees to find their way back to their hive</h1>
+          <Parallax offsetYMax={50} offsetYMin={-100}>
+            <div className='honeycomb-cont'>
+              <img src={ honeycomb } id='honeycomb' />
+              <img src={ honeycomb1 } id='honeycomb1' />
+            </div>
+          </Parallax>
+          <p>They are also very addictive (like nicotine)</p>
+          <Parallax offsetYMax={0} offsetYMin={-100}>
+            <img src={ nicotine2 } id='nicotine' />
+          </Parallax>
+        </div>
+        <div className='neonics-cont2'>
+          <p>Bees will seek out plants that have been sprayed with neonicotinoides</p>
+          <p>Meaning each time they visit sprayed plants, they have a greater chance of not finding home</p>
+        </div>
       </article>
     );
   };
@@ -66,8 +83,8 @@ export default class Problems extends Component {
         <div className='fixed-monocropping'></div>
         <p>Bees become stressed out feeding on the same plant because they do not receive a nutrient-rich diet</p>
         <p>In fact, nearly 20 percent of the beekeepers who pollinated almonds lost 50 percent or more of their colonies</p>
-        <p>Also, fields of one plant often cause more problems with weeds and pests</p>
-        <p>Enhancing the need for pesticides and harming the pollinating bees</p>
+        <p>Also, fields of one plant often cause more problems with weeds and pests,</p>
+        <p>enhancing the need for pesticides and harming the pollinating bees</p>
       </article>
     );
   };

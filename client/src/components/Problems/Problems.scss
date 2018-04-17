@@ -8,7 +8,7 @@
 }
 
 .problems-article {
-  height: 100vh;
+  min-height: 100vh;
 
   & h1 {
     font-size: 3em;
@@ -26,4 +26,38 @@
     background-size: cover;
     height: 130px;
   }
+}
+
+.neonics-cont1 {
+  height: 100vh;
+  position: relative;
+}
+
+.honeycomb-cont {
+  position: relative;
+  height: 300px
+}
+
+#honeycomb {
+  width: 685px;
+  z-index: -1;
+  position: relative;
+  top: -131px;
+  left: 570px;
+}
+
+#honeycomb1 {
+  width: 213px;
+  z-index: -1;
+  position: relative;
+  top: -203px;
+  left: -214px;
+}
+
+#nicotine {
+  width: 550px;
+  z-index: -1;
+  transform: rotate(-20deg);
+  margin-left: -230px;
+  margin-bottom: 230px;
 }
