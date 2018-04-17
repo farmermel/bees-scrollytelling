@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
+import { Parallax } from 'react-scroll-parallax';
 import PieChart from '../PieChart/PieChart';
 import PropTypes from 'prop-types';
 import './Problems.css';
 import honeycomb from '../../assets/honeycomb.png';
 import honeycomb1 from '../../assets/honeycomb1.png';
+import nicotine2 from '../../assets/nicotine2.png';
 
 
 export default class Problems extends Component {
@@ -55,12 +57,16 @@ export default class Problems extends Component {
       <article className='problems-article'>
         <div className='neonics-cont1'> 
           <h1>Neonicotinoides confuse bees and make it difficult for bees to find their way back to their hive</h1>
-          <div className='honeycomb-cont'>
-            <img src={honeycomb} id='honeycomb' />
-            <img src={honeycomb1} id='honeycomb1' />
-          </div>
+          <Parallax offsetYMax={50} offsetYMin={-100}>
+            <div className='honeycomb-cont'>
+              <img src={ honeycomb } id='honeycomb' />
+              <img src={ honeycomb1 } id='honeycomb1' />
+            </div>
+          </Parallax>
           <p>They are also very addictive (like nicotine)</p>
-          <img src='' />
+          <Parallax offsetYMax={0} offsetYMin={-100}>
+            <img src={ nicotine2 } id='nicotine' />
+          </Parallax>
         </div>
         <div className='neonics-cont2'>
           <p>Bees will seek out plants that have been sprayed with neonicotinoides</p>

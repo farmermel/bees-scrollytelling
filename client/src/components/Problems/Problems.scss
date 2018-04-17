@@ -30,6 +30,7 @@
 
 .neonics-cont1 {
   height: 100vh;
+  position: relative;
 }
 
 .honeycomb-cont {
@@ -37,17 +38,25 @@
 }
 
 #honeycomb {
-  width: 611px;
-  position: absolute;
-  right: -308px;
-  top: -179px;
+  width: 685px;
   z-index: -1;
+  position: relative;
+  top: -131px;
+  left: 570px;
 }
 
 #honeycomb1 {
-  width: 187px;
-  position: absolute;
-  right: 201px;
-  top: -20px;
+  width: 213px;
   z-index: -1;
+  position: relative;
+  top: -203px;
+  left: -214px;
+}
+
+#nicotine {
+  width: 550px;
+  z-index: -1;
+  transform: rotate(-20deg);
+  margin-left: -230px;
+  margin-bottom: 230px;
 }
