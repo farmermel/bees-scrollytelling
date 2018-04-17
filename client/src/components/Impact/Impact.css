@@ -43,6 +43,9 @@
     .diet-form .raining-fruit.rain-9 {
       right: -37%;
       top: -50px; }
+  .diet-form #food-h2 {
+    margin: 20px 380px 20px 0;
+    text-align: left; }
 
 .question-cont {
   position: relative; }

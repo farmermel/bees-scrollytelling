@@ -38,3 +38,5 @@
 .questions-cont {
   display: flex;
   justify-content: space-around; }
+  .questions-cont #concern {
+    margin-left: 150px; }

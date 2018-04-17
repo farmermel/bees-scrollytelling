@@ -1,11 +1,19 @@
 .Help {
-  height: 100vh;
+  min-height: 100vh;
   color: inherit; }
   .Help h1 {
+    font-size: 5em;
+    margin: 20px 0; }
+  .Help h2 {
     font-size: 3em;
     font-weight: bold; }
   .Help p {
     font-size: 2em; }
+  .Help .flowers {
+    position: relative;
+    display: flex;
+    height: 200px;
+    width: 100%; }
   .Help .bee-images {
     height: 257px;
     width: 390px;

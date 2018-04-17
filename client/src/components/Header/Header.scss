@@ -44,4 +44,8 @@
 .questions-cont {
   display: flex;
   justify-content: space-around;
+
+  & #concern {
+    margin-left: 150px;
+  }
 }
