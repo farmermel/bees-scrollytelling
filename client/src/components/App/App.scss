@@ -76,15 +76,21 @@ button {
 
 .progress-container {
   position: fixed;
-  width: 80%;
+  top: 340px;
+  left: 50%;
+  width: 77%;
   height: 50px;
+  border: 1px solid black;
+  transform: rotate(90deg);
 }
 
 .progress-bar {
   height: 50px;
   width: 50px;
-  background-image: url('../../assets/bee2.png');
+  background-image: url('../../assets/bee3.png');
   background-repeat: no-repeat;
   background-position: right top;
   background-size: 50px 50px;
+  
 }
+

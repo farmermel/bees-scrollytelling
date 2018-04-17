@@ -25,6 +25,7 @@ class App extends Component {
 
   stopScroll = () => {
     this.manageGraphDisplay();
+    this.myFunction()
     if (
       this.state.questionsEnabled &&
       window.scrollY > this.state.scrollPosition
