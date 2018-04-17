@@ -54,7 +54,7 @@ class Header extends Component {
     e.preventDefault();
     try {
       if (this.state.concern && this.state.age) {
-        this.props.startScroll(e, 1396);
+        this.props.startScroll(e, 1634);
         this.setState({ answered: true });
         await this.postToDB();
       }

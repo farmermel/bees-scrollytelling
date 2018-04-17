@@ -72,7 +72,7 @@ class Impact extends Component {
 
   displayDietQuestion = () => {
     return (
-      <form onSubmit={(e) => this.handleSubmit(e, 2770, 'percent', 'What percentage of your diet do you think is provided by bees?')} 
+      <form onSubmit={(e) => this.handleSubmit(e, 4260, 'percent', 'What percentage of your diet do you think is provided by bees?')} 
             className='diet-form'>
         <div className='question-cont'>
           <h2 id='food-h2'>Let's talk about food...</h2>
@@ -150,7 +150,7 @@ class Impact extends Component {
 
   displayEconomicQuestion = () => {
     return (
-      <form onSubmit={(e) => this.handleSubmit(e, 4500, 'economy', 'How much do bees contribute to the economy, anually?')}
+      <form onSubmit={(e) => this.handleSubmit(e, 6085, 'economy', 'How much do bees contribute to the economy, anually?')}
             className='economic-questions'>
         <h2>What about the Economy?</h2>
         <label htmlFor='economic' 
@@ -173,14 +173,14 @@ class Impact extends Component {
             <option value='billion'>billion</option>
           </select>
         </div>
-        <Parallax offsetYMax={50} offsetYMin={-50} className='coins-parallax'>
-          <img src={ coins } alt='falling coins' id='coins' />
-        </Parallax>
         {
           this.state.answeredeconomy
           ? <div className='arrow-cont'><img src={ downArrow } alt='scroll' className='hover-arrow' /></div>
           : <button type='submit'>Guess</button>
         }
+        <Parallax offsetYMax={50} offsetYMin={-50} className='coins-parallax'>
+          <img src={ coins } alt='falling coins' id='coins' />
+        </Parallax>
       </form>
     );
   }

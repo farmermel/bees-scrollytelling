@@ -18,7 +18,7 @@ export default class BeeFacts extends Component {
   }
 
   handleSubmit = async e => {
-    this.props.startScroll(e, 6000);
+    this.props.startScroll(e, 11255);
     const postBody = {
       method: 'POST',
       headers: {
