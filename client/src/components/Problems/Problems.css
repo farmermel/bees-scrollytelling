@@ -17,3 +17,23 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 130px; }
+
+.neonics-cont1 {
+  height: 100vh; }
+
+.honeycomb-cont {
+  position: relative; }
+
+#honeycomb {
+  width: 611px;
+  position: absolute;
+  right: -308px;
+  top: -179px;
+  z-index: -1; }
+
+#honeycomb1 {
+  width: 187px;
+  position: absolute;
+  right: 201px;
+  top: -20px;
+  z-index: -1; }

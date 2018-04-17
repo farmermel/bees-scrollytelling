@@ -15,6 +15,7 @@ import './Impact.css';
 import fruitArrangement from '../../assets/raspberryStarfruit.png';
 import wordCloud from '../../assets/wordcloud.png';
 import wheat from '../../assets/wheat.png';
+import wheatCropped from '../../assets/wheat-cropped.png';
 
 class Impact extends Component {
   constructor(props) {
@@ -115,21 +116,21 @@ class Impact extends Component {
       <article className='diet-article'>
         <div className='diet-article-volume'>
           <h1 id='diet-header'>In your daily diet,</h1>
-          <h1>30% by volume of food you eat</h1>
-          <p>The majority of our diet consists of wheat, rice and corn, all which are wind pollinated</p>
+          <h1>30% of food you eat is pollinated by bees</h1>
+          <p>The other 70% consists of wheat, rice and corn, all which are wind pollinated</p>
           <div className='wind-foods-cont'>
             <Parallax offsetYMax={50} offsetYMin={-100} >
               <div className='wheat-cont'>
                 <img src={ wheat } className='wheat' id='wheat1' />
                 <img src={ wheat } className='wheat' id='wheat2' />
-                <img src={ wheat } className='wheat' id='wheat3' />
-                <img src={ wheat } className='wheat' id='wheat4' />
+                <img src={ wheatCropped } className='wheat' id='wheat3' />
+                <img src={ wheatCropped } className='wheat' id='wheat4' />
               </div>
             </Parallax>
           </div>
         </div>
-        <h1>and 60% diversity, are pollinated by bees</h1>
-        <p>Most fruits and vegetables are animal pollinated, including chocolate, coffee, tea, and avocados</p>
+        <h1>60% of the diversity of food you eat is pollinated by bees</h1>
+        <p>This is because most fruits and vegetables are animal pollinated, including chocolate, coffee, tea, and avocados</p>
           <div className='foods-cont'>
             <img src={wordCloud} alt='all the fruits' className='word-cloud' />
           </div>
@@ -143,7 +144,7 @@ class Impact extends Component {
             className='economic-questions'>
         <h2>What about the Economy?</h2>
         <label htmlFor='economic' 
-               className='question-descr'>How much do bees contribute to the economy, anually?</label>
+               className='question-descr'>How much does bee pollination contribute to the economy, anually?</label>
         <div>
           <select name='monetary' onChange={ (e) => this.handleChangeEcon(e) }>
             <option value='1' >1</option>
@@ -170,7 +171,7 @@ class Impact extends Component {
   displayEconomicArticle = () => {
     return (
       <article className='economic-article'>
-        <h1>The honeybee services are valued to be just above $20 billion in the United States. World wide, that number rises to $217 billion. </h1>
+        <h1>The honeybee pollination services are valued to be just above $20 billion in the United States. World wide, that number rises to $217 billion. </h1>
         {
           this.props.displayGraphCover &&
           <Parallax offsetYMax={1300}
