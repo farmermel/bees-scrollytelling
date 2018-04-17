@@ -81,21 +81,23 @@
   width: 685px;
   z-index: -1;
   position: relative;
-  top: -131px;
-  left: 570px;
+  top: -330px;
+  left: 650px;
+  transform: rotate(180deg);
 }
 
 #honeycomb1 {
-  width: 213px;
+  width: 685px;
   z-index: -1;
   position: relative;
-  top: -203px;
-  left: -214px;
+  top: -740px;
+  left: -409px;
 }
 
 #bee {
   position: relative;
   top: -450px;
+  left: -210px;
 }
 
 .monoculture {
