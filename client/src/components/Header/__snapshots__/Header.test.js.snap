@@ -124,7 +124,9 @@ ShallowWrapper {
                                         />
                               </label>
                     </div>
-                    <div>
+                    <div
+                              id="concern"
+                    >
                               <h3
                                         className="question-descr"
                               >
@@ -335,7 +337,9 @@ ShallowWrapper {
                                           />
                             </label>
               </div>
-              <div>
+              <div
+                            id="concern"
+              >
                             <h3
                                           className="question-descr"
                             >
@@ -521,7 +525,9 @@ ShallowWrapper {
                                     />
                   </label>
 </div>,
-                <div>
+                <div
+                  id="concern"
+>
                   <h3
                                     className="question-descr"
                   >
@@ -925,6 +931,7 @@ ShallowWrapper {
 </label>,
                     ],
                   ],
+                  "id": "concern",
                 },
                 "ref": null,
                 "rendered": Array [
@@ -1225,7 +1232,9 @@ ShallowWrapper {
                                                 />
                                     </label>
                         </div>
-                        <div>
+                        <div
+                                    id="concern"
+                        >
                                     <h3
                                                 className="question-descr"
                                     >
@@ -1436,7 +1445,9 @@ ShallowWrapper {
                                                 />
                                 </label>
                 </div>
-                <div>
+                <div
+                                id="concern"
+                >
                                 <h3
                                                 className="question-descr"
                                 >
@@ -1622,7 +1633,9 @@ ShallowWrapper {
                                         />
                     </label>
 </div>,
-                  <div>
+                  <div
+                    id="concern"
+>
                     <h3
                                         className="question-descr"
                     >
@@ -2026,6 +2039,7 @@ ShallowWrapper {
 </label>,
                       ],
                     ],
+                    "id": "concern",
                   },
                   "ref": null,
                   "rendered": Array [

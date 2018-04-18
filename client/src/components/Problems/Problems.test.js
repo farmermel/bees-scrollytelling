@@ -36,9 +36,9 @@ describe('Problems', () => {
 
   describe('handleSubmit', () => {
 
-    it('calls startScroll with event passed in and 8000', async () => {
+    it('calls startScroll with event passed in', async () => {
       await wrapper.instance().handleSubmit({});
-      expect(startScroll).toHaveBeenCalledWith({}, 8000)
+      expect(startScroll).toHaveBeenCalledWith({})
     });
 
     it('sets state with economy made up of monetary and unit values in state', async () => {

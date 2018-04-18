@@ -96,6 +96,7 @@ ShallowWrapper {
                     </p>
           </div>
           <Parallax
+                    className="honeycomb-parallax"
                     disabled={false}
                     offsetXMax={0}
                     offsetXMin={0}
@@ -113,14 +114,14 @@ ShallowWrapper {
                                         src="honeycomb.png"
                               />
                               <img
-                                        alt="honeycomb"
-                                        id="honeycomb1"
-                                        src="honeycomb1.png"
-                              />
-                              <img
                                         alt="bee"
                                         id="bee"
                                         src="bee-problem.png"
+                              />
+                              <img
+                                        alt="honeycomb"
+                                        id="honeycomb1"
+                                        src="honeycomb.png"
                               />
                     </div>
           </Parallax>
@@ -175,7 +176,7 @@ ShallowWrapper {
                     A warmer climate promotes the growth of pests in bee hives
           </p>
           <p>
-                    Making bees more suseptible to ------------------ colony collapse disorder, parasites?
+                    Making bees more suseptible to colony collapse disorder and parasites
           </p>
           <p>
                     Also, climate change causes plants to flower earlier, disrupting the bee's natural schedule
@@ -339,6 +340,7 @@ ShallowWrapper {
               </p>
 </div>,
             <Parallax
+              className="honeycomb-parallax"
               disabled={false}
               offsetXMax={0}
               offsetXMin={0}
@@ -356,14 +358,14 @@ ShallowWrapper {
                                           src="honeycomb.png"
                             />
                             <img
-                                          alt="honeycomb"
-                                          id="honeycomb1"
-                                          src="honeycomb1.png"
-                            />
-                            <img
                                           alt="bee"
                                           id="bee"
                                           src="bee-problem.png"
+                            />
+                            <img
+                                          alt="honeycomb"
+                                          id="honeycomb1"
+                                          src="honeycomb.png"
                             />
               </div>
 </Parallax>,
@@ -596,16 +598,17 @@ ShallowWrapper {
                                 src="honeycomb.png"
                 />
                 <img
-                                alt="honeycomb"
-                                id="honeycomb1"
-                                src="honeycomb1.png"
-                />
-                <img
                                 alt="bee"
                                 id="bee"
                                 src="bee-problem.png"
                 />
+                <img
+                                alt="honeycomb"
+                                id="honeycomb1"
+                                src="honeycomb.png"
+                />
 </div>,
+              "className": "honeycomb-parallax",
               "disabled": false,
               "offsetXMax": 0,
               "offsetXMin": 0,
@@ -627,14 +630,14 @@ ShallowWrapper {
                     src="honeycomb.png"
 />,
                   <img
-                    alt="honeycomb"
-                    id="honeycomb1"
-                    src="honeycomb1.png"
-/>,
-                  <img
                     alt="bee"
                     id="bee"
                     src="bee-problem.png"
+/>,
+                  <img
+                    alt="honeycomb"
+                    id="honeycomb1"
+                    src="honeycomb.png"
 />,
                 ],
                 "className": "honeycomb-cont",
@@ -659,9 +662,9 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "alt": "honeycomb",
-                    "id": "honeycomb1",
-                    "src": "honeycomb1.png",
+                    "alt": "bee",
+                    "id": "bee",
+                    "src": "bee-problem.png",
                   },
                   "ref": null,
                   "rendered": null,
@@ -672,9 +675,9 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "alt": "bee",
-                    "id": "bee",
-                    "src": "bee-problem.png",
+                    "alt": "honeycomb",
+                    "id": "honeycomb1",
+                    "src": "honeycomb.png",
                   },
                   "ref": null,
                   "rendered": null,
@@ -851,7 +854,7 @@ ShallowWrapper {
               A warmer climate promotes the growth of pests in bee hives
 </p>,
             <p>
-              Making bees more suseptible to ------------------ colony collapse disorder, parasites?
+              Making bees more suseptible to colony collapse disorder and parasites
 </p>,
             <p>
               Also, climate change causes plants to flower earlier, disrupting the bee's natural schedule
@@ -918,10 +921,10 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "Making bees more suseptible to ------------------ colony collapse disorder, parasites?",
+              "children": "Making bees more suseptible to colony collapse disorder and parasites",
             },
             "ref": null,
-            "rendered": "Making bees more suseptible to ------------------ colony collapse disorder, parasites?",
+            "rendered": "Making bees more suseptible to colony collapse disorder and parasites",
             "type": "p",
           },
           Object {
@@ -1081,6 +1084,7 @@ ShallowWrapper {
                         </p>
             </div>
             <Parallax
+                        className="honeycomb-parallax"
                         disabled={false}
                         offsetXMax={0}
                         offsetXMin={0}
@@ -1098,14 +1102,14 @@ ShallowWrapper {
                                                 src="honeycomb.png"
                                     />
                                     <img
-                                                alt="honeycomb"
-                                                id="honeycomb1"
-                                                src="honeycomb1.png"
-                                    />
-                                    <img
                                                 alt="bee"
                                                 id="bee"
                                                 src="bee-problem.png"
+                                    />
+                                    <img
+                                                alt="honeycomb"
+                                                id="honeycomb1"
+                                                src="honeycomb.png"
                                     />
                         </div>
             </Parallax>
@@ -1160,7 +1164,7 @@ ShallowWrapper {
                         A warmer climate promotes the growth of pests in bee hives
             </p>
             <p>
-                        Making bees more suseptible to ------------------ colony collapse disorder, parasites?
+                        Making bees more suseptible to colony collapse disorder and parasites
             </p>
             <p>
                         Also, climate change causes plants to flower earlier, disrupting the bee's natural schedule
@@ -1324,6 +1328,7 @@ ShallowWrapper {
                 </p>
 </div>,
               <Parallax
+                className="honeycomb-parallax"
                 disabled={false}
                 offsetXMax={0}
                 offsetXMin={0}
@@ -1341,14 +1346,14 @@ ShallowWrapper {
                                                 src="honeycomb.png"
                                 />
                                 <img
-                                                alt="honeycomb"
-                                                id="honeycomb1"
-                                                src="honeycomb1.png"
-                                />
-                                <img
                                                 alt="bee"
                                                 id="bee"
                                                 src="bee-problem.png"
+                                />
+                                <img
+                                                alt="honeycomb"
+                                                id="honeycomb1"
+                                                src="honeycomb.png"
                                 />
                 </div>
 </Parallax>,
@@ -1581,16 +1586,17 @@ ShallowWrapper {
                                     src="honeycomb.png"
                   />
                   <img
-                                    alt="honeycomb"
-                                    id="honeycomb1"
-                                    src="honeycomb1.png"
-                  />
-                  <img
                                     alt="bee"
                                     id="bee"
                                     src="bee-problem.png"
                   />
+                  <img
+                                    alt="honeycomb"
+                                    id="honeycomb1"
+                                    src="honeycomb.png"
+                  />
 </div>,
+                "className": "honeycomb-parallax",
                 "disabled": false,
                 "offsetXMax": 0,
                 "offsetXMin": 0,
@@ -1612,14 +1618,14 @@ ShallowWrapper {
                       src="honeycomb.png"
 />,
                     <img
-                      alt="honeycomb"
-                      id="honeycomb1"
-                      src="honeycomb1.png"
-/>,
-                    <img
                       alt="bee"
                       id="bee"
                       src="bee-problem.png"
+/>,
+                    <img
+                      alt="honeycomb"
+                      id="honeycomb1"
+                      src="honeycomb.png"
 />,
                   ],
                   "className": "honeycomb-cont",
@@ -1644,9 +1650,9 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "alt": "honeycomb",
-                      "id": "honeycomb1",
-                      "src": "honeycomb1.png",
+                      "alt": "bee",
+                      "id": "bee",
+                      "src": "bee-problem.png",
                     },
                     "ref": null,
                     "rendered": null,
@@ -1657,9 +1663,9 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "alt": "bee",
-                      "id": "bee",
-                      "src": "bee-problem.png",
+                      "alt": "honeycomb",
+                      "id": "honeycomb1",
+                      "src": "honeycomb.png",
                     },
                     "ref": null,
                     "rendered": null,
@@ -1836,7 +1842,7 @@ ShallowWrapper {
                 A warmer climate promotes the growth of pests in bee hives
 </p>,
               <p>
-                Making bees more suseptible to ------------------ colony collapse disorder, parasites?
+                Making bees more suseptible to colony collapse disorder and parasites
 </p>,
               <p>
                 Also, climate change causes plants to flower earlier, disrupting the bee's natural schedule
@@ -1903,10 +1909,10 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "Making bees more suseptible to ------------------ colony collapse disorder, parasites?",
+                "children": "Making bees more suseptible to colony collapse disorder and parasites",
               },
               "ref": null,
-              "rendered": "Making bees more suseptible to ------------------ colony collapse disorder, parasites?",
+              "rendered": "Making bees more suseptible to colony collapse disorder and parasites",
               "type": "p",
             },
             Object {

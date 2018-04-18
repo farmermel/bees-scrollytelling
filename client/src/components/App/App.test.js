@@ -8,11 +8,30 @@ describe('App', () => {
   global.window = window;
   window.addEventListener = jest.fn();
   window.scrollTo = jest.fn();
+  // let document;
+  // global.document = document;
+  // document = {
+  //   documentElement: {
+  //     clientHeight: 600
+  //   },
+  //   querySelector: jest.fn().mockImplementation(() => {
+  //     return {
+  //       style: {
+  //         width: 0
+  //       }
+  //     }
+  //   })
+  // }
+  // console.log(document)
+  // // global.document.documentElement = document.body.clientHeight = 600;
+  
 
+  // // Object.defineProperty(document, 'documentElement', { clientHeight: 600 })
   beforeEach(() => {
     wrapper = shallow(<App />, { disableLifecycleMethods: true });
     window.addEventListener.mockClear();
     window.scrollTo.mockClear();
+    
   });
 
   it('should match the Snapshot', () => {
@@ -25,16 +44,18 @@ describe('App', () => {
 
   describe('componentDidMount', () => {
     it('calls addEventListener on window', () => {
+      
       expect(window.addEventListener).not.toHaveBeenCalled();
 
       wrapper.instance().componentDidMount();
-
+   
       expect(window.addEventListener).toHaveBeenCalled();
     });
   });
 
   describe('stopScroll', () => {
     it('calls scrollTo on window when questions are enabled and scroll position is greater that current limit', () => {
+      wrapper.instance().trackBeeScroll = jest.fn();
       expect(window.scrollTo).not.toHaveBeenCalled();
       window.scrollY = 800;
 

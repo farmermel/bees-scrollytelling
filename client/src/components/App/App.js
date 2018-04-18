@@ -21,13 +21,11 @@ class App extends Component {
 
   componentDidMount = () => {
     window.addEventListener('scroll', this.stopScroll);
-    document.querySelector('.progress-container').style.width =  document.documentElement.clientHeight-10 + 'px';
   };
 
   stopScroll = () => {
-    console.log(window.scrollY)
     this.manageGraphDisplay();
-    this.myFunction();
+    this.trackBeeScroll();
     if (
       this.state.questionsEnabled &&
       window.scrollY > this.state.scrollPosition
@@ -64,7 +62,7 @@ class App extends Component {
 
   
 
-  myFunction = () => {
+  trackBeeScroll = () => {
     const winScroll =
       document.body.scrollTop || document.documentElement.scrollTop;
     const height =

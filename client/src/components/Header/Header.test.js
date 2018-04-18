@@ -91,10 +91,10 @@ describe('Header', () => {
       expect(event.preventDefault).toHaveBeenCalled();
     });
 
-    it('calls startScroll with event and 1396 if concern and age have values in state', () => {
+    it('calls startScroll with event and 1634 if concern and age have values in state', () => {
       wrapper.instance().handleSubmit(event);
 
-      expect(wrapper.instance().props.startScroll).toHaveBeenCalledWith(event, 1396);
+      expect(wrapper.instance().props.startScroll).toHaveBeenCalledWith(event, 1634);
     });
 
     it('calls postToDB', async () => {

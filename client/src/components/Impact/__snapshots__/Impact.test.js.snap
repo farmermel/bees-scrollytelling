@@ -29,7 +29,9 @@ ShallowWrapper {
           <div
                     className="question-cont"
           >
-                    <h2>
+                    <h2
+                              id="food-h2"
+                    >
                               Let's talk about food...
                     </h2>
                     <img
@@ -153,13 +155,13 @@ ShallowWrapper {
                                                             alt="wheat grass"
                                                             className="wheat"
                                                             id="wheat1"
-                                                            src="wheat.png"
+                                                            src="wheat-cropped.png"
                                                   />
                                                   <img
                                                             alt="wheat grass"
                                                             className="wheat"
                                                             id="wheat2"
-                                                            src="wheat.png"
+                                                            src="wheat-cropped.png"
                                                   />
                                                   <img
                                                             alt="wheat grass"
@@ -283,6 +285,22 @@ ShallowWrapper {
           >
                     Guess
           </button>
+          <Parallax
+                    className="coins-parallax"
+                    disabled={false}
+                    offsetXMax={0}
+                    offsetXMin={0}
+                    offsetYMax={50}
+                    offsetYMin={-50}
+                    slowerScrollRate={false}
+                    tag="div"
+          >
+                    <img
+                              alt="falling coins"
+                              id="coins"
+                              src="falling-coins.png"
+                    />
+          </Parallax>
 </form>,
         <article
           className="economic-article"
@@ -323,7 +341,9 @@ ShallowWrapper {
             <div
               className="question-cont"
 >
-              <h2>
+              <h2
+                            id="food-h2"
+              >
                             Let's talk about food...
               </h2>
               <img
@@ -422,7 +442,9 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                <h2>
+                <h2
+                  id="food-h2"
+>
                   Let's talk about food...
 </h2>,
                 <img
@@ -505,6 +527,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "Let's talk about food...",
+                  "id": "food-h2",
                 },
                 "ref": null,
                 "rendered": "Let's talk about food...",
@@ -804,13 +827,13 @@ ShallowWrapper {
                                                                       alt="wheat grass"
                                                                       className="wheat"
                                                                       id="wheat1"
-                                                                      src="wheat.png"
+                                                                      src="wheat-cropped.png"
                                                         />
                                                         <img
                                                                       alt="wheat grass"
                                                                       className="wheat"
                                                                       id="wheat2"
-                                                                      src="wheat.png"
+                                                                      src="wheat-cropped.png"
                                                         />
                                                         <img
                                                                       alt="wheat grass"
@@ -884,13 +907,13 @@ ShallowWrapper {
                                                                         alt="wheat grass"
                                                                         className="wheat"
                                                                         id="wheat1"
-                                                                        src="wheat.png"
+                                                                        src="wheat-cropped.png"
                                                       />
                                                       <img
                                                                         alt="wheat grass"
                                                                         className="wheat"
                                                                         id="wheat2"
-                                                                        src="wheat.png"
+                                                                        src="wheat-cropped.png"
                                                       />
                                                       <img
                                                                         alt="wheat grass"
@@ -967,13 +990,13 @@ ShallowWrapper {
                                                             alt="wheat grass"
                                                             className="wheat"
                                                             id="wheat1"
-                                                            src="wheat.png"
+                                                            src="wheat-cropped.png"
                                         />
                                         <img
                                                             alt="wheat grass"
                                                             className="wheat"
                                                             id="wheat2"
-                                                            src="wheat.png"
+                                                            src="wheat-cropped.png"
                                         />
                                         <img
                                                             alt="wheat grass"
@@ -1004,13 +1027,13 @@ ShallowWrapper {
                                             alt="wheat grass"
                                             className="wheat"
                                             id="wheat1"
-                                            src="wheat.png"
+                                            src="wheat-cropped.png"
                       />
                       <img
                                             alt="wheat grass"
                                             className="wheat"
                                             id="wheat2"
-                                            src="wheat.png"
+                                            src="wheat-cropped.png"
                       />
                       <img
                                             alt="wheat grass"
@@ -1044,13 +1067,13 @@ ShallowWrapper {
                           alt="wheat grass"
                           className="wheat"
                           id="wheat1"
-                          src="wheat.png"
+                          src="wheat-cropped.png"
 />,
                         <img
                           alt="wheat grass"
                           className="wheat"
                           id="wheat2"
-                          src="wheat.png"
+                          src="wheat-cropped.png"
 />,
                         <img
                           alt="wheat grass"
@@ -1077,7 +1100,7 @@ ShallowWrapper {
                           "alt": "wheat grass",
                           "className": "wheat",
                           "id": "wheat1",
-                          "src": "wheat.png",
+                          "src": "wheat-cropped.png",
                         },
                         "ref": null,
                         "rendered": null,
@@ -1091,7 +1114,7 @@ ShallowWrapper {
                           "alt": "wheat grass",
                           "className": "wheat",
                           "id": "wheat2",
-                          "src": "wheat.png",
+                          "src": "wheat-cropped.png",
                         },
                         "ref": null,
                         "rendered": null,
@@ -1280,6 +1303,22 @@ ShallowWrapper {
 >
               Guess
 </button>,
+            <Parallax
+              className="coins-parallax"
+              disabled={false}
+              offsetXMax={0}
+              offsetXMin={0}
+              offsetYMax={50}
+              offsetYMin={-50}
+              slowerScrollRate={false}
+              tag="div"
+>
+              <img
+                            alt="falling coins"
+                            id="coins"
+                            src="falling-coins.png"
+              />
+</Parallax>,
           ],
           "className": "economic-questions",
           "onSubmit": [Function],
@@ -1639,6 +1678,41 @@ ShallowWrapper {
             "rendered": "Guess",
             "type": "button",
           },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": <img
+                alt="falling coins"
+                id="coins"
+                src="falling-coins.png"
+/>,
+              "className": "coins-parallax",
+              "disabled": false,
+              "offsetXMax": 0,
+              "offsetXMin": 0,
+              "offsetYMax": 50,
+              "offsetYMin": -50,
+              "slowerScrollRate": false,
+              "tag": "div",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "falling coins",
+                "id": "coins",
+                "src": "falling-coins.png",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            "type": [Function],
+          },
         ],
         "type": "form",
       },
@@ -1783,7 +1857,9 @@ ShallowWrapper {
             <div
                         className="question-cont"
             >
-                        <h2>
+                        <h2
+                                    id="food-h2"
+                        >
                                     Let's talk about food...
                         </h2>
                         <img
@@ -1907,13 +1983,13 @@ ShallowWrapper {
                                                                         alt="wheat grass"
                                                                         className="wheat"
                                                                         id="wheat1"
-                                                                        src="wheat.png"
+                                                                        src="wheat-cropped.png"
                                                             />
                                                             <img
                                                                         alt="wheat grass"
                                                                         className="wheat"
                                                                         id="wheat2"
-                                                                        src="wheat.png"
+                                                                        src="wheat-cropped.png"
                                                             />
                                                             <img
                                                                         alt="wheat grass"
@@ -2037,6 +2113,22 @@ ShallowWrapper {
             >
                         Guess
             </button>
+            <Parallax
+                        className="coins-parallax"
+                        disabled={false}
+                        offsetXMax={0}
+                        offsetXMin={0}
+                        offsetYMax={50}
+                        offsetYMin={-50}
+                        slowerScrollRate={false}
+                        tag="div"
+            >
+                        <img
+                                    alt="falling coins"
+                                    id="coins"
+                                    src="falling-coins.png"
+                        />
+            </Parallax>
 </form>,
           <article
             className="economic-article"
@@ -2077,7 +2169,9 @@ ShallowWrapper {
               <div
                 className="question-cont"
 >
-                <h2>
+                <h2
+                                id="food-h2"
+                >
                                 Let's talk about food...
                 </h2>
                 <img
@@ -2176,7 +2270,9 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  <h2>
+                  <h2
+                    id="food-h2"
+>
                     Let's talk about food...
 </h2>,
                   <img
@@ -2259,6 +2355,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "Let's talk about food...",
+                    "id": "food-h2",
                   },
                   "ref": null,
                   "rendered": "Let's talk about food...",
@@ -2558,13 +2655,13 @@ ShallowWrapper {
                                                                                 alt="wheat grass"
                                                                                 className="wheat"
                                                                                 id="wheat1"
-                                                                                src="wheat.png"
+                                                                                src="wheat-cropped.png"
                                                                 />
                                                                 <img
                                                                                 alt="wheat grass"
                                                                                 className="wheat"
                                                                                 id="wheat2"
-                                                                                src="wheat.png"
+                                                                                src="wheat-cropped.png"
                                                                 />
                                                                 <img
                                                                                 alt="wheat grass"
@@ -2638,13 +2735,13 @@ ShallowWrapper {
                                                                                 alt="wheat grass"
                                                                                 className="wheat"
                                                                                 id="wheat1"
-                                                                                src="wheat.png"
+                                                                                src="wheat-cropped.png"
                                                             />
                                                             <img
                                                                                 alt="wheat grass"
                                                                                 className="wheat"
                                                                                 id="wheat2"
-                                                                                src="wheat.png"
+                                                                                src="wheat-cropped.png"
                                                             />
                                                             <img
                                                                                 alt="wheat grass"
@@ -2721,13 +2818,13 @@ ShallowWrapper {
                                                                   alt="wheat grass"
                                                                   className="wheat"
                                                                   id="wheat1"
-                                                                  src="wheat.png"
+                                                                  src="wheat-cropped.png"
                                             />
                                             <img
                                                                   alt="wheat grass"
                                                                   className="wheat"
                                                                   id="wheat2"
-                                                                  src="wheat.png"
+                                                                  src="wheat-cropped.png"
                                             />
                                             <img
                                                                   alt="wheat grass"
@@ -2758,13 +2855,13 @@ ShallowWrapper {
                                                 alt="wheat grass"
                                                 className="wheat"
                                                 id="wheat1"
-                                                src="wheat.png"
+                                                src="wheat-cropped.png"
                         />
                         <img
                                                 alt="wheat grass"
                                                 className="wheat"
                                                 id="wheat2"
-                                                src="wheat.png"
+                                                src="wheat-cropped.png"
                         />
                         <img
                                                 alt="wheat grass"
@@ -2798,13 +2895,13 @@ ShallowWrapper {
                             alt="wheat grass"
                             className="wheat"
                             id="wheat1"
-                            src="wheat.png"
+                            src="wheat-cropped.png"
 />,
                           <img
                             alt="wheat grass"
                             className="wheat"
                             id="wheat2"
-                            src="wheat.png"
+                            src="wheat-cropped.png"
 />,
                           <img
                             alt="wheat grass"
@@ -2831,7 +2928,7 @@ ShallowWrapper {
                             "alt": "wheat grass",
                             "className": "wheat",
                             "id": "wheat1",
-                            "src": "wheat.png",
+                            "src": "wheat-cropped.png",
                           },
                           "ref": null,
                           "rendered": null,
@@ -2845,7 +2942,7 @@ ShallowWrapper {
                             "alt": "wheat grass",
                             "className": "wheat",
                             "id": "wheat2",
-                            "src": "wheat.png",
+                            "src": "wheat-cropped.png",
                           },
                           "ref": null,
                           "rendered": null,
@@ -3034,6 +3131,22 @@ ShallowWrapper {
 >
                 Guess
 </button>,
+              <Parallax
+                className="coins-parallax"
+                disabled={false}
+                offsetXMax={0}
+                offsetXMin={0}
+                offsetYMax={50}
+                offsetYMin={-50}
+                slowerScrollRate={false}
+                tag="div"
+>
+                <img
+                                alt="falling coins"
+                                id="coins"
+                                src="falling-coins.png"
+                />
+</Parallax>,
             ],
             "className": "economic-questions",
             "onSubmit": [Function],
@@ -3392,6 +3505,41 @@ ShallowWrapper {
               "ref": null,
               "rendered": "Guess",
               "type": "button",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": <img
+                  alt="falling coins"
+                  id="coins"
+                  src="falling-coins.png"
+/>,
+                "className": "coins-parallax",
+                "disabled": false,
+                "offsetXMax": 0,
+                "offsetXMin": 0,
+                "offsetYMax": 50,
+                "offsetYMin": -50,
+                "slowerScrollRate": false,
+                "tag": "div",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "falling coins",
+                  "id": "coins",
+                  "src": "falling-coins.png",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+              "type": [Function],
             },
           ],
           "type": "form",
