@@ -26,7 +26,7 @@ export default class Problems extends Component {
   }
 
   handleSubmit = async e => {
-    this.props.startScroll(e, 8000);
+    this.props.startScroll(e);
     await this.setState({ 
       economy: `${this.state.monetary}${this.state.unit}`,
       answered: true
