@@ -61,6 +61,20 @@ button {
 #displayNone {
   display: none; }
 
+.progress-container {
+  transform: rotate(90deg);
+  position: fixed;
+  top: calc(96% - 360px);
+  left: calc(2% - 360px);
+  height: 30px; }
+
+.progress-bar {
+  height: 30px;
+  background-image: url("../../assets/bee3.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: 30px 30px; }
+
 .arrow-cont {
   height: 150px; }
 
