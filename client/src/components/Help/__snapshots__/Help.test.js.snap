@@ -19,23 +19,58 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <h1>
+          Ways you can help
+</h1>,
+        <h2>
           Buy organic and local
-</h1>,
-        <h1>
+</h2>,
+        <h2>
           Grow pollinator gardens
-</h1>,
+</h2>,
         <p>
           Be sure to ask if the plants you buy were grown with neonicitinoides
 </p>,
-        <h1>
+        <div
+          className="flowers"
+>
+          <img
+                    className="flowers"
+                    src="hypericum.svg"
+          />
+          <img
+                    className="flowers"
+                    src="iris.svg"
+          />
+          <img
+                    className="flowers"
+                    src="knapweed.svg"
+          />
+          <img
+                    className="flowers"
+                    src="mimosa.svg"
+          />
+          <img
+                    className="flowers"
+                    src="pansy.svg"
+          />
+          <img
+                    className="flowers"
+                    src="poppy.svg"
+          />
+          <img
+                    className="flowers"
+                    src="carnation.svg"
+          />
+</div>,
+        <h2>
           Make bee homes
-</h1>,
+</h2>,
         <div
           className="bee-images bee-home"
 />,
-        <h1>
+        <h2>
           Support bee friendly organizations and legislation
-</h1>,
+</h2>,
       ],
       "className": "Help",
     },
@@ -46,11 +81,22 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
+          "children": "Ways you can help",
+        },
+        "ref": null,
+        "rendered": "Ways you can help",
+        "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
           "children": "Buy organic and local",
         },
         "ref": null,
         "rendered": "Buy organic and local",
-        "type": "h1",
+        "type": "h2",
       },
       Object {
         "instance": null,
@@ -61,7 +107,7 @@ ShallowWrapper {
         },
         "ref": null,
         "rendered": "Grow pollinator gardens",
-        "type": "h1",
+        "type": "h2",
       },
       Object {
         "instance": null,
@@ -79,11 +125,137 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
+          "children": Array [
+            <img
+              className="flowers"
+              src="hypericum.svg"
+/>,
+            <img
+              className="flowers"
+              src="iris.svg"
+/>,
+            <img
+              className="flowers"
+              src="knapweed.svg"
+/>,
+            <img
+              className="flowers"
+              src="mimosa.svg"
+/>,
+            <img
+              className="flowers"
+              src="pansy.svg"
+/>,
+            <img
+              className="flowers"
+              src="poppy.svg"
+/>,
+            <img
+              className="flowers"
+              src="carnation.svg"
+/>,
+          ],
+          "className": "flowers",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "flowers",
+              "src": "hypericum.svg",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "flowers",
+              "src": "iris.svg",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "flowers",
+              "src": "knapweed.svg",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "flowers",
+              "src": "mimosa.svg",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "flowers",
+              "src": "pansy.svg",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "flowers",
+              "src": "poppy.svg",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "flowers",
+              "src": "carnation.svg",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
           "children": "Make bee homes",
         },
         "ref": null,
         "rendered": "Make bee homes",
-        "type": "h1",
+        "type": "h2",
       },
       Object {
         "instance": null,
@@ -105,7 +277,7 @@ ShallowWrapper {
         },
         "ref": null,
         "rendered": "Support bee friendly organizations and legislation",
-        "type": "h1",
+        "type": "h2",
       },
     ],
     "type": "div",
@@ -118,23 +290,58 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <h1>
+            Ways you can help
+</h1>,
+          <h2>
             Buy organic and local
-</h1>,
-          <h1>
+</h2>,
+          <h2>
             Grow pollinator gardens
-</h1>,
+</h2>,
           <p>
             Be sure to ask if the plants you buy were grown with neonicitinoides
 </p>,
-          <h1>
+          <div
+            className="flowers"
+>
+            <img
+                        className="flowers"
+                        src="hypericum.svg"
+            />
+            <img
+                        className="flowers"
+                        src="iris.svg"
+            />
+            <img
+                        className="flowers"
+                        src="knapweed.svg"
+            />
+            <img
+                        className="flowers"
+                        src="mimosa.svg"
+            />
+            <img
+                        className="flowers"
+                        src="pansy.svg"
+            />
+            <img
+                        className="flowers"
+                        src="poppy.svg"
+            />
+            <img
+                        className="flowers"
+                        src="carnation.svg"
+            />
+</div>,
+          <h2>
             Make bee homes
-</h1>,
+</h2>,
           <div
             className="bee-images bee-home"
 />,
-          <h1>
+          <h2>
             Support bee friendly organizations and legislation
-</h1>,
+</h2>,
         ],
         "className": "Help",
       },
@@ -145,11 +352,22 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
+            "children": "Ways you can help",
+          },
+          "ref": null,
+          "rendered": "Ways you can help",
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
             "children": "Buy organic and local",
           },
           "ref": null,
           "rendered": "Buy organic and local",
-          "type": "h1",
+          "type": "h2",
         },
         Object {
           "instance": null,
@@ -160,7 +378,7 @@ ShallowWrapper {
           },
           "ref": null,
           "rendered": "Grow pollinator gardens",
-          "type": "h1",
+          "type": "h2",
         },
         Object {
           "instance": null,
@@ -178,11 +396,137 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
+            "children": Array [
+              <img
+                className="flowers"
+                src="hypericum.svg"
+/>,
+              <img
+                className="flowers"
+                src="iris.svg"
+/>,
+              <img
+                className="flowers"
+                src="knapweed.svg"
+/>,
+              <img
+                className="flowers"
+                src="mimosa.svg"
+/>,
+              <img
+                className="flowers"
+                src="pansy.svg"
+/>,
+              <img
+                className="flowers"
+                src="poppy.svg"
+/>,
+              <img
+                className="flowers"
+                src="carnation.svg"
+/>,
+            ],
+            "className": "flowers",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "flowers",
+                "src": "hypericum.svg",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "flowers",
+                "src": "iris.svg",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "flowers",
+                "src": "knapweed.svg",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "flowers",
+                "src": "mimosa.svg",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "flowers",
+                "src": "pansy.svg",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "flowers",
+                "src": "poppy.svg",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "flowers",
+                "src": "carnation.svg",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
             "children": "Make bee homes",
           },
           "ref": null,
           "rendered": "Make bee homes",
-          "type": "h1",
+          "type": "h2",
         },
         Object {
           "instance": null,
@@ -204,7 +548,7 @@ ShallowWrapper {
           },
           "ref": null,
           "rendered": "Support bee friendly organizations and legislation",
-          "type": "h1",
+          "type": "h2",
         },
       ],
       "type": "div",

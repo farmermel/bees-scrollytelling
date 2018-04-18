@@ -38,10 +38,10 @@ describe('BeeFacts', () => {
       })
     })
 
-    it('calls startScroll with event passed in and 6000', () => {
+    it('calls startScroll with event passed in and 11255', () => {
       wrapper.instance().handleSubmit(mockData.event);
 
-      expect(wrapper.instance().props.startScroll).toHaveBeenCalledWith(mockData.event, 6000);
+      expect(wrapper.instance().props.startScroll).toHaveBeenCalledWith(mockData.event, 11255);
     });
 
     it('calls fetch with /api/v1/answers and the post body', () => {
